@@ -1,0 +1,19 @@
+<view class='main'>
+  <view class='top_bg'>
+    <image class='top_bg_img' src='../../resources/image/bg.png'></image>
+  </view>
+  <view class='logo'></view>
+
+  <view class='introduce'>
+
+    <text class='introduce_title'>比看起来更强大，比用起来更简单。</text>
+
+    <text class="introduce_content">
+      <text class='introduce_content_item'>房地产行业供需双方专用工具,聊天留言,重要信息不遗漏,关键内容有留存</text>
+      <text class='introduce_content_item'>供需双方直接触达，沟通体验更有质感，沟通效率更有保障</text>
+    </text>
+
+  </view>
+
+  <button class='use_now' catch:tap="useNow">马上使用</button>
+</view>
