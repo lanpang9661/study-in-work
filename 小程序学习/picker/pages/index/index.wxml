@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="section">
+  <view>普通选择器</view>
+  <picker range='{{countryArr}}' bind:change="countryChangeFn" value='{{nowcountryIndex}}'>
+    <view>当前选择: {{countryArr[nowCountryIndex]}}</view>
+  </picker>
+</view>
+
+<view class="section">
+  <view>时间选择器</view>
+  <picker mode="time" start="09:01" end="20:59" value='{{time}}' bind:change="timeChangeFn">
+    <view>当前选择: {{time}}</view>
+  </picker>
+</view>
+
+<view class="section">
+  <view>日期选择器</view>
+  <picker mode="date" start="1996-06-01" end="2096-06-01" value='{{date}}' bind:change="dateChangeFn">
+    <view>当前选择: {{date}}</view>
+  </picker>
+</view>
+
+<view class="section">
+  <view>城市选择器</view>
+  <picker mode="region" start="1996-06-01" end="2096-06-01" value='{{nowCity}}' bind:change="cityChangeFn">
+    <view>当前选择: {{nowCity[0]}}，{{nowCity[1]}}，{{nowCity[2]}}</view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">多列选择器</view>
+  <picker mode="multiSelector" bind:change="bindMultiPickerChange" bind:columnchange="bindMultiPickerColumnChange" value="{{multiArrIndex}}" range="{{multiArr}}">
+    <view class="picker">
+      当前选择：{{multiArr[0][multiArrIndex[0]]}}，{{multiArr[1][multiArrIndex[1]]}}，{{multiArr[2][multiArrIndex[2]]}}
+    </view>
+  </picker>
+</view>
