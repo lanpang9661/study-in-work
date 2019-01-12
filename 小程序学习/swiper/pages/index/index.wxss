@@ -1,0 +1,45 @@
+
+
+
+.items image{
+  width: 100%;
+  height: 100%;
+}
+
+.page-section-title{
+  font-size: 28rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  position: relative;
+}
+
+.info{
+  position: absolute;
+  right: 0;
+  color: #353535;
+  font-size: 30rpx;
+}
+
+.page-section {
+  padding: 0 80rpx;
+  margin-top: 40rpx;
+}
+
+.page-switch{
+  padding: 0 40rpx;
+}
+
+.switch-item{
+  padding: 19rpx 0;
+  display: flex;
+  position: relative;
+  border-bottom: 2rpx solid #999999;
+}
+
+.switch-item switch{
+  position: absolute;
+  right: 0; 
+  bottom: 10rpx;
+}

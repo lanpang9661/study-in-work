@@ -1,0 +1,57 @@
+<view>
+
+  <swiper
+    indicator-dots='{{dotCheck}}'
+    indicator-color='blue'
+    indicator-active-color='red'
+    autoplay='{{isAuto}}'
+    interval="{{timing}}"
+    circular='true'
+    display-multiple-items='1' 
+    previous-margin='{{preMar}}'
+    next-margin='{{nextMar}}'
+  >
+  
+    <swiper-item class="items">
+      <image src='../../image/1.jpg'></image>
+    </swiper-item>
+    <swiper-item class="items">
+      <image src='../../image/1.jpg'></image>
+    </swiper-item>
+    <swiper-item class="items">
+      <image src='../../image/1.jpg'></image>
+    </swiper-item>
+
+  </swiper>
+
+  <view class='page-switch'>
+    <view class='switch-item'>
+      <text>指示点</text>
+      <switch checked='{{dotCheck}}' bind:change="changeDotFn"></switch>
+    </view>
+    <view class='switch-item'>
+      <text>自动播放</text>
+      <switch checked='{{isAuto}}' bind:change="changeAutoFn"></switch>
+    </view>
+  </view>
+
+  <view class='page-section'>
+    <view class="page-section-title">
+      <text>幻灯片切换时长(ms)</text>
+      <text class="info">{{timing}}</text>
+    </view>
+    <slider value="{{timing}}" min="2000" max="5000" bindchange="changeProperty" data-property-name="duration" />
+
+    <view class="page-section-title">
+      <text>前边距(px)</text>
+      <text class="info">{{preMar}}</text>
+    </view>
+    <slider value="{{preMar}}" min="0" max="50" bindchange="preMarFn" data-property-name="duration" />
+
+    <view class="page-section-title">
+      <text>后(px)</text>
+      <text class="info">{{nextMar}}</text>
+    </view>
+    <slider value="{{nextMar}}" min="0" max="50" bindchange="nextMarFn" data-property-name="duration" />
+  </view>
+</view>
