@@ -1,0 +1,28 @@
+<!--pages/jsmf/chose/chose.wxml-->
+<view class="yezhu-wrapper">
+  <view class="appraisal-select list">
+    <view class="step steps stepon">
+      <view class="inp">
+        <view class="name">
+          <text>楼栋号</text>
+          <input type="text" placeholder="请输入楼栋号" class="sug" sug-data="loudong"></input>
+          <text class="backs">完成</text>
+        </view>
+      </view>
+      <view class="loudongList sublist">
+        <text class="title">您可直接选择</text>
+        <ul>
+          <li class="change changeval">
+            <i>1号楼</i>
+          </li>
+          <li class="change changeval">
+            <i>2号楼</i>
+          </li>
+          <li class="change changeval">
+            <i>无楼栋号</i>
+          </li>
+        </ul>
+      </view>
+    </view>
+  </view>
+</view>

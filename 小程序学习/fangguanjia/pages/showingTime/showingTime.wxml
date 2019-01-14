@@ -1,0 +1,24 @@
+<!--pages/showingTime/showingTime.wxml-->
+<view class='main'>
+  <view class='title'>设置可看时间，增加买房人看房几率</view>
+  <view wx:if="{{!appointmentArr.length}}" class='haveNoTime'>暂无预约时间</view>
+  <view class='add-time'>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}"    range="{{multiArray}}" class='btn btn-primary btn-big btn-evaluate'>
+      新建时间
+    </picker> 
+  </view>
+
+  <view class="appointment-box">
+
+    <view class='appointment-item' wx:for="{{appointmentArr}}" wx:key="{{item}}">
+      <view class="appointment-day">
+        {{item.day}}
+      </view>
+      <view class='appointment-time'>
+        <view class='appointment-time-detail' wx:for="{{item.children}}" wx:key="*this">{{item}}<image src="../../resources/image/u818.png"></image></view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

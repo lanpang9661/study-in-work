@@ -1,0 +1,17 @@
+/* pages/my/information/information.wxss */
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+.weui-cell:before, .weui-cell:after {
+  border: none;
+}
+
+.my-body .weui-cell__hd icon {
+  line-height: 28px;
+}

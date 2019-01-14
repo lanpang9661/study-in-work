@@ -1,0 +1,125 @@
+/* pages/dtdetail/maidian/maidian.wxss */
+.quanwen{
+  padding: 20rpx 40rpx;
+  display: flex;
+  flex-direction:column;
+flex: 1;
+ align-content: stretch;
+    justify-content: space-between
+}
+.maidian_word{
+   padding: 20rpx 40rpx;
+  display: flex;
+  font-size: 32rpx;
+  border-bottom: 1px solid #e7e7e7;
+  align-items:center;
+  justify-content:space-between;
+  padding-bottom: 20rpx;
+  
+
+}
+
+.maidian_zhuangtai{
+  font-size: 28rpx;
+  
+}
+.maidian_wenbenquyu textarea{
+
+flex: 1
+
+
+}
+.maidian_wenbenquyu{ padding-top: 20rpx; padding-bottom: 20rpx;flex:1;display:flex;
+flex-direction:column;
+
+}.head-tit{ font-size:32rpx; font-weight: 700}
+.maidian_wb::-webkit-input-placeholder{
+        line-height: 100rpx;
+        color: #0fa6e8;
+        
+}
+.link-btn navigator {
+  display: block;
+  width: 47%;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  color: #5f6670;
+  font-size: 15px;
+  background: #f5f7fa;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+}
+.fr{
+  display: flex;
+}
+.sub-input {
+  height: 44px;
+  background: #0fa6e8;
+  color: #fff;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  font-size: 16px;
+  line-height: 44px;
+}
+
+
+.link-btn navigator:after {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  top: -50%;
+  left: -50%;
+  border: 0.01rem solid #d8dde6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.link-btn .tips-black {
+  position: absolute;
+  top: 0.52rem;
+  right: 0;
+  display: inline-block;
+  background: rgba(48, 55, 65, 0.8);
+  border-radius: 0.15rem;
+  -webkit-border-radius: 0.15rem;
+  line-height: 0.3rem;
+  color: #fff;
+  font-size: 0.12rem;
+  z-index: 11;
+  padding: 0 0.14rem;
+  animation: fadeOut 0.2s ease-out;
+  -webkit-animation: fadeOut 5s 4s ease both;
+  display: none;
+}
+
+.link-btn .tips-black.active {
+  display: block;
+}
+.maidian_btn{
+  display: flex;
+}
+.maidian_btn button{
+  flex: 1;
+  line-height: 44px;
+  font-size: 16px;
+  margin-right: 20rpx;
+
+}
+.maidian_btn button:last-of-type{
+  margin-right: 0rpx;
+}
+.btn.btn-defult{
+border-radius: 2px;
+border: 1px solid #d9d9d9;
+}
+.btn.btn-defult::after,.btn.btn-defult::before{
+content: none;
+}
+

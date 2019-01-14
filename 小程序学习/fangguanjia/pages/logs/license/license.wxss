@@ -1,0 +1,25 @@
+/* pages/register/license/license.wxss */
+page{
+  background: #fff;
+  padding-bottom: 40rpx;
+}
+.h1{
+  width: 100%;
+  font-size: 40rpx;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  padding: 40rpx 0 0 0;
+}
+.h2{
+  font-size: 32rpx;
+  color: #333;
+  text-align: left;
+  padding: 30rpx 32rpx 10rpx 32rpx;
+}
+.text{
+  font-size: 28rpx;
+  color: #666;
+  padding: 0 32rpx;
+  display: block;
+}

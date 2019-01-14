@@ -1,0 +1,241 @@
+
+page {
+background:#f0f0f0;
+height:100%;
+
+}
+.space-between{
+    display: flex;
+    flex-flow: column;
+    align-content: stretch;
+    justify-content: space-between;
+    height: 100%
+  }
+.news-top{ padding-top: 134rpx;padding-bottom:100rpx;
+
+overflow-y:auto;
+overflow-x:hidden;
+}
+.newstxt .time {
+  color: #fff;
+  background-color: #ccc;
+  font-size: 12px;
+  padding: 0 5px;
+  margin: 0 auto;
+  border-radius: 3px;
+  width: fit-content;
+}
+
+.newstxt .news-bd {
+  margin: 20px 20% 0 10%; position: relative; font-size: 14px; color: #333
+}
+.newstxt .news-bd.news-bd-r{  margin: 15px 20% 15px 15%;display:flex;
+justify-content:flex-end;
+ }
+.newstxt .news-bd.news-bd-l{  margin: 15px 15% 15px 20%;display:flex;
+justify-content:flex-start;}
+.newstxt .news-bd .news-txt-bd{
+  background-color: #fff; width: fit-content;padding:10px; border-radius:5px; position: relative}
+.newstxt .news-bd.news-bd-r .news-txt-bd{background: #99c8f5}
+ .newstxt .news-bd .news-txt-bd .news-tit{display: block; width: 100%; font-size: 32rpx; line-height: 40rpx}
+  .newstxt .news-bd .news-txt-bd .news-bot{ color: #999; white-space: nowrap; text-overflow: ellipsis;display: block; overflow: hidden}
+
+.newstxt .news-bd .pop-btn .btn{ border-radius: 0;
+font-size: 14px}
+.newstxt .news-bd .pop-btn .btn-cancel{ height: auto}
+.newstxt .time-tips {
+  color: #ccc;
+  margin: 0 auto ;
+  font-size: 12px;
+  width: fit-content;
+}
+
+.mews-agent {
+  position: absolute;
+  right: -112rpx;
+  top: -2px;
+}
+
+.newstxt .news-bd.news-bd-l .mews-agent {
+  right: auto;
+  left: -112rpx;
+}
+
+.mews-agent .name {
+  display: block;
+  text-align: center;
+}
+ .b-flex-info { display: flex;background: #fff;padding: 10rpx 90rpx;justify-content:space-between; align-items: center}
+.mews-agent .img-wrapper, .b-flex-info .img-wrapper{
+  display: block;
+  overflow: hidden;
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 92rpx;
+  background-size: 100%;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+
+color:#fff;
+text-align:center;
+line-height:92rpx;
+
+}
+.mews-agent .img-wrapper.wenzi{  background:#ff4081;}
+.mews-agent .img-wrapper image, .b-flex-info .img-wrapper image{
+  width: 100%;
+  height: 100%;
+}
+
+.index-menu {
+  width: 100%;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index:1;
+}
+
+.index-menu-item {
+  -webkit-flex: 0 0 50%;
+  -webkit-box-flex: 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  text-align: center;
+  margin-top: 4rpx;
+  padding: 14rpx 0;
+  box-sizing: border-box;
+
+}.index-menu-item text.name {
+  display: block;
+  font-size: 24rpx;
+  line-height: 1.4;
+  white-space: nowrap;
+  margin-top: 10rpx;
+}
+.box_r {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  color: #fff;
+  font-size: 36rpx;
+}
+.c_jubao {
+   border:1px solid #f60;
+   color: #f60
+}
+.icon-point{ font-size: 18px; text-align: center; line-height:45px;
+ }
+.c_dianhua {
+  border:1px solid #0fa6e8;
+  color: #0fa6e8;
+}
+.c_xiaolian {
+
+  color: #0fa6e8;
+}
+
+
+.news-bd .company{font-size:12px; color:#9dd0d3; background-color: #f2f2f2; padding: 0 3px; margin-left: 5px}
+.news-bd .renzheng{font-size:12px;color:#f80;margin-left: 5px }
+.news-bd .agent-name {
+  color: #394043;
+  font-size: 34rpx;
+  line-height: 34rpx;
+}
+
+
+
+.input-panel {
+    height: 100rpx;
+    box-sizing: border-box;
+    padding: 13rpx 20rpx 0;
+    background: #f5f5f7;
+    border-top:#d7d7d9 1rpx solid;
+    position: relative;
+    display: flex;
+}
+.send-input {
+    flex: 1;
+    height: 72rpx;
+    background: #fff;
+    border:#ddd 1rpx solid;
+    border-radius: 3px;
+    margin-right: 20rpx;
+    box-sizing: border-box;
+    padding: 0 10rpx;
+    position:relative;
+z-index:1;
+
+}
+.send-btn {
+    width: 160rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    background-color: #2687e5;
+    font-size: 28rpx;
+    color: #fff
+}
+.send-btn.send-btn-default{ background-color: #ddd; color: #666}
+.sent-massage{ position: fixed; bottom: 0;width: 100%}
+.dh-mob, .biaoqing-list-swip{position: absolute; bottom: 103rpx; background-color: #fff; padding: 20rpx;border-radius:10px 10px 0px 0px;width:100%;box-shadow:0px -1px 1px #ddd;box-sizing: border-box;
+height: 320rpx;z-index: 2;overflow-y:auto
+ }
+.mob-list view{ margin-bottom: 0;  font-size: 28rpx; padding: 10px; border-radius: 3px; color: #333;border-bottom:1px solid #f4f4f4;
+}
+.dh-mob .tips{ font-size: 28rpx; padding: 2rpx;text-align: center; background-color: #fff;border-bottom:0;
+}
+.xiaolian_icon{
+  position:absolute;
+bottom:14rpx;
+right:200rpx;
+z-index:2;
+ 
+
+}
+.icon-xiaolian{font-size:48rpx;
+display:block;
+width:90rpx;
+height:72rpx;
+line-height:72rpx;
+text-align:center;
+color:#aaa
+}
+.read-tip{  position: absolute; bottom:0; left:-60rpx; font-size: 24rpx; color: #aaa }
+.read-tip.refresh{ color: #E74C3C}
+.new-massage{ position: fixed; top:200rpx;right: 0; background: #fff; border:1px solid #e7e7e7; border-right: 0; border-radius: 50rpx 0 0 50rpx; color: #2687e5; text-align: center; padding: 5px 15px; font-size:26rpx}
+.biaoqing-list swiper-item{display: flex;flex-wrap:wrap;align-content:flex-start;
+}
+.biaoqing-list swiper-item image{ width:56rpx; height: 56rpx}
+.biaoqing-list-swip{ padding-top: 50rpx}
+.biaoqing-list swiper-item view{ width:100rpx; height: 100rpx; display: flex; align-items: center;justify-content: center}
+.icon-shuangjiantoushang{
+  font-size: 24rpx;
+  margin-right: 10rpx;
+  
+}.mob-list button{ padding: 0;border: none; background: none;font-size:28rpx;
+color: #333;line-height: 36rpx;text-align: left;
+
+}.mob-list button:before, .mob-list button:after{content: none}
+.huibo{ font-size: 32rpx}
+.newstxt .time.news-bd-m{
+  margin: 20rpx 60rpx;
+  padding: 10rpx 20rpx;
+}
+.time.news-bd-m .news-bd-c{
+  color: #0fa6e8;
+  display: block;
+}

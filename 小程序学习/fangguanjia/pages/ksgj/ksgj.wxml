@@ -1,0 +1,52 @@
+<!--pages/jsmf/jsmf.wxml-->
+
+<view class="yezhu-wrapper">
+  <view class="appraisal-select list">
+    <view class="step steps stepon">
+      <view class="appraisal-page appraisal-page-padding space-between">
+        <view class="list list-select list-border">
+          <view class="list-item">
+            <text class="list-label">城市</text>
+            <text class="list-value flex-1">大连</text>
+            <text class="icon icon-in"></text>
+          </view>
+          <view class="list-item">
+            <text class="list-label">户型</text>
+            <text class="list-value flex-1">XXXXX</text>
+            <text class="icon icon-in"></text>
+          </view>
+          <view class="list-item">
+            <text class="list-label">朝向</text>
+            <text class="list-value flex-1">XXXX</text>
+            <text class="icon icon-in"></text>
+          </view>
+          <view class="list-item">
+            <text class="list-label">楼层</text>
+            <text class="list-value flex-1">XXXX</text>
+            <text class="icon icon-in"></text>
+          </view>
+
+          <view class="list-item danw">
+            <text class="list-label">面积</text>
+            <view class="list-value flex-1 default">
+              <input type="number" placeholder="请输入" class="list-input"></input>
+            </view>
+            <text class="ti">平米</text>
+          </view>
+
+        </view>
+
+        <view class="bottom-btn">
+          <text class="promotion-tips">先估价再买房，心里倍儿有底</text>
+          <button class="btn btn-primary btn-big btn-evaluate">快速估价</button>
+        </view>
+      </view>
+    </view>
+
+
+
+
+
+    <!---->
+  </view>
+</view>

@@ -1,0 +1,205 @@
+<!--pages/newsdetail/newsdetail.wxml-->
+<view class="index-menu">
+  <navigator class="index-menu-item" url="" hover-class="none">
+    <text class='icon mmf box_r c_dianhua mmf-dianhua'></text>
+    <text class='name'>拨打电话</text>
+  </navigator>
+  <navigator class="index-menu-item" url="jubao/jubao" hover-class="none">
+    <text class='icon iconfont box_r c_jubao icon-point'></text>
+    <text class='name'>投诉举报</text>
+  </navigator>
+
+
+</view>
+<view class='newsdetail space-between'>
+
+   <scroll-view class='news-top' scroll-y="true"  bindscroll="scrollHandle" style='height:100vh' >
+    <view class='newstxt'>
+    <view class='time news-bd-m'>
+    <text class='news-txt-bd-c'>您可以通过秒卖房加密专线号码直接跟经纪人电话沟通，经纪人看不到您的真实手机号。</text>
+    <text class='news-bd-c'>现在拨打</text>
+    </view>
+    
+      <view class='time'>11月24日 下午 17：00</view>
+
+      <view class='news-bd news-bd-l'>
+        <view class='news-txt-bd'>
+          <text class='news-tit'>中海天赋山</text>
+          <view class='news-bot'>2室1厅1卫 89.5平 <text class='c-f60'>190万</text></view> 
+        </view>
+
+        <view class='mews-agent'>
+          <view class="img-wrapper">
+            <image src="../../resources/image/jingjiren.png" />
+          </view>
+
+        </view>
+      </view>
+      <view class='time'>11月24日 下午 17：00</view>
+      <view class='news-bd news-bd-l'>
+        <view class='news-txt-bd'>
+          <text class='news-tit'>房主你好，请求电话号码，沟通房子事宜。</text>
+        </view>
+
+        <view class='mews-agent'>
+          <view class="img-wrapper">
+            <image src="../../resources/image/jingjiren.png" />
+          </view>
+
+        </view>
+      </view>
+      <view class='time'>11月24日 下午 17：00</view>
+      <view class='time-tips'>已投诉举报</view>
+      <view class='news-bd news-bd-r'>
+        <view class='news-txt-bd'>
+          <text class='news-tit'>我的电话：13977544253</text><view class='read-tip'>已读</view>
+        </view>
+
+        <view class='mews-agent'>
+          <view class="img-wrapper">
+             <image src="../../resources/image/jingjiren.png" />
+          </view>
+        </view>
+
+        
+
+
+      </view>
+      <view class='time'>11月24日 下午 17：00</view>
+      <view class='news-bd news-bd-l'>
+        <view class='news-txt-bd'>
+          <text class='news-tit'>尝试拨打电话,但未接通</text><text class='c-f60 huibo'>点击回拨</text>
+        </view>
+
+        <view class='mews-agent'>
+          <view class="img-wrapper">
+            <image src="../../resources/image/jingjiren.png" />
+          </view>
+
+        </view>
+      </view>
+
+      <view class='time'>11月24日 下午 17：00</view>
+      <view class='news-bd news-bd-r'>
+        <view class='news-txt-bd'>
+          <text class='news-tit'>尝试拨打电话,但未接通</text><text class='c-orange huibo'>点击回拨</text>
+        </view>
+
+        <view class='mews-agent'>
+          <view class="img-wrapper">
+            <image src="../../resources/image/jingjiren.png" />
+          </view>
+
+        </view>
+      </view>
+      
+      <view class='new-massage'>
+        <text class='icon iconfont c_xiaolian icon-shuangjiantoushang'></text>16条新消息
+      </view>
+
+
+    </view>
+    </scroll-view>
+
+
+
+
+</view>
+
+
+
+<view class='sent-massage'>
+  <view class='biaoqing-list-swip' style='display:none'>
+      <swiper class="biaoqing-list" indicator-dots="{{true}}" indicator-color='#e7e7e7' indicator-active-color='#0fa6e8'>
+        <swiper-item>
+         <view>
+             <image src="../../resources/image/1.png" />
+         </view>
+         <view>
+             <image src="../../resources/image/2.png" />
+         </view>
+         <view>
+             <image src="../../resources/image/3.png" />
+         </view>
+         <view>
+             <image src="../../resources/image/4.png" />
+         </view>
+          <view>
+             <image src="../../resources/image/4.png" />
+         </view>
+          <view>
+             <image src="../../resources/image/4.png" />
+         </view>
+          <view>
+             <image src="../../resources/image/4.png" />
+         </view>
+          <view>
+             <image src="../../resources/image/4.png" />
+         </view>
+          <view>
+             <image src="../../resources/image/4.png" />
+         </view>
+          <view>
+             <image src="../../resources/image/4.png" />
+         </view> 
+        </swiper-item>
+     </swiper>
+  </view>
+  <view class='b-flex-info' style='display:none'>
+    <view class="img-wrapper">
+      <image src="../../resources/image/jingjiren.png" />
+    </view>
+    <view>徐伟</view>
+    <view>太阳雨公司</view>
+    <view class='c-f60'>已认证</view>
+  </view>
+  <view class='dh-mob' style='display:none'>
+    <view class='mob-list'>
+  
+      <view class='tips'>点击快捷回复</view>
+      <!--<view>业主您好，房子还在卖么？</view>
+    <view>房子是您的名么？</view>
+    <view>房子有两税么？</view>
+    <view>其他内容</view>-->
+      <view><button>是的</button></view>
+      <view><button>房子是我的名。</button></view>
+      <view><button>给我回电话，134xxxx5678。(
+        <text class='c-red'>慎用</text>)</button></view>
+      <view><button>自定义回复</button></view>
+      <view><button>内容5</button></view>
+      <view><button>内容6</button></view>
+    </view>
+
+  </view>
+
+  <view class="input-panel">
+    <view class='xiaolian_icon'>
+      <text class='icon iconfont box_r c_xiaolian icon-xiaolian'></text>
+    </view>
+    <input type="text" class="send-input"></input>
+    <button class="send-btn send-btn-default">发送</button>
+  </view>
+  
+
+
+</view>
+
+
+<view class="has-no-css sell-inform-mask" style="display: none;"></view>
+
+<view class="popup-mobile pop-notit auth-code active" style="display: none;">
+<view class='boda_juzhong'>
+  <text class='tit'>用加密号码直接联系经纪人</text>
+  <view class='img_boda'>
+  <image src='../../resources/image/jingjiren.png'></image>
+ 
+  </view>
+   <text>许伟</text>
+   </view>
+  <text class="pop_text">为最大可能的保护隐私，请不要告知经纪人真实手机号，拨号过程使用加密号码，只能用1345****6553的手机号拨打哦。</text>
+  <view class="pop-btn">
+    <button class="btn btn-cancel code-cancel-btn" type="button">取消</button>
+    <!-- 无内容是btn btn-default，填写后是btn btn-sure -->
+    <button class="btn btn-sure code-button" type="button">立即拨打</button>
+  </view>
+</view>

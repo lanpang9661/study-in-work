@@ -1,0 +1,6 @@
+/* pages/housedetail/dynamicdet/dynamicdet.wxss */
+@import '../housedetail.wxss';
+.weui-panel:after {
+  bottom: 0;
+  border-bottom:0;
+}

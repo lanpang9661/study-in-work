@@ -1,0 +1,64 @@
+<!--pages/housedetail/dynamicdet/dynamicdet.wxml-->
+<view class="weui-panel dynamic">
+<view class="time-axis">
+      <view class='axis-bd p-r'>
+        <text class='tit'>今日</text>
+        <ul class='zhuti'>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+
+          </li>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+          </li>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+          </li>
+        </ul>
+        <view class='disc'></view>
+      </view>
+      <view class='axis-bd p-r'>
+        <text class='tit'>昨日</text>
+        <ul class='zhuti'>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+
+          </li>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+          </li>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+          </li>
+        </ul>
+        <view class='disc'></view>
+      </view>
+    </view>
+    <view class="loadmore">
+      <view class="loadmore__tips">没有更多了</view>
+    </view>
+</view>

@@ -1,0 +1,44 @@
+<!--pages/jsmf/search/search.wxml-->
+
+<view class="yezhu-wrapper">
+  <view class="appraisal-select list">
+    <view class="step steps stepon">
+
+      <view class="search inp">
+        <input type="text" value="" placeholder="请输入小区名称" class="autoSuggest searc-input sug" sug-data="xiaoqu"></input>
+        <text class="searc-btn backs">完成</text>
+      </view>
+      <view class="xiaoquList sublist">
+        <ul>
+          <li class="change changeval">
+            <text>金隅万科城</text>
+          </li>
+          <li class="change changeval">
+            <text>万达广场</text>
+          </li>
+          <li class="change changeval">
+            <text>万达广场</text>
+          </li><li class="change changeval">
+            <text>万达广场</text>
+          </li><li class="change changeval">
+            <text>万达广场</text>
+          </li><li class="change changeval">
+            <text>万达广场</text>
+          </li><li class="change changeval">
+            <text>万达广场</text>
+          </li><li class="change changeval">
+            <text>万达广场</text>
+          </li><li class="change changeval">
+            <text>万达广场</text>
+          </li><li class="change changeval">
+            <text>万达广场</text>
+          </li><li class="change changeval">
+            <text>万达广场</text>
+          </li>
+          
+        </ul>
+      </view>
+     
+    </view>
+  </view>
+</view>

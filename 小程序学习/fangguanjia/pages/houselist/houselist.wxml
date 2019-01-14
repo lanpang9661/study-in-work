@@ -1,0 +1,111 @@
+<view class="container">
+
+  <view class="container-body" >
+    <view class="list-body">
+      <view class="search-flex bm_common">
+        <view class="search-bar">
+          <navigator class='input' url="../search/search">
+            <view class='search-view'> <text class="icon iconfont c-6 icon-fangdajing mr5"></text><text>奥术大师大所多撒大所大所多撒大所大所多大所大所多大所大所多</text></view>
+          </navigator>
+        </view>
+
+      </view>
+      <view class="resblock-list">
+
+        <view class="resblock-list-item">
+          <navigator class=" post_ulog" url="../housedetail/housedetail" hover-class="none">
+
+            <view class="resblock-info  bm_common bm_common_dot">
+              <image src="../../resources/image/zxing.png" class="avatar lj-lazy" style="display: block;" />
+              <view class="main-info">
+                <view class="resblock-name-line">
+                  <text class="name">开发区万达广场开发区万达广场开发区万达广场</text>
+                 
+                </view>
+                <text class="resblock-location-line">上线时间: 2015-07-19</text>
+                <text class="resblock-location-line">房源状态: <text class="tag to-selling ">在售</text></text>
+                 <view class="resblock-price">
+                    <text class="price_num">7800</text>
+                    <text class="price_bunch">万</text>
+                  </view>
+
+
+              </view>
+            </view>
+
+            <view class='md-b-tj'>
+              <view class="my-tj">
+                <text class='tj-num'>123</text>
+                <text class='name'>带看人数</text>
+
+              </view>
+              <view class="my-tj">
+                <text class='tj-num'>123</text>
+                <text class='name'>收藏人数</text>
+
+              </view>
+              <view class="my-tj">
+                <text class='tj-num'>123</text>
+                <text class='name'>点击次数</text>
+              </view>
+            </view>
+          </navigator>
+
+        </view>
+        <view class="resblock-list-item">
+          <navigator class=" post_ulog" url="../housedetail/housedetail" hover-class="none">
+
+            <view class="resblock-info  bm_common bm_common_dot">
+              <image src="../../resources/image/zanwufm.png" class="avatar lj-lazy" style="display: block;" />
+              <view class="main-info">
+                <view class="resblock-name-line">
+                  <text class="name">开发区万达广场开发区万达广场开发区万达广场</text>
+                 
+                </view>
+                <text class="resblock-location-line">上线时间: 2015-07-19</text>
+                <text class="resblock-location-line">房源状态: <text class="tag to-selling ">在售</text></text>
+                 <view class="resblock-price">
+                    <text class="price_num">7800</text>
+                    <text class="price_bunch">万</text>
+                  </view>
+
+
+              </view>
+            </view>
+
+            <view class='md-b-tj'>
+              <view class="my-tj">
+                <text class='tj-num'>123</text>
+                <text class='name'>带看人数</text>
+
+              </view>
+              <view class="my-tj">
+                <text class='tj-num'>123</text>
+                <text class='name'>收藏人数</text>
+
+              </view>
+              <view class="my-tj">
+                <text class='tj-num'>123</text>
+                <text class='name'>点击次数</text>
+              </view>
+            </view>
+          </navigator>
+
+        </view>
+        <view class="loadmore">
+          <view class="loadmore__tips">没有更多了</view>
+        </view>
+
+         <view class="list_none">
+            <image src='../../resources/image/nolist.png' />
+            <view class="list_none_text">亲 暂无房源哦～</view>
+          </view>
+
+        
+
+      </view>
+    </view>
+
+  </view>
+
+</view>

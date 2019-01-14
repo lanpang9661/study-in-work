@@ -1,0 +1,26 @@
+<!--pages/dtdetail/maidian/maidian.wxml-->
+<view class='maidian_word '>
+
+  <text class='head-tit' >夸夸自己的房子</text>
+  <!-- <text class='maidian_zhuangtai c-f60'>暂存中</text> -->
+   <text class='maidian_zhuangtai c-green'>已发布</text>
+  </view>
+<view class='quanwen'>
+
+  <view class='maidian_wenbenquyu '>
+<textarea class='maidian_wb'  placeholder='向买房人说一下卖房原因、房子优点、方便看房时间、周边环境等，最多输入400个汉字。' auto-focus >
+
+ 
+ </textarea>
+ <!-- <text class='text_word'>小房换大房，房子五明户型，南北通透，近市场，近学校，环境优美。
+</text> -->
+  </view>
+  <view class='maidian_btn' >
+      <button class='btn btn-defult'>暂存</button>
+          <button  class='btn btn-defult'>清除</button>
+              <button class='sub-input j-sellSub button-hover'>发布</button>
+
+  </view>
+
+  </view>
+

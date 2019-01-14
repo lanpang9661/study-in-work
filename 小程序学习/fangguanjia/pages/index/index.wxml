@@ -1,0 +1,443 @@
+<!--index.wxml-->
+<view class="bottombox-app-active">
+  <view class="shl">
+
+    <swiper class="index-banner">
+      <swiper-item>
+        <image src="../../resources/image/header-bg2.jpg" class='slide-image'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../resources/image/header-bg.jpg" class='slide-image'></image>
+      </swiper-item>
+
+    </swiper>
+    <view class="top-txt">
+      <text class='tit'>房子卖得快，房主多卖钱</text>
+      <text class='tit-d'>通过"秒卖房"卖二手房，省去看房烦恼， \n  出售速度快，出售价格高。
+            </text>
+    </view>
+  </view>
+  <view class="sell-area">
+    <text class="sell-num">
+            <text>10260</text>房主已提交卖房申请
+    </text>
+    <view class="sell-input sell-input-top">
+      <view class='phone-body p-r'>
+        <view class='city-switch'>
+          <view class="search-city-name ">
+            大连
+          </view>
+        </view>
+        <view class="input-border">
+          <input class="j-input-phone input-phone" type="tel" data-role="phone" placeholder="请输入您的手机号码"></input>
+          <span class="tips">隐私保护
+            <image src='../../resources/image/phonebh.png'></image>
+          </span>
+        </view>
+      </view>
+      <button class="sub-input j-sellSub">极速卖房</button>
+    </view>
+    <view class="link-btn">
+      <navigator class="fl" url="tel:4008388301">电话卖房</navigator>
+      <navigator class="fr" url="#">房屋估价</navigator>
+    </view>
+  </view>
+
+
+  <view class="index-menu">
+    <navigator class="index-menu-item" url="" hover-class="none">
+      <text class='icon iconfont box_r c_jisu icon-shandianjiaoyi'></text>
+      <text class='name'>极速卖房</text>
+    </navigator>
+    <navigator class="index-menu-item" url="" hover-class="none">
+      <text class='icon iconfont box_r c_gujia icon-jisuanqi'></text>
+      <text class='name'>房屋估价</text>
+    </navigator>
+    <navigator class="index-menu-item" url="" hover-class="none">
+      <text class='icon iconfont box_r c_dianhua icon-dianhuayuanrun'></text>
+      <text class='name'>电话卖房</text>
+    </navigator>
+
+    <navigator class="index-menu-item" url="/pages/appointment/appointment" hover-class="none">
+      <text class='icon iconfont box_r c_yuyue icon-yuyue'>  
+        <text class='redDot'></text>
+      </text>
+      <text class='name'>看房预约</text>
+    </navigator>
+
+  </view>
+  <view class="gray-blank"></view>
+
+  <view class='my-house'>
+    <text class="sell-tit bm0">我的房子 </text>
+    <swiper class="m-h-list" indicator-dots="{{true}}" indicator-color='#e7e7e7' indicator-active-color='#0fa6e8'>
+      <swiper-item>
+        <view class="weui-media-box weui-media-box_appmsg">
+          <view class='box-shadow flex align-top p16 b-e7'>
+            <view class="weui_home_image">
+              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+
+                <image class="weui-media-box__thumb" mode="scaleToFill" src="http://snailhome.oss-cn-huhehaote.aliyuncs.com/2018/09/d8987288-3eb7-4940-afff-81ebc2c098b2.jpg@!water400"></image>
+              </view>
+
+
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title-black">
+                <view>
+
+                  花溪苑150平期待售价100万
+                </view>
+              </view>
+
+              <view class="clear mar_bom_15">
+
+                <view class="weui_home_h2 p-r">
+                  <view class='tit'>状态:</view>
+                  <view class='c-6'>待审核</view>
+                </view>
+
+
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="weui-media-box weui-media-box_appmsg">
+          <view class='box-shadow flex align-top p16 b-e7'>
+            <view class="weui_home_image">
+              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+
+                <image class="weui-media-box__thumb" mode="scaleToFill" src="http://snailhome.oss-cn-huhehaote.aliyuncs.com/2018/09/d8987288-3eb7-4940-afff-81ebc2c098b2.jpg@!water400"></image>
+              </view>
+
+
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title-black">
+                <view>
+
+                  西岗区绕山路小区中心位置
+                </view>
+              </view>
+
+              <view class="clear mar_bom_15">
+
+                <view class="weui_home_h2 p-r">
+                  <view class='tit'>状态:</view>
+                  <view class='c-6'>待审核</view>
+                </view>
+
+
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="gray-blank"></view>
+  <view class="index-menu tese">
+    <navigator class="index-menu-item" url="" hover-class="none">
+      <view class=' box_r'>
+        <image src='../../resources/image/lnck.png'></image>
+      </view>
+      <text class='name'>隐私保护免骚扰</text>
+    </navigator>
+    <navigator class="index-menu-item" url="" hover-class="none">
+      <view class=' box_r'>
+        <image src='../../resources/image/bjsm.png'></image>
+      </view>
+      <text class='name'>免费上门评估</text>
+    </navigator>
+    <navigator class="index-menu-item" url="" hover-class="none">
+      <view class=' box_r'>
+        <image src='../../resources/image/fuwu.png'></image>
+      </view>
+      <text class='name'>全城中介帮你卖</text>
+    </navigator>
+
+  </view>
+  <view class="gray-blank"></view>
+  <view class="youshi-step youshi-step-1">
+    <text class="sell-tit">卖房优势 </text>
+    <view class="youshi">
+      <ul class="ys-ul ">
+        <li class="ys-1">
+          <view>最快售出</view>
+          <view>
+            <text>2</text>小时</view>
+          <view class='bg-img'>
+            <image src='../../resources/image/ys-1.jpg'></image>
+          </view>
+        </li>
+        <li class="ys-2">
+          <view>全城中介</view>
+          <view>
+            <text>1100</text>家</view>
+          <view class='bg-img'>
+            <image src='../../resources/image/ys-2.jpg'></image>
+          </view>
+        </li>
+        <li class="ys-3">
+          <view>全城经纪人</view>
+          <view>
+            <text>1万</text>+</view>
+          <view class='bg-img'>
+            <image src='../../resources/image/ys-3.jpg'></image>
+          </view>
+        </li>
+        <li class="ys-4">
+          <view>储备买家</view>
+          <view>
+            <text>6万</text>+</view>
+          <view class='bg-img'>
+            <image src='../../resources/image/ys-4.jpg'></image>
+          </view>
+        </li>
+      </ul>
+    </view>
+  </view>
+  <view class="gray-blank"></view>
+  <view class="sell-step">
+    <text class="sell-tit">卖房流程 </text>
+    <view class="img-step">
+      <view class='luc'>
+        <image src='../../resources/image/liuc.png'></image>
+      </view>
+      <ul>
+        <li>
+          <text>在线提交委托</text>
+          <text>免费上门评估</text>
+        </li>
+        <li>
+          <text>全城中介售卖</text>
+          <text>买家咨询看房</text>
+        </li>
+        <li>
+          <text>买家购房签约</text>
+          <text>平均13天成交</text>
+        </li>
+      </ul>
+    </view>
+  </view>
+  <view class="gray-blank"></view>
+
+  <view class='sold-house'>
+    <text class="sell-tit">最近成交 </text>
+    <view class="cj-list-wrapper">
+      <ul class="cj-list">
+        <li class="cj-list-item">
+          <view class="cj-img-wrapper change-img post_ulog_exposure_scroll">
+            <image class="lazyload cj-img" src="http://snailhome.oss-cn-huhehaote.aliyuncs.com/2018/09/d8987288-3eb7-4940-afff-81ebc2c098b2.jpg@!water400"></image>
+            <view class="icon-wrapper"></view>
+          </view>
+          <view class="number-area flex">
+            <text class="sold-name">景山小区</text>
+            <view class='cj-status'>1天成交</view>
+          </view>
+
+          <view class="sold-price flexbox">
+            <text class="price">成交价66.8万</text>
+          </view>
+        </li>
+        <li class="cj-list-item">
+          <view class="cj-img-wrapper change-img post_ulog_exposure_scroll">
+            <image class="lazyload cj-img" src="http://snailhome.oss-cn-huhehaote.aliyuncs.com/2018/09/d8987288-3eb7-4940-afff-81ebc2c098b2.jpg@!water400"></image>
+            <view class="icon-wrapper"></view>
+          </view>
+          <view class="number-area flex">
+            <text class="sold-name">景山小区</text>
+            <view class='cj-status'>13天成交</view>
+          </view>
+
+          <view class="sold-price flexbox">
+            <text class="price">成交价50万</text>
+          </view>
+        </li>
+        <li class="cj-list-item">
+          <view class="cj-img-wrapper change-img post_ulog_exposure_scroll">
+            <image class="lazyload cj-img" src="http://snailhome.oss-cn-huhehaote.aliyuncs.com/2018/09/d8987288-3eb7-4940-afff-81ebc2c098b2.jpg@!water400"></image>
+            <view class="icon-wrapper"></view>
+          </view>
+          <view class="number-area flex">
+            <text class="sold-name">景山小区景山小区景山小区</text>
+            <view class='cj-status'>150天成交</view>
+          </view>
+
+          <view class="sold-price flexbox">
+            <text class="price">成交价1000万/套</text>
+          </view>
+        </li>
+
+      </ul>
+    </view>
+  </view>
+  <view class="gray-blank"></view>
+  <view class="wenda-step">
+    <text class="sell-tit">秒卖房问答</text>
+    <ul class="list">
+      <li class="list-item">
+        <!-- q-and-a + active 显示 answer -->
+        <view class="q-and-a active" data-role="ul0">
+          <text class="question" data-role="ulList" data-val="0"><text>Q1</text>在秒卖房卖二手房有什么优势？</text>
+          <view class="answer">
+            <text>1、资深房产管家1对1服务，为房源精准估价。</text>
+            <text>2、房源包装，针对房源制定房屋售卖计划、卖点包装、照片拍摄、房屋户型图 绘制、房源推广、智能门锁等。</text>
+            <text>3、房主省心，从报房源到成交之前不需要任何烦扰，看房、谈价全程服务， 为交易安全保驾护航。</text>
+            <text>4、卖的快，房源全城分发，销售提速。房源成交周期平均13天，最快2小时。</text>
+          </view>
+        </view>
+      </li>
+      <li class="list-item">
+        <!-- q-and-a + active 显示 answer -->
+        <view class="q-and-a" data-role="ul2">
+          <text class="question" data-role="ulList" data-val="1"><text>Q2</text>卖房流程是怎么样的？</text>
+          <view class="answer ">
+            <text>1、在本页填写卖房信息或拨打400-838-8309联系我们。</text>
+            <text>2、接受专业评估师上门实勘，定出售价。</text>
+            <text>3、房产管家为房源制定营销方案。</text>
+            <text>4、房源包装上线，分发全程经纪人售卖。</text>
+            <text>5、房源签约成交全程陪同，直至交易完成。</text>
+          </view>
+        </view>
+      </li>
+      <li class="list-item">
+        <!-- q-and-a + active 显示 answer -->
+        <view class="q-and-a" data-role="ul1">
+          <text class="question" data-role="ulList" data-val="2"><text>Q3</text>卖房需要准备什么？</text>
+          <view class="answer ">
+            1、身份证 2、房产证 3、户口本 4、结婚证
+          </view>
+        </view>
+      </li>
+      <li class="list-item">
+        <!-- q-and-a + active 显示 answer -->
+        <view class="q-and-a" data-role="ul3">
+          <text class="question" data-role="ulList" data-val="3"><text>Q4</text>大概多久能成交？</text>
+          <view class="answer ">
+            大部分房源在秒卖房上平均成交时间仅需15天。
+          </view>
+        </view>
+      </li>
+    </ul>
+  </view>
+  <view class="gray-blank"></view>
+  <view class="youshi-step">
+    <text class="sell-tit">投资机构 </text>
+    <view class="youshi touzi">
+      <ul class="ys-ul ">
+        <li>
+          <view class='hz-logo'>
+            <image src="https://www.miaomaifang.com/msale/resources/images/hszb.jpg"></image>
+          </view>
+          <view>红杉资本</view>
+
+        </li>
+        <li>
+          <view class='hz-logo'>
+            <image src="https://www.miaomaifang.com/msale/resources/images/58tc.jpeg"></image>
+          </view>
+          <view>58同城</view>
+
+        </li>
+        
+        <li>
+          <view class='hz-logo'>
+            <image src="https://www.miaomaifang.com/msale/resources/images/meihua.jpeg"></image>
+          </view>
+          <view>梅花创投</view>
+
+        </li>
+        <li>
+          <view class='hz-logo'>
+            <image src="https://www.miaomaifang.com/msale/resources/images/xfcq.jpeg"></image>
+          </view>
+          <view>险峰长青</view>
+
+        </li>
+      </ul>
+    </view>
+  </view>
+
+  <view class="gray-blank"></view>
+  <view class="hezuo-step">
+    <text class="sell-tit">合作伙伴
+        </text>
+    <view class="hz">
+      <ul class="hz-ul ">
+        <li>
+          <image src="../../resources/image/hz/hezuo16.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo2.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo3.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo4.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo5.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo6.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo7.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo8.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo9.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo10.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo1.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo12.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo13.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo14.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo15.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo11.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo19.jpg"></image>
+        </li>
+        <li>
+          <image src="../../resources/image/hz/hezuo20.jpg"></image>
+        </li>
+      </ul>
+    </view>
+  </view>
+  <view class="gray-blank"></view>
+  <view class="fix-input">
+    <view class="sell-input sell-input-bottom">
+      <view class="input-border">
+        <input class="input-phone" type="tel" data-role="phone" placeholder="请输入手机号码"></input>
+      </view>
+      <button class="sub-input" data-role="sellSubmit" data-clue-entry="05" data-clue-position="27" data-needpub="1">预约卖车</button>
+    </view>
+  </view>
+
+  <view class="tip active" style='display:none'>
+    手机号码格式不正确
+  </view>
+
+</view>

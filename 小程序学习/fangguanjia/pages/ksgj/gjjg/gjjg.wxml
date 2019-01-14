@@ -1,0 +1,34 @@
+<!--pages/ksgj/gjjg/gjjg.wxml-->
+<view class="appraisal-page ">
+<view class='appraisal-page-bd space-between'>
+  <view class="wrapper gujia_index">
+    <!-- 成交头部 -->
+    <view class="gujia_header">
+      <view class="address">
+        万达广场 - 2室2厅2卫 123㎡ 2/2层
+      </view>
+      <view class="total_price">
+        <text class="total_price_num">617</text>
+        <text>万</text>
+        <text class="rise_num">+10万</text>
+        <text class="rise_perc">较上月涨1.6%</text>
+      </view>
+    </view>
+    <!-- 图表 -->
+    <view class="mod_box tab_box data_tab gujia_chart">
+      <h3 class="tab_tit">价格走势</h3>
+      <view class="tab_cont">
+        <view class="cont active">
+          <view class="chart_box" style="margin: 3rem 0px 2rem;">
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class="bottom-btn">
+    <text class="promotion-tips">快速卖房，最快出售仅1天
+    </text>
+    <button class="btn btn-primary btn-big btn-evaluate">我要保卖</button>
+  </view>
+</view></view>

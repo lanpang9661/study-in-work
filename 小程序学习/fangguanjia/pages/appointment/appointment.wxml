@@ -1,0 +1,68 @@
+<!--pages/appointment/appointment.wxml-->
+<view class='main'>
+
+  <view class='appointment-num'></view>
+
+  <view class="weui-panel__bd p-r"  bindtap='dtdetail'>
+    <view class="weui-media-box weui-media-box_appmsg">
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title-black">
+          <view>
+            中山沙卫街6号楼沙卫街6号楼1单元701
+          </view>
+        </view>
+
+        <view class="clear mar_bom_15">
+          <view class="weui_home_h2">
+            <view class='tit'>预约中介:</view>
+            <view>赵兴成</view>
+            <view class='tel'>13950883206</view>
+          </view>
+          <view class="weui_home_h2">
+            <view class='tit'>预约时间:</view>
+            <view class='appointment-time'>2015-07-19</view>
+            <view class='appointment-time-detail'>15:30-18:30</view>
+          </view>
+          <view class="weui_home_h2 p-r">
+            <view class='tit'>房源状态:</view>
+            <view class='c-6'>正常</view>
+          </view>
+
+
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="weui-panel__bd p-r"  bindtap='dtdetail'>
+    <view class="weui-media-box weui-media-box_appmsg">
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title-black">
+          <view>
+            中山沙卫街6号楼沙卫街6号楼1单元701
+          </view>
+        </view>
+
+        <view class="clear mar_bom_15">
+          <view class="weui_home_h2">
+            <view class='tit'>预约中介:</view>
+            <view>赵兴成</view>
+            <view class='tel'>13950883206</view>
+          </view>
+          <view class="weui_home_h2">
+            <view class='tit'>预约时间:</view>
+            <view class='appointment-time'>2015-07-19</view>
+            <view class='appointment-time-detail'>15:30-18:30</view>
+          </view>
+          <view class="weui_home_h2 p-r">
+            <view class='tit'>房源状态:</view>
+            <view class='c-f60'>已取消</view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+  
+</view>

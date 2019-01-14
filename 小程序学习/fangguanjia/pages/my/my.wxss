@@ -1,0 +1,77 @@
+/* pages/my/my.wxss */
+.container {
+	flex:1;
+display:flex;
+flex-direction:column;
+box-sizing:border-box;
+background-color:#f4f4f4;
+
+}
+.my-banner{
+    display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}.my-banner>image{
+ height: 309rpx;
+  position: relative;
+  width: 100%;
+  top:-1px}
+.my-xinxi{
+    position:absolute;
+  top:62rpx;
+  left:50%;
+  margin-left:-212rpx;
+   width:423rpx;
+}
+.my-xinxi .touxiang image{ width: 100%}
+.my-xinxi .touxiang {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 2px solid #fff;
+}
+ .my-xinxi .name {
+  font-size: 34rpx;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+  color: #fff;
+  display:flex;
+  justify-content:center;
+
+
+} 
+.name-bd { margin-left: 20px}
+ .name .icon{ display: block; width: 20px;font-size:17px;
+}
+.weui-panel.bg-f4{ margin-top: 0; padding-top: 10px; background-color: #f4f4f4}
+.weui-cell:before, .weui-cell:after{ border: none}
+.my-body .weui-cell__hd icon{line-height: 28px}
+
+.weui-btn-area{
+  width: 600rpx;
+  height: 88rpx;
+  margin: 88rpx auto 0 auto;
+}
+.weui-btn-area button{
+  width: 600rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background:rgb(38, 135, 229);
+  color: #fff;
+  border-radius: 10rpx;
+}
+.weui-btn-area button:active{
+  background:rgb(38, 135, 229);
+  color: #fff;
+}.weui-btn-area button:hover{background:rgb(38, 135, 229)}
+

@@ -1,0 +1,85 @@
+/* pages/register/citylist/citylist.wxss */
+
+page {
+  background-color: #f4f4f4;
+}
+
+.citylist .tit, .city-pannel {
+  padding: 0 32rpx;
+}
+
+.citylist .tit {
+  font-size: 28rpx;
+  line-height: 90rpx;
+  color: #999;
+}
+
+.city-pannel {
+  border-bottom: 1rpx solid #f4f4f4;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 45px;
+}
+
+.city-pannel:last-child {
+  border: none;
+}
+
+.city-now {
+  position: relative;
+}
+
+.city-now .refresh {
+  color: #f60;
+  position: absolute;
+  right: 32rpx;
+  top: 0;
+  font-size: 28rpx;
+  line-height: 90rpx;
+}
+
+.bg-fff {
+  background-color: #fff;
+}
+
+.city-panel {
+  padding: 0 32rpx;
+}
+
+.nowct {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.weui-loadmore__tips_in-line {
+  background-color: #f4f4f4;
+}
+
+.refresh-ico {
+  margin-left: 10rpx;
+  color: #f60;
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.refresh-ico .mmf {
+  position: relative;
+  top: -16px;
+  font-size: 14px;
+}
+
+.refresh-ico {
+  animation: spin 800ms infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

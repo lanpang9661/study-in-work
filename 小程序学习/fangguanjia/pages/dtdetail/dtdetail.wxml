@@ -1,0 +1,438 @@
+<!--pages/housedetail/housedetail.wxml-->
+
+<view class="container">
+
+
+  <view class="searchList_main">
+    <view class="weui-flex">
+      <view class="weui-flex__item" id="searchListTap_1">
+        <text class="tob">切换房源</text>
+        <text class="san"></text>
+      </view>
+    </view>
+  </view>
+  <view class="efault">
+    <!-- 默认图片覆盖层 -->
+
+    <swiper class="ImageBanner">
+      <block>
+        <swiper-item>
+          <image mode="scaleToFill" style="background: url(http://snailhome.oss-cn-huhehaote.aliyuncs.com/2018/08/713c14a2-b20e-43ca-bf8e-a088324a8db2.jpg@!water400) no-repeat center;background-size:cover;" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 阴影遮罩文字显示 -->
+    <view class="baner_h2">客厅</view>
+
+    <!-- 指示器 -->
+    <view class="baner_num">
+      <text>1</text>
+      <text>/</text>
+      <text>7</text>
+    </view>
+  </view>
+  <view class="mmf-panel detail-tit">
+
+    <text class="name">开发区万达广场开发区万达广场开发区万达广场开发区万达广场</text>
+    <text class="tag to-selling-border">在售</text>
+    <!-- <text class="tag  will-sell-border">即将开盘</text>
+    <text class="tag  selling-border">已成交</text> -->
+
+  </view>
+  <!-- 房源详细描述 -->
+  <view class="home_con_layer2_list open">
+    <!-- 展开添加open -->
+    <view class="home_con_layer2">
+      <view class="home_con_layer2_bottom_list axis price">
+        <text class="home_con_layer2_bottom_list_con price-bd">58.5万</text>
+        <text class="home_con_layer2_bottom_list_title">售价</text>
+        <view class='price-change'>调价</view>
+
+      </view>
+
+      <view class="home_con_layer2_bottom_list axis time">
+        <text class="home_con_layer2_bottom_list_con time-bd">2018-09-28</text>
+        <text class="home_con_layer2_bottom_list_title">上线时间</text>
+
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">装修:</text>
+        <text class="home_con_layer2_bottom_list_con">精装修</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">面积:</text>
+        <text class="home_con_layer2_bottom_list_con">63.72㎡</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">楼层:</text>
+        <text class="home_con_layer2_bottom_list_con">7/7</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">朝向:</text>
+        <text class="home_con_layer2_bottom_list_con">南</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">用途:</text>
+        <text class="home_con_layer2_bottom_list_con">住宅</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">产权:</text>
+        <text class="home_con_layer2_bottom_list_con">产权</text>
+      </view>
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">户型:</text>
+        <text class="home_con_layer2_bottom_list_con">2室1厅1卫1厨1阳台          </text>
+      </view>
+
+    </view>
+    <view class="detail-switch ">
+      <icon class='icon iconfont icon-xiajiantou'></icon>
+    </view>
+  </view>
+  <view class="index-menu">
+    <navigator class="index-menu-item defult" url="" hover-class="none">
+      <!-- 有defult颜色变灰 -->
+      <text class='icon iconfont box_r c_guanjia icon-news1'></text>
+      <text class='name'>服务管家</text>
+    </navigator>
+
+    <navigator class="index-menu-item" url="maidian/maidian" hover-class="none">
+      <text class='icon iconfont box_r c_guanjia icon-damuzhi'></text>
+      <text class='name'>说说卖点</text>
+    </navigator>
+
+    <navigator class="index-menu-item" url="" hover-class="none">
+      <text class='icon iconfont box_r c_guanjia icon-jiage '></text>
+      <text class='name'>调价</text>
+    </navigator>
+
+    <navigator class="index-menu-item" url="/pages/showingTime/showingTime" hover-class="none">
+      <text class='icon iconfont box_r c_shijian icon-shijian '></text>
+      <text class='name'>看房时间</text>
+    </navigator>
+  </view>
+  <view class="weui-panel dynamic">
+    <view class="section-head mb0">
+      <view class="head-title-line bm_common ">
+        <text>卖房动态</text>
+      </view>
+    </view>
+
+    <view class="time-axis open">
+      <view class='axis-bd p-r'>
+        <ul class='zhuti'>
+          <li>
+            <text class='time'>11/30 14:50</text>
+            <view class='zt-bd'>
+              <text>签订房屋买卖合同，已成交</text>
+            </view>
+          </li>
+
+        </ul>
+        <view class='disc'></view>
+      </view>
+
+      <view class='axis-bd p-r'>
+        <ul class='zhuti'>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>签订房屋买卖合同，已成交</text>
+            </view>
+          </li>
+          <li>
+            <text class='time'></text>
+            <view class='zt-bd zt-bd-jjr'>
+              <text>经纪人:刘长军</text>
+              <text class='phone-num'>15112234238</text>
+            </view>
+          </li>
+
+        </ul>
+        <view class='disc'></view>
+      </view>
+      <view class='axis-bd p-r'>
+        <ul class='zhuti'>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>签订房屋买卖合同，已成交</text>
+            </view>
+          </li>
+          <li>
+            <text class='time'></text>
+            <view class='zt-bd zt-bd-jjr'>
+              <text>经纪人:刘长军</text>
+              <text class='phone-num'>15112234238</text>
+            </view>
+          </li>
+
+        </ul>
+        <view class='disc'></view>
+      </view>
+
+      <view class="detail-switch ">
+        <icon class='icon iconfont icon-xiajiantou'></icon>
+      </view>
+    </view>
+    <view class="loadmore" style='display:none'>
+      <view class="loadmore__tips">没有更多了</view>
+    </view>
+    <view class="list_none" style='display:none'>
+      <image src='../../resources/image/nolist.png' />
+      <view class="list_none_text">最近2天暂无房源动态哦</view>
+    </view>
+    <view class="list_none" style='display:none'>
+      <image src='../../resources/image/xiaolian.png' />
+      <view class="list_none_text">恭喜您，房源已售出</view>
+    </view>
+
+
+  </view>
+
+  <view class="weui-panel dkjjr">
+    <view class="section-head mb0">
+      <view class="head-title-line bm_common ">
+        <text>带看经纪人</text>
+        <navigator class="more post_ulog" url="../agentlist/agentlist" hover-class="none">更多></navigator>
+      </view>
+    </view>
+    <view class="agent-item ">
+      <view class="agent">
+        <view class="img-wrapper">
+          <image src="../../resources/image/jingjiren.png" />
+        </view>
+        <view class="agent-info">
+          <view class='flex align-center mb5'>
+            <text class="agent-name">徐小雨</text>
+            <text class='company'>瑞家</text>
+            <text class='renzheng'>已认证</text>
+          </view>
+          <view class="agent-desc">
+            <text class="daikan">共带看10次</text>
+
+          </view>
+
+        </view>
+        <view class="contact">
+          <button class="icon iconfont icon-news new_dianhua" bindtap="calling"></button>
+        </view>
+      </view>
+      <view class="agent">
+        <view class="img-wrapper">
+          <image src="../../resources/image/jingjiren.png" />
+        </view>
+        <view class="agent-info">
+          <view class='flex align-center mb5'>
+            <text class="agent-name">赵起越</text>
+            <text class='company'>链家</text>
+            <text class='renzheng'>已认证</text>
+          </view>
+          <view class="agent-desc">
+            <text class="daikan">共带看15次</text>
+
+          </view>
+
+        </view>
+        <view class="contact">
+          <button class="icon iconfont icon-news new_dianhua" bindtap="calling"></button>
+        </view>
+      </view>
+      <view class="agent">
+        <view class="img-wrapper">
+          <image src="../../resources/image/jingjiren.png" />
+        </view>
+        <view class="agent-info">
+          <view class='flex align-center mb5'>
+            <text class="agent-name">李雪</text>
+            <text class='company'>链家</text>
+            <text class='renzheng'>已认证</text>
+          </view>
+          <view class="agent-desc">
+            <text class="daikan">共带看20次</text>
+
+          </view>
+
+        </view>
+        <view class="contact">
+          <button class="icon iconfont icon-news new_dianhua" bindtap="calling"></button>
+        </view>
+      </view>
+    </view>
+    <view class="list_none">
+      <image src='../../resources/image/nojjr.png' />
+      <view class="list_none_text">验房上线后，会有大量经纪人带看哦</view>
+    </view>
+
+
+  </view>
+
+  <view class="weui-panel dkjjr">
+    <view class="section-head mb0">
+      <view class="head-title-line bm_common ">
+        <text>通话经纪人</text>
+        <navigator class="more post_ulog" url="../contentAgentList/contentAgentList" hover-class="none">更多></navigator>
+      </view>
+    </view>
+    <view class="agent-item ">
+      <view class="agent">
+        <view class="img-wrapper">
+          <image src="../../resources/image/jingjiren.png" />
+        </view>
+        <view class="agent-info">
+          <view class='flex align-center mb5'>
+            <text class="agent-name">徐小雨</text>
+            <text class='company'>瑞家</text>
+            <text class='renzheng'>已认证</text>
+          </view>
+          <view class="agent-desc">
+            <text class="daikan">共带看10次</text>
+
+          </view>
+
+        </view>
+        <view class="contact">
+          <button class="icon iconfont icon-news new_dianhua" bindtap="calling"></button>
+        </view>
+      </view>
+      <view class="agent">
+        <view class="img-wrapper">
+          <image src="../../resources/image/jingjiren.png" />
+        </view>
+        <view class="agent-info">
+          <view class='flex align-center mb5'>
+            <text class="agent-name">赵起越</text>
+            <text class='company'>链家</text>
+            <text class='renzheng'>已认证</text>
+          </view>
+          <view class="agent-desc">
+            <text class="daikan">共带看15次</text>
+
+          </view>
+
+        </view>
+        <view class="contact">
+          <button class="icon iconfont icon-news new_dianhua" bindtap="calling"></button>
+        </view>
+      </view>
+      <view class="agent">
+        <view class="img-wrapper">
+          <image src="../../resources/image/jingjiren.png" />
+        </view>
+        <view class="agent-info">
+          <view class='flex align-center mb5'>
+            <text class="agent-name">李雪</text>
+            <text class='company'>链家</text>
+            <text class='renzheng'>已认证</text>
+          </view>
+          <view class="agent-desc">
+            <text class="daikan">共带看20次</text>
+
+          </view>
+
+        </view>
+        <view class="contact">
+          <button class="icon iconfont icon-news new_dianhua" bindtap="calling"></button>
+        </view>
+      </view>
+    </view>
+    <view class="list_none">
+      <image src='../../resources/image/nodate.png' />
+      <view class="list_none_text">经纪人没有给您打电话哦</view>
+    </view>
+
+
+  </view>
+
+  <view class="weui-panel diagram">
+    <view class="section-head">
+      <view class="head-title-line bm_common ">
+        <text>平台统计</text>
+      </view>
+    </view>
+    <view class="md-b-tj bm_common">
+      <navigator class="my-tj" url="dynamicdet/dynamicdet">
+        <text class='tj-num'>23</text>
+        <text class='name'>带看人数</text>
+
+      </navigator>
+      <navigator class="my-tj">
+        <text class='tj-num'>634</text>
+        <text class='name'>收藏人数</text>
+
+      </navigator>
+      <navigator class="my-tj">
+        <text class='tj-num'>762</text>
+        <text class='name'>点击次数</text>
+      </navigator>
+    </view>
+    <view class="diagram-bd">
+      <view class="section-head">
+        <view class="head-title-line">
+          <text>近7日趋势</text>
+        </view>
+      </view>
+      <view class="diagram-top">
+        <view class='dk-rs active'>
+          <text></text>带看人数</view>
+        <view class='sc-rs'>
+          <text></text>收藏人数</view>
+        <view class='dj-rs'>
+          <text></text>点击人数</view>
+      </view>
+      <image src="../../resources/image/quxian.png" style="display: block;width:auto;height:150px;" />
+    </view>
+    <view class="list_none">
+      <image src='../../resources/image/nodate.png' />
+      <view class="list_none_text">暂无平台统计数据哦</view>
+    </view>
+  </view>
+
+  <view class="list_none">
+    <image src='../../resources/image/nodate.png' />
+    <view class="list_none_text">您还没有委托卖房哦</view>
+    <button class='weui-btn list-btn-pre'>极速卖房</button>
+  </view>
+
+
+</view>
+<view class="has-no-css sell-inform-mask" style="display: none;"></view>
+
+
+
+<view class="popup-mobile pop-notit auth-code active" style="display: none;">
+
+  <text class="pop-text">拨打对方号码，可能泄露您的手机号，请谨慎操作。</text>
+  <view class="pop-btn">
+    <button class="btn btn-cancel code-cancel-btn" type="button">取消</button>
+    <!-- 无内容是btn btn-default，填写后是btn btn-sure -->
+    <button class="btn btn-sure code-button" type="button">继续拨打</button>
+  </view>
+</view>
+<view class="popup-mobile pop-notit auth-code active" style="display:block;">
+  <view class='boda_juzhong'>
+    <text class='tiaojia_word'>调价</text>
+    <view class='mb40r'>
+      <view class='tiaojia'>现价：
+        <text class='xianjia_jine c-f60'>60</text>万元</view>
+      <view class='tiaojia'>改后价：
+        <input placeholder='' selection-start='-1' selection-end='-1' cursor='1'>
+        </input>
+        万元
+      </view>
+      <view class='tips c-red'>注:每天最多修改两次</view>
+    </view>
+  </view>
+
+  <view class="pop-btn">
+    <button class="btn btn-cancel code-cancel-btn" type="button">取消</button>
+    <!-- 无内容是btn btn-default，填写后是btn btn-sure -->
+    <button class="btn btn-sure code-button" type="button">提交</button>
+  </view>
+</view>

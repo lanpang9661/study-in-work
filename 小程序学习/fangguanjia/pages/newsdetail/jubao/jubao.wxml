@@ -1,0 +1,67 @@
+<view class='yuanyin_shi'>
+  举报原因是</view>
+<view class="jb-panel weui-cells_after-title">
+  <checkbox-group>
+    <label class='jb-panel-bd weui-check__label'>
+      <view class='weui-cell__bd'>欺骗联系方式和房源信息；</view>
+      <checkbox class='weui-check' value='0' checked=''></checkbox>
+
+      <view class='weui-cell__hd weui-check__hd_in-checkbox'>
+        <icon class='weui-icon-checkbox_success' size='23' type='success'>
+        </icon>
+      </view>
+
+
+    </label>
+    <label class='jb-panel-bd weui-check__label'>
+      <view class='weui-cell__bd'>恶意骚扰，灌水</view>
+      <checkbox class='weui-check' value='1'></checkbox>
+
+      <view class='weui-cell__hd weui-check__hd_in-checkbox'>
+        <icon class='weui-icon-checkbox_circle' size='23' type='circle'>
+        </icon>
+      </view>
+
+
+    </label>
+    <label class='jb-panel-bd weui-check__label'>
+      <view class='weui-cell__bd'>政治有害</view>
+      <checkbox class='weui-check' value='1'></checkbox>
+
+      <view class='weui-cell__hd weui-check__hd_in-checkbox'>
+        <icon class='weui-icon-checkbox_circle' size='23' type='circle'>
+        </icon>
+      </view>
+
+
+    </label>
+    <label class='jb-panel-bd weui-check__label'>
+      <view class='weui-cell__bd'>色情</view>
+      <checkbox class='weui-check' value='1'></checkbox>
+
+      <view class='weui-cell__hd weui-check__hd_in-checkbox'>
+        <icon class='weui-icon-checkbox_circle' size='23' type='circle'>
+        </icon>
+      </view>
+
+
+    </label>
+    
+  </checkbox-group>
+  <view class="textarea-pannel weui-cells_after-title">
+    
+    <view class="textarea">
+      <view class='weui-cell-tit'>其他原因</view>
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" placeholder=""  />
+
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<button class="sub-input j-sellSub">提交</button>
+<view class='tip active'>
+  感谢您的反馈，我们会及时处理。
+</view>

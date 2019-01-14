@@ -1,0 +1,57 @@
+<!--pages/jsmf/jsmf.wxml-->
+
+<view class="yezhu-wrapper">
+  <view class="appraisal-select list">
+    <view class="step steps stepon">
+      <view class="appraisal-page appraisal-page-padding space-between" >
+        <view class="list list-select list-border">
+          <view class="list-item">
+            <text class="list-label">城市</text>
+            <text class="list-value flex-1">大连</text>
+            <text class="icon icon-in"></text>
+          </view>
+          <view class="list-item">
+            <text class="list-label">小区</text>
+            <text class="list-value flex-1">XXXXX</text>
+            <text class="icon icon-in"></text>
+          </view>
+          <view class="list-item">
+            <text class="list-label">楼栋号</text>
+            <text class="list-value flex-1">XXXX</text>
+            <text class="icon icon-in"></text>
+          </view>
+          <view class="list-item">
+            <text class="list-label">单元号</text>
+            <text class="list-value flex-1">XXXX</text>
+            <text class="icon icon-in"></text>
+          </view>
+          <view class="list-item">
+            <text class="list-label">门牌号</text>
+            <text class="list-value flex-1">XXXX</text>
+            <text class="icon icon-in"></text>
+          </view>
+          <view class="list-item danw">
+            <text class="list-label">面积</text>
+            <view class="list-value flex-1 default">
+              <input type="number" placeholder="请输入" class="list-input"></input>
+            </view>
+            <text class="ti">平米</text>
+          </view>
+          <view class="list-item danw">
+            <text class="list-label">期望售价</text>
+            <view class="list-value flex-1 default">
+              <input type="number" placeholder="请输入" class="list-input"></input>
+            </view>
+            <text class="ti">万</text>
+          </view>
+        </view>
+
+        <view class="bottom-btn">
+          <text class="promotion-tips">只差2步，快速卖房，最快出售仅1天</text>
+          <button class="btn btn-primary btn-big btn-evaluate">下一步</button>
+        </view>
+      </view>
+    </view>
+    <!---->
+  </view>
+</view>

@@ -1,0 +1,215 @@
+<!--pages/housedetail/housedetail.wxml-->
+
+<view class="container">
+  <view class="efault">
+    <!-- 默认图片覆盖层 -->
+
+    <swiper class="ImageBanner">
+      <block>
+        <swiper-item>
+          <image mode="scaleToFill" style="background: url(http://snailhome.oss-cn-huhehaote.aliyuncs.com/2018/08/713c14a2-b20e-43ca-bf8e-a088324a8db2.jpg@!water400) no-repeat center;background-size:cover;" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 阴影遮罩文字显示 -->
+    <view class="baner_h2">客厅</view>
+
+    <!-- 指示器 -->
+    <view class="baner_num">
+      <text>1</text>
+      <text>/</text>
+      <text>7</text>
+    </view>
+  </view>
+  <view class="mmf-panel detail-tit">
+
+    <text class="name">开发区万达广场开发区万达广场开发区万达广场开发区万达广场</text>
+    <text class="tag to-selling-border">在售</text>
+    <!-- <text class="tag  will-sell-border">即将开盘</text>
+    <text class="tag  selling-border">已成交</text> -->
+
+  </view>
+  <!-- 房源详细描述 -->
+  <view class="home_con_layer2_list open">
+    <!-- 展开添加open -->
+    <view class="home_con_layer2">
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">售价:</text>
+        <text class="home_con_layer2_bottom_list_con">58.5万</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">上线:</text>
+        <text class="home_con_layer2_bottom_list_con">2018-09-28</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">装修:</text>
+        <text class="home_con_layer2_bottom_list_con">精装修</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">面积:</text>
+        <text class="home_con_layer2_bottom_list_con">63.72㎡</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">楼层:</text>
+        <text class="home_con_layer2_bottom_list_con">7/7</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">朝向:</text>
+        <text class="home_con_layer2_bottom_list_con">南</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">用途:</text>
+        <text class="home_con_layer2_bottom_list_con">住宅</text>
+      </view>
+
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">产权:</text>
+        <text class="home_con_layer2_bottom_list_con">产权</text>
+      </view>
+      <view class="home_con_layer2_bottom_list">
+        <text class="home_con_layer2_bottom_list_title">户型:</text>
+        <text class="home_con_layer2_bottom_list_con">2室1厅1卫1厨1阳台          </text>
+     </view>
+
+    </view>
+    <view class="detail-switch ">
+      <icon class='icon iconfont icon-xiajiantou'></icon>
+    </view>
+  </view>
+  <view class="weui-panel agent-item ">
+    <view class="agent">
+      <view class="img-wrapper">
+        <image src="../../resources/image/guanjia.png" />
+      </view>
+      <view class="agent-info">
+        <text class="agent-name">赵起越</text>
+        <view class="agent-desc">
+          <text class="daikan">服务管家 </text>
+
+        </view>
+
+      </view>
+      <view class="contact">
+        <button class="icon iconfont icon-dianhua new_dianhua" bindtap="calling"></button>
+      </view>
+    </view>
+  </view>
+  <view class="weui-panel diagram">
+    <view class="section-head">
+      <view class="head-title-line bm_common ">
+        <text>近7日趋势</text>
+      </view>
+    </view>
+    <view class="diagram-bd">
+      <view class="diagram-top">
+        <view class='dk-rs active'>
+          <text></text>带看人数</view>
+        <view class='sc-rs'>
+          <text></text>收藏人数</view>
+        <view class='dj-rs'>
+          <text></text>点击人数</view>
+      </view>
+      <image src="http://dl.hahafang.com/img/300x225/c/1279/photos/1/20180112/636513744852922987411.jpg" style="display: block;width:auto;height:200px;" />
+    </view>
+  </view>
+  <view class="weui-panel dynamic">
+    <view class="section-head mb0">
+      <view class="head-title-line bm_common ">
+        <text>房源动态</text>
+      </view>
+    </view>
+    <view class="md-b-tj bm_common">
+      <navigator class="my-tj" url="dynamicdet/dynamicdet">
+        <text class='tj-num'>123</text>
+        <text class='name'>带看人数</text>
+
+      </navigator>
+      <navigator class="my-tj">
+        <text class='tj-num'>123</text>
+        <text class='name'>收藏人数</text>
+
+      </navigator>
+      <navigator class="my-tj">
+        <text class='tj-num'>123</text>
+        <text class='name'>点击次数</text>
+      </navigator>
+    </view>
+    <view class="time-axis">
+      <view class='axis-bd p-r'>
+        <text class='tit'>今日</text>
+        <ul class='zhuti'>
+          <li>
+            <text class='time'>14:50:25</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+
+          </li>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+          </li>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+          </li>
+        </ul>
+        <view class='disc'></view>
+      </view>
+      <view class='axis-bd p-r'>
+        <text class='tit'>昨日</text>
+        <ul class='zhuti'>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+
+          </li>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+          </li>
+          <li>
+            <text class='time'>14:50</text>
+            <view class='zt-bd'>
+              <text>吴金星</text>带看，看房人电话
+              <text class='phone-num'>151****4238</text>
+            </view>
+          </li>
+        </ul>
+        <view class='disc'></view>
+      </view>
+    </view>
+    <view class="loadmore">
+      <view class="loadmore__tips">没有更多了</view>
+    </view>
+    <view class="list_none">
+      <image src='../../resources/image/nolist.png' />
+      <view class="list_none_text">最近2天暂无房源动态哦</view>
+    </view>
+    <view class="list_none">
+      <image src='../../resources/image/xiaolian.png' />
+      <view class="list_none_text">恭喜您，房源已售出</view>
+    </view>
+
+
+  </view>
+</view>

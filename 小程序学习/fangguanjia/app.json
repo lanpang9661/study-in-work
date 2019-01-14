@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/houselist/houselist",
+    "pages/dtdetail/dtdetail",
+    "pages/dtlist/dtlist",
+    "pages/dtdetail/maidian/maidian",
+    "pages/agentlist/agentlist",
+    "pages/newslist/newslist",
+    "pages/newsdetail/newsdetail",
+    "pages/newsdetail/jubao/jubao",
+    "pages/housedetail/housedetail",
+    "pages/jsmf/jsmf",
+    "pages/jsmf/search/search",
+    "pages/jsmf/chose/chose",
+    "pages/jsmf/timechose/timechose",
+    "pages/ksgj/ksgj",
+    "pages/ksgj/gjjg/gjjg",
+    "pages/citylist/citylist",
+    "pages/housedetail/dynamicdet/dynamicdet",
+    "pages/my/my",
+    "pages/my/information/information",
+    "pages/my/about/about",
+    "pages/search/search",
+    "pages/activation/activation",
+    "pages/welcome/welcome",
+    "pages/logs/logs",
+    "pages/logs/license/license",
+    "pages/appointment/appointment",
+    "pages/showingTime/showingTime",
+    "pages/contentAgentList/contentAgentList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2687e5",
+    "navigationBarTitleText": "房管家",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#666666",
+    "selectedColor": "#0FA6E8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "resources/image/home-h.png",
+        "selectedIconPath": "resources/image/home-l.png"
+      },
+      {
+        "pagePath": "pages/dtlist/dtlist",
+        "text": "房源动态",
+        "iconPath": "resources/image/dt-h.png",
+        "selectedIconPath": "resources/image/dt-l.png"
+      },
+      {
+        "pagePath": "pages/newslist/newslist",
+        "text": "消息",
+        "iconPath": "resources/image/xiaoxi-d.png",
+        "selectedIconPath": "resources/image/xiaoxi-l.png"
+      },
+      {
+        "pagePath": "pages/jsmf/timechose/timechose",
+        "text": "我的",
+        "iconPath": "resources/image/wode-h.png",
+        "selectedIconPath": "resources/image/wode-l.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+/* pages/agentlist/agentlist.wxss */
+@import '../dtdetail/dtdetail.wxss'; 
+.dkjjr .agent {
+margin-top:15px;
+border-bottom:1px solid #eee;
+padding-bottom:15px;
+
+}

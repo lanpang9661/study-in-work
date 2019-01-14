@@ -1,0 +1,141 @@
+<!--pages/me/orderlist/orderlist.wxml-->
+<view class="weui-panel__bd p-r"  bindtap='dtdetail'>
+  <view class="weui-media-box weui-media-box_appmsg">
+    <view class="weui_home_image">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <view class="efault_img">
+          <image src="../../../resources/image/18.png"></image>
+        </view>
+        <image class="weui-media-box__thumb" mode="scaleToFill" src="http://snailhome.oss-cn-huhehaote.aliyuncs.com/2018/09/d8987288-3eb7-4940-afff-81ebc2c098b2.jpg@!water400"></image>
+      </view>
+
+
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title-black">
+        <view>
+
+          西岗区绕山路小区中心位置
+        </view>
+      </view>
+
+      <view class="clear mar_bom_15">
+        <view class="weui_home_h2">
+          <view class='tit'>期望售价:</view>
+          <view class='c-f60'>50万元</view>
+        </view>
+        <view class="weui_home_h2 p-r">
+          <view class='tit'>房源状态:</view>
+          <view class='c-6'>正常</view>
+        </view>
+        <view class="weui_home_h2">
+          <view class='tit'>提交时间:</view>
+          <view class='c-6'>2015-07-19</view>
+        </view>
+
+
+      </view>
+    </view>
+
+  </view>
+
+  <view class="list-btn">
+    <view class='mmf mmf-duihao'></view>
+  </view>
+</view>
+<view class="weui-panel__bd p-r">
+  <view class="weui-media-box weui-media-box_appmsg">
+    <view class="weui_home_image">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <view class="efault_img">
+          <image src="../../../resources/image/18.png"></image>
+        </view>
+        <image class="weui-media-box__thumb" mode="scaleToFill" src="http://snailhome.oss-cn-huhehaote.aliyuncs.com/2018/09/d8987288-3eb7-4940-afff-81ebc2c098b2.jpg@!water400"></image>
+      </view>
+
+
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title-black">
+        <view>
+
+          西岗区绕山路小区中心位置
+        </view>
+      </view>
+
+      <view class="clear mar_bom_15">
+        <view class="weui_home_h2">
+          <view class='tit'>期望售价:</view>
+          <view class='c-f60'>50万元</view>
+        </view>
+        <view class="weui_home_h2 p-r">
+          <view class='tit'>房源状态:</view>
+          <view class='c-6'>正常</view>
+        </view>
+        <view class="weui_home_h2">
+          <view class='tit'>提交时间:</view>
+          <view class='c-6'>2015-07-19</view>
+        </view>
+
+
+      </view>
+    </view>
+
+  </view>
+
+
+</view>
+
+<view class="weui-panel__bd p-r">
+  <view class="weui-media-box weui-media-box_appmsg">
+    <view class="weui_home_image">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <view class="efault_img">
+          <image src="../../../resources/image/18.png"></image>
+        </view>
+        <image class="weui-media-box__thumb" mode="scaleToFill" src="http://snailhome.oss-cn-huhehaote.aliyuncs.com/2018/09/d8987288-3eb7-4940-afff-81ebc2c098b2.jpg@!water400"></image>
+      </view>
+
+
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title-black">
+        <view>
+
+          西岗区绕山路小区中心位置
+        </view>
+      </view>
+
+      <view class="clear mar_bom_15">
+        <view class="weui_home_h2">
+          <view class='tit'>期望售价:</view>
+          <view class='c-f60'>50万元</view>
+        </view>
+        <view class="weui_home_h2 p-r">
+          <view class='tit'>房源状态:</view>
+          <view class='c-6'>正常</view>
+        </view>
+        <view class="weui_home_h2">
+          <view class='tit'>提交时间:</view>
+          <view class='c-6'>2015-07-19</view>
+        </view>
+
+
+      </view>
+    </view>
+
+  </view>
+
+
+</view>
+
+<view class="list_none">
+            <image src='../../resources/image/nolist.png' />
+            <view class="list_none_text">您还没有委托房源哦～</view>
+            <button class='weui-btn list-btn-pre'>极速卖房</button>
+</view>
+
+
+<view class="weui-loadmore weui-loadmore_line">
+  <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+</view>

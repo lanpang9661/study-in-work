@@ -1,0 +1,71 @@
+<!--pages/jsmf/timechose/timechose.wxml-->
+<view class="yezhu-wrapper">
+  <view class="appraisal-select list">
+    <view class="step steps stepon">
+      <!--stepon-->
+      <view class='space-between'>
+
+        <view class="inspect-wrap">
+          <view class="bgff mt10">
+
+            <ul class="inspect-time clearfix">
+              <li></li>
+              <li>上午(9:00-12:00)</li>
+              <li>下午(12:00-18:00)</li>
+              <li>今天(06.25)</li>
+              <li class="validate-time  co66 active" ssdata-date="今天(06.25) 9:00-12:00">
+                可选 </li>
+              <li class="validate-time co66" data-date="今天(06.25) 12:00-18:00">
+                可选 </li>
+              <!--<li class="co66">可选</li>-->
+              <li>明天(06.26)</li>
+              <li class="validate-time co66" data-date="明天(06.26) 9:00-12:00">可选</li>
+              <li class="validate-time co66" data-date="明天(06.26) 12:00-18:00">可选</li>
+            </ul>
+            <view class="inspect-radio tc co66 validate-time" data-date="-1">
+              <text class="icon-radio other-time active"></text>以上时间均不方便，让客服联系我</view>
+          </view>
+        </view>
+
+        <view class="bottom-btn">
+          <text class="promotion-tips">只差1步，快速卖房，最快出售仅1天</text>
+          <button class="btn btn-primary btn-big btn-evaluate">完成</button>
+        </view>
+      </view>
+
+
+      <view class="has-no-css sell-inform-mask" style="display: block;"></view>
+      <view class="popup-mobile auth-code active" style="display: block;">
+        <text class="pop-tit">手机号验证</text>
+        <text class="pop-text">验证通过后，秒卖房将第一时间帮你安排房屋估师上门免费评估</text>
+        <view class="pop-ipt">
+          <input class="box-size" type="text" name="code-phone" placeholder="请输入您的手机号" value="13765726354"></input>
+          <button class="btn-code active" type="button">获取验证码</button>
+        </view>
+        <view class="pop-ipt mt10">
+          <input class="box-size" type="text" name="code" placeholder="请输入验证码"></input>
+        </view>
+        <text class="pop-error"><text class="code-error" style="display:none;"></text></text>
+        <view class="pop-btn">
+          <button class="btn btn-cancel code-cancel-btn" type="button">取消</button>
+          <!-- 无内容是btn btn-default，填写后是btn btn-sure -->
+          <button class="btn btn-sure code-button" type="button">提交</button>
+        </view>
+      </view>
+      <view class="popup-mobile auth-code active pop-resault" style="display: none;">
+        <view class="pop-tit">
+        <text class='mmf mmf-duihao'></text>提交成功</view>
+        
+       
+        
+        
+        <view class="pop-btn">
+         
+          <!-- 无内容是btn btn-default，填写后是btn btn-sure -->
+          <button class="btn btn-sure code-button" type="button">关闭</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,40 @@
+/* pages/agentlist/agentlist.wxss */
+@import '../dtdetail/dtdetail.wxss';
+
+.dkjjr .agent {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.agent .contact {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  top: 0rpx;
+  color: #bbb;
+}
+
+.agent .img-wrapper {
+  position: relative;
+}
+
+.list_none {
+  padding: 300rpx 0 130rpx 0;
+}
+
+.delete-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #fff;
+  color: #333;
+  font-size: 32rpx;
+  padding: 14rpx 60rpx;
+  box-shadow: 0 0 10px #aaa;
+  border-radius: 2px;
+  z-index: 2
+}

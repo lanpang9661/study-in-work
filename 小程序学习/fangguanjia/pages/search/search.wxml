@@ -1,0 +1,38 @@
+<view class="container">
+
+  <view class="search_form flexbox">
+    <view class="search_box search_a box_col">
+      <icon class="icon iconfont icon-fangdajing new_fdj"></icon>
+      <input class="input" placeholder="搜索区、商圈、街道" auto-focus/>
+      
+    </view>
+    <view class='weui-search-bar__cancel-btn'>取消</view>
+  </view>
+  <view class="mod_box ">
+    <view class="item_lists" data-mark="history_list">
+      <view class="li_item">
+        <text class="box_col text_cut">万达广场</text>
+      </view>
+      <view class="li_item">
+        <text class="box_col text_cut">万达广场</text>
+      </view>
+    </view>
+  </view>
+  <view style="" class="history_title">
+    <text class="">历史搜索</text>
+    <navigator href="javascript:;" class="deleta_history">
+      <text class="icon iconfont c-6 icon-lajitong"></text>
+    </navigator>
+  </view>
+  <view class="mod_box ">
+    <view class="item_lists" data-mark="history_list">
+      <view class="li_item">
+        <text class="box_col text_cut">万达广场</text>
+      </view>
+      <view class="li_item">
+        <text class="box_col text_cut">万达广场</text>
+      </view>
+    </view>
+  </view>
+
+</view>

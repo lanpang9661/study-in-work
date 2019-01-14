@@ -1,0 +1,39 @@
+<view class="weui-panel dkjjr">
+
+    <view class="agent-item "  bindtap="a1">
+      <view class="agent">
+        <view class='p-r'>
+          <view class="img-wrapper">
+            <image src="../../resources/image/jingjiren.png" />
+          </view>
+          <text class='red-dot'></text>
+        </view>
+        <view class="agent-info">
+          <view class='flex align-center mb5'>
+            <text class="agent-name">赵起越</text>
+            <text class='company'>链家</text>
+            <text class='renzheng'>已认证</text>
+          </view>
+          <view class="agent-desc">
+            <text class="daikan">房主你好，有客户看中您的房子，想跟您谈房，烦请回电。</text>
+
+          </view>
+
+        </view>
+        <view class="contact text">
+          13:36
+        </view>
+        <view class='delete-btn'>删除</view>
+      </view>
+
+    </view>
+
+
+  </view>
+
+
+
+<view class="list_none">
+      <image src='../../resources/image/nodate.png' />
+      <view class="list_none_text">还没有任何消息哦</view>
+ </view>

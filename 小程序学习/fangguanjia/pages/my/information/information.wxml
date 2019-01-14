@@ -1,0 +1,34 @@
+<!--pages/my/information/information.wxml-->
+<view class="container">
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input bm_common l-right">
+      <view class="weui-cell__hd">
+        <view class="weui-label">姓名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input placeholder-class="phcolor" maxlength="4" class="weui-input" placeholder="姓名" value='{{name}}' bindinput='bindNameBlur' />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">电话</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input placeholder-class="phcolor" type="number" maxlength="11" class="weui-input" placeholder="手机或固话" value='{{phone}}' bindinput='bindPhoneBlur' />
+      </view>
+    </view>
+    <!-- 手机验证码一行 -->
+    <view class="weui-cell weui-cell_input"  hidden="{{!isShowCodeLine}}">
+      <!-- 验证码输入 -->
+      <view class="weui-cell__hd weui-cell__hd_label"></view>
+      <view class="weui-cell__bd">
+        <input placeholder-class="phcolor" class="weui-input weui-input1" type="number" maxlength="6" placeholder="请输入验证码" value='{{code}}' bindinput='onCodeInput' />
+        <view class="weui-input-btn">
+          <button bindtap='onGetCodeClick' disabled="{{disableGetCodeBtn}}">{{getCodeBtnText}}            </button>
+        </view>
+      </view>
+      <!-- 获取验证码按钮 -->
+    </view>
+    
+  </view>
+</view>
