@@ -1,0 +1,66 @@
+/* pages/me/information/information.wxss */
+
+page {
+  background: #fff;
+}
+
+.weui-btn-area {
+  margin: 0;
+}
+
+.weui-btn-area button {
+  background: #4da1ff;
+  font-size: 40rpx;
+  color: #fff;
+  display: block;
+  width: 548rpx;
+  height: 102rpx;
+  line-height: 94rpx;
+  padding: 0rpx;
+  margin: 0 auto;
+  border-radius: 102rpx;
+}
+
+.weui-btn-area button.btn-border {
+  background: 0;
+  border: 1px solid #4da1ff;
+  color: #4da1ff;
+}
+
+.buzhou {
+  height: 600rpx;
+  overflow: hidden;
+}
+
+.weui-btn-area button:hover, .weui-btn-area button:active,
+.weui-btn-area button:visited {
+  background: #4da1ff;
+  color: #fff;
+}
+
+.weui-btn-area button.btn-border:hover {
+  background: 0;
+  border: 1px solid #4da1ff;
+  color: #4da1ff;
+}
+
+.header {
+  font-size: 32rpx;
+  padding: 30rpx 40rpx;
+}
+
+.buzhou image {
+  width: 750rpx;
+  height: 657rpx;
+}
+
+.weui-btn-area {
+  text-align: center;
+}
+
+.weui-btn-area text {
+  font-size: 28rpx;
+  color: #45b849;
+  margin: 60rpx 0;
+  display: block;
+}

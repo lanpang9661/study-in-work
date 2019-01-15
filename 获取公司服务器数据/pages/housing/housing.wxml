@@ -1,0 +1,410 @@
+<view class='main'>
+  <!-- 模糊匹配搜索 start -->
+  <view class="searchList" style="position: fixed;">
+    <view class="search-flex" hidden="{{searchShow}}">
+      <view class="search-bar">
+        <navigator class='input' bindtap='openSearchPage'>
+          <view class='search-view'>
+            <text class="mmf c-6 mmf-fangdajing mr5"></text>
+            <text>{{searchData.address!=''?searchData.address:'搜索区、商圈、街道、小区'}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 模糊匹配搜索 end -->
+
+    <!-- 搜索导航 start -->
+    <view class="searchList_main">
+       <view class="weui-flex">
+        <view wx:key="index" wx:for="{{kTitles}}" class="weui-flex__item" id="searchListTap_{{index+1}}" bindtap='searchListTouchFn'>
+          <text class="tob" wx:if="{{item.length > 0}}">{{item}}</text>
+          <text class="san san1 {{searchListTouch==index+1?'active':''}} {{searchSelec9ted==index+1?'active':''}}" searchSelected wx:if="{{item.length > 0}}"></text>
+        </view>
+      </view>
+    <!-- 搜索导航 end -->
+
+    <!-- 位置搜索 start-->
+      <view class="searchList_content">
+        <view class='searchList_content_list'  wx:if="{{searchListTouch==1}}">
+          <!-- 区 -->
+          <view class='searchList_body_left'>
+            <block wx:for="{{cityAreaList}}" wx:key="{{index}}">
+              <view bindtap='cityAreaChange' data-index="{{index}}">
+                <view class="active" wx:if="{{cityAreaCheck==index}}">{{item.name}}</view>
+                <view  wx:else="{{cityAreaCheck==index}}">{{item.name}}</view>
+              </view>
+            </block>
+          </view>
+          <!-- 商圈 -->
+          <view class='searchList_body_right'>
+            <block wx:for="{{regionList}}" wx:key="{{index}}">
+              <view bindtap='regionChange' data-index="{{index}}">
+                <view class="active" wx:if="{{item.isflag==1}}">{{item.name}}</view>
+                <view  wx:else >{{item.name}}</view>
+              </view>
+            </block>
+          </view>
+        </view>
+    <!-- 位置搜索 end -->     
+
+    <!-- 筛选条件 start-->
+        <view class='more-sx-bd'  wx:if="{{searchListTouch==2}}">
+        <!-- 特色-->
+          <view class="group bm_common">
+            <view class="group-header">特色</view>
+            <view class="group-body">
+              <view class="multiple-select">
+                 <block wx:for="{{featuresList}}" wx:key="{{index}}">
+                    <view  wx:if="{{item.status==1}}" bindtap='featuresChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                    <view  wx:else bindtap='featuresChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                 </block>
+              </view>
+            </view>
+          </view>
+          <!-- 面积-->
+          <view class="group bm_common">
+            <view class="group-header">面积(平）</view>
+            <view class="group-body">
+              <view class='min-max'>
+               <view>
+                  <input  type='number' class='price' placeholder="最低" value='{{areaMin}}' bindinput='areaMinInput' />
+                </view>
+                -
+                <view>
+                  <input  type='number' class='price' placeholder="最高" value='{{areaMax}}' bindinput='areaMaxInput' />
+                </view>
+              </view>
+              <view class="multiple-select">
+                <block wx:for="{{areaList}}" wx:key="{{index}}">
+                    <view  wx:if="{{item.status==1}}" bindtap='areaChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                    <view  wx:else bindtap='areaChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                 </block>
+              </view>
+            </view>
+          </view>
+        <!-- 户型-->
+          <view class="group">
+            <view class="group-header">户型</view>
+            <view class="group-body">
+              <view class="multiple-select">
+                <block wx:for="{{modelList}}" wx:key="{{index}}">
+                    <view  wx:if="{{item.status==1}}" bindtap='modelChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                    <view  wx:else   bindtap='modelChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                 </block>
+              </view>
+            </view>
+          </view>
+        <!-- 总价-->
+          <view class="group">
+            <view class="group-header">总价（万）</view>
+            <view class="group-body">
+              <view class='min-max'>
+                <view>
+                  <input  type='number' class='price' placeholder="最低" value='{{priceMin}}' bindinput='priceMinInput' />
+                </view>
+                -
+                <view>
+                  <input  type='number' class='price' placeholder="最高" value='{{priceMax}}' bindinput='priceMaxInput' />
+                </view>
+              </view>
+              <view class="multiple-select">
+                 <block wx:for="{{priceList}}" wx:key="{{index}}">
+                    <view  wx:if="{{item.status==1}}" bindtap='priceChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                    <view  wx:else   bindtap='priceChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                 </block>
+              </view>
+            </view>
+          </view>
+        </view>
+      <!-- 智能排序-->
+        <view class='more-px-bd' wx:if="{{searchListTouch==3}}">
+          <view class="group bm_common">
+            <view class="group-header">排序</view>
+            <view class="group-body">
+              <view class="multiple-select-px">
+                <view class='multiple-select-px-list'>
+                  <block wx:for="{{intelligenceSortList}}" wx:key="{{index}}">
+                      <view  wx:if="{{intelligenceSortCheck==index}}" class="{{index==0?'full':''}}  {{ (index>0 &&index<4 )?'one-third':''}} {{ (index>3 )?'half':''}}" bindtap='intelligenceSortChange' data-index="{{index}}">
+                        <text class='active'>{{item.title}}</text>
+                      </view>
+                      <view  wx:else class="{{index==0?'full':''}}  {{ (index>0 &&index<4 )?'one-third':''}} {{ (index> 3 )?'half':''}}"   bindtap='intelligenceSortChange' data-index="{{index}}"><text >{{item.title}}</text>
+                      </view>
+                  </block>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 更多-->
+        <view class='more-sx-bd'  wx:if="{{searchListTouch==4}}">
+          <!--状态-->
+          <view class="group bm_common">
+            <view class="group-header">状态</view>
+            <view class="group-body">
+              <view class="multiple-select">
+                 <block wx:for="{{statusList}}" wx:key="{{index}}">
+                    <view  wx:if="{{item.status==1}}" bindtap='statusChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                    <view  wx:else bindtap='statusChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                 </block>
+              </view>
+            </view>
+          </view>
+          <!-- 朝向-->
+          <view class="group bm_common">
+            <view class="group">
+              <view class="group-header">朝向</view>
+              <view class="group-body">
+                <view class="multiple-select">
+                  <block wx:for="{{towardList}}" wx:key="{{index}}">
+                      <view  wx:if="{{item.status==1}}" bindtap='towardChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                      <view  wx:else   bindtap='towardChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                  </block>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 房屋类型-->
+          <view class="group bm_common">
+            <view class="group">
+              <view class="group-header">房屋类型</view>
+              <view class="group-body">
+                <view class="multiple-select">
+                  <block wx:for="{{houseTypeList}}" wx:key="{{index}}">
+                      <view  wx:if="{{item.status==1}}" bindtap='houseTypeChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                      <view  wx:else   bindtap='houseTypeChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                  </block>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!--产权-->
+          <view class="group bm_common">
+            <view class="group">
+              <view class="group-header">产权</view>
+              <view class="group-body">
+                <view class="multiple-select">
+                  <block wx:for="{{propertyList}}" wx:key="{{index}}">
+                      <view  wx:if="{{item.status==1}}" bindtap='propertyChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                      <view  wx:else bindtap='propertyChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                    </block>
+                </view>
+              </view>
+            </view>
+           </view>  
+          <!--装修 -->
+          <view class="group bm_common">
+              <view class="group">
+                <view class="group-header">装修</view>
+                <view class="group-body">
+                  <view class="multiple-select">
+                    <block wx:for="{{decorationList}}" wx:key="{{index}}">
+                        <view  wx:if="{{item.status==1}}" bindtap='decorationChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                        <view  wx:else  bindtap='decorationChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                      </block>
+                  </view>
+                </view>
+              </view>
+          </view>
+          <!--房屋用途   -->
+          <view class="group bm_common">
+            <view class="group">
+              <view class="group-header">房屋用途</view>
+              <view class="group-body">
+                <view class="multiple-select">
+                    <block wx:for="{{purposeList}}" wx:key="{{index}}">
+                      <view  wx:if="{{item.status==1}}" bindtap='purposeChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                      <view  wx:else   bindtap='purposeChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                    </block>
+                </view>
+              </view>
+            </view>
+          </view> 
+         <!-- 两说承担   -->
+          <view class="group bm_common">        
+            <view class="group">
+              <view class="group-header">两说承担</view>
+              <view class="group-body">
+                <view class="multiple-select">
+                    <block wx:for="{{taxesFeesList}}" wx:key="{{index}}">
+                      <view  wx:if="{{item.status==1}}" bindtap='taxesFeesChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                      <view  wx:else  bindtap='taxesFeesChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                    </block>
+                </view>
+              </view>
+            </view>
+          </view>  
+          <!--梯户   -->
+          <view class="group bm_common">        
+            <view class="group">
+              <view class="group-header">梯户</view>
+              <view class="group-body">
+                <view class="multiple-select">
+                    <block wx:for="{{ladderHouseholdList}}" wx:key="{{index}}">
+                      <view  wx:if="{{item.status==1}}" bindtap='ladderHouseholdChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                      <view  wx:else  bindtap='ladderHouseholdChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                    </block>
+                </view>
+              </view>
+            </view>
+          </view>  
+            <view class="group bm_common">        
+            <view class="group">
+              <view class="group-header">位置</view>
+              <view class="group-body">
+                <view class="multiple-select">
+                    <block wx:for="{{locationList}}" wx:key="{{index}}">
+                      <view  wx:if="{{item.status==1}}" bindtap='locationChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                      <view  wx:else  bindtap='locationChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                    </block>
+                </view>
+              </view>
+            </view>
+          </view>  
+            <view class="group bm_common">        
+            <view class="group">
+              <view class="group-header">更多卖点</view>
+              <view class="group-body">
+                <view class="multiple-select">
+                    <block wx:for="{{moreSellingPointList}}" wx:key="{{index}}">
+                      <view  wx:if="{{item.status==1}}" bindtap='moreSellingPointChange' data-index="{{index}}"><text class='active'>{{item.title}}</text></view>
+                      <view  wx:else   bindtap='moreSellingPointChange' data-index="{{index}}"><text >{{item.title}}</text></view>
+                    </block>
+                </view>
+              </view>
+            </view>
+          </view>  
+        </view>
+        <!-- 提交 -->
+        <view class="opt_box bt_common " wx:if="{{searchListTouch>0}}">
+          <button class="btn btn-cancel post_ulog" bindtap='clearFilter' >重置</button>
+          <button class="btn btn-confirm post_ulog" bindtap='submit' >确定</button>
+        </view>
+      </view>
+      <!--遮罩 -->
+      <view class="searchList_mask"  wx:if="{{searchListTouch!=0}}" bindtap='searchListMask'></view>
+    </view>
+  </view>
+ <view style="display:none;height:42px;"></view>
+  <!-- 模糊匹配没有搜索条件显示 -->
+  <view style="{{searchListStyleZhan}};height:100rpx;"></view>
+  <view class="list_none" hidden='{{!filterNone}}'>
+    <view>
+      <image class="img_136_118" src='../../resources/image/26.png' />
+    </view>
+    <view class="list_none_text list_none_text1">亲 没有找到哦～</view>
+    <view class="list_none_text2">请换个搜索条件或者浏览我们为你推荐的房源</view>
+  </view>
+  <view hidden='{{!xibaofixed}}'>
+    <view class="height162"></view>
+  </view>
+
+
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <view class="weui-panel__bd" bindtap="onItemClick" data-item="{{item}}">
+      <navigator class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" url="">
+        <view class='weui_home_bdtxt'>
+          <!-- 左边的图片 -->
+          <view class="weui_home_image">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <!-- 默认图片覆盖层 -->
+              <view class="efault_img">
+                <image src="../../resources/image/18.png">
+                </image>
+              </view>
+                <!-- 房源预览/封面图 -->
+              <image class="weui-media-box__thumb" mode="scaleToFill" src="{{item.imgUrl}}"></image>
+              <view  wx:if="{{item.statusTimeStr!=''}}" class='weui-media-box_imgword'>{{item.statusTimeStr}}</view>
+            </view>
+            <!-- 左上角标签图片 -->
+            <view>
+              <image class="ico_1" wx:if="{{item.status==1}}" src="../../resources/image/22.png" />
+              <image class="ico_1" wx:elif="{{item.status==3}}" src="../../resources/image/23.png" />
+              <image class="ico_1" wx:elif="{{item.status==4}}" src="../../resources/image/iconSoldOut.png" />
+              <image class="ico_1" wx:elif="{{item.status==2}}" src="../../resources/image/iconYushou.png" />
+              <image class="ico_1" wx:elif="{{item.status==-1}}" src="../../resources/image/iconXinshang.png" />
+            </view>
+            <view wx:if="{{item.status==2 && item.remainingTime > 0}}" class="tishi">
+                <text class="tishi_1">{{item.remainingTime}}</text>
+                <text class="tishi_2">天</text>
+                <text class="tishi_3">{{item.remainingContent}}</text>
+            </view>
+            <view wx:if="{{item.status==2 && item.remainingTime <= 0}}" class="tishi tishi1">
+              <text class="tishi_3">{{item.remainingContent}}</text>
+            </view>
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <!-- 显示自营的标签 -->
+            <view wx:if="{{item.status==1 || item.status==-1 || item.status==2}}" class="weui-media-box__title-black">
+              <view>
+                <view class="h2_label" hidden="{{item.proprietary != '1'}}">
+                  优选
+                </view>
+                {{item.houseTitle}}
+              </view>
+            </view>
+            <view wx:else class="weui-media-box__title-gray">
+              <view>
+                <view class="h2_label" hidden="{{item.proprietary != '1'}}">
+                  优选
+                </view>
+                {{item.houseTitle}}
+              </view>
+            </view>
+             <!-- 价格和单价一行 -->
+            <view class="clear mar_bom_15">
+                  <view class="weui_home_h2">{{item.hx}}|{{item.area}}㎡|{{item.floor}}/{{item.floorTotal}}</view>
+                  <view class='weui_home_tips'>
+                  <block wx:for="{{item.featuresList}}" wx:for-item="tag" wx:for-index="i" wx:key="{{i}}">
+                    <view wx:if="{{i < 3}}" class="weui_home_em">{{tag}}</view>
+                  </block>
+                  </view>
+                  <view class="weui_home_con_bottom p-r">
+                    <view class="weui_home_con_bottom_text1">￥{{item.salesTotalPrice}}万</view>
+                    <view class="weui_home_con_bottom_text2">{{item.salesPrice}}元/㎡</view>
+                    <text class='mmf mmf-zhinengsuo f-mfl '></text>
+                  </view>
+            </view>
+          </view>
+        </view>
+      <!--关注、带看、浏览 -->
+        <view class='shuju-list'>
+          <text>关注人数：{{item.collectNum}}</text>
+          <text>带看人次：{{item.takeNum}}</text>
+          <text>浏览次数：{{item.browseNum}}</text>
+        </view>
+      <!-- 佣金、红包、（浏览、关注、带看） -->
+        <view class="yong">
+          <image src="../../resources/image/yong.png">
+          </image>
+          <text>{{item.yongJinHongBao}}</text>
+          <text>{{item.showbottom}}</text>
+        </view>
+      </navigator>
+    </view>
+  </block>
+
+
+
+  <view class="weui-loadmore" hidden="{{noMore || list.length == 0}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载...</view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line" hidden="{{!noMore || list.length == 0}}">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+  </view>
+
+  <view class="huodong_layer" style='display:{{redEvelopeShow}}'>
+    <view class="huodong_board">
+      <view hover-class="none" class="close" bindtap="closeRedEvelope"></view>
+      <image src="../../resources/image/hongbao.jpg" />
+      <view class='huodong-btn' bindtap="fxQrCode"></view>
+      <view class='huodong-txt'>
+        <text class='txt-tit'>邀请新经纪人注册</text>
+        <text class='txt-dt'>立得10元</text>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>

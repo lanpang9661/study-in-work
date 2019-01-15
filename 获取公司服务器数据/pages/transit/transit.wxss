@@ -1,0 +1,83 @@
+page{
+  height: 100%;
+  background:rgba(240,240,240,1);
+}
+.p .bit{
+  position: absolute;
+  bottom: 0;
+  width: 750rpx;
+  height: 347rpx;
+}
+.p .t{
+  text-align: center;
+  padding-top: 200rpx;
+}
+.p .t image{
+  width: 432rpx;
+  height: 151rpx;
+}
+.mask{
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  text-align: center;
+}
+.mask .bai{
+  width: 560rpx;
+  height: 291rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top:-145rpx;
+  margin-left:-280rpx;
+}
+.mask .bai .di{
+  width:450rpx;
+  height:180rpx;
+  margin:0rpx auto;
+  line-height: 45rpx;
+}
+.mask .bai .di text{
+  text-align:center;
+  font-size:30rpx;
+  color:rgba(102,102,102,1);
+}
+.leftBorder{
+  border-left: 1px solid #eee;
+}
+.weui-flex{
+ padding-bottom: 20rpx;
+ padding-left: 20rpx;
+ padding-right: 20rpx;
+ border-top:1px solid #E5E5E5;
+}
+button{
+  background:#fff;
+  color:#999;
+  font-size:36rpx;
+}
+.btn{
+  color:rgba(2,187,0,1);
+}
+.weui-flex__item{
+  flex: none;
+  width: 260rpx;
+  height: 100rpx;
+  float: left;
+  overflow: hidden;
+}
+.weui-flex__item button{
+  width: 266rpx;
+  height: 106rpx;
+  line-height: 106rpx;
+  left: -3rpx;
+  top: -3rpx;
+}
+.weui-flex__item button:hover{
+  background: #fff;
+}

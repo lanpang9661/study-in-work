@@ -35,3 +35,12 @@
     </view>
   </picker>
 </view>
+
+<view class="section">
+  <view class="section__title">多列选择器</view>
+  <picker mode="multiSelector" bind:columnchange="mmfColChange" value="{{cityIndex}}" range="{{cityAreaList}}">
+    <view class="picker">
+      当前选择：{{cityAreaList[0][cityIndex[0]]}}，{{cityAreaList[1][cityIndex[1]]}}
+    </view>
+  </picker>
+</view>

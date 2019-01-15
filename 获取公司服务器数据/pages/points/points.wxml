@@ -1,0 +1,102 @@
+<!--pages/points/points.wxml-->
+<view class='md-top'>
+  <text class='md-num' bindtap="mbeanTotalDetail">{{mbeanTotal}}</text>
+  <text class='md-intro'><text class='mmf mmf-buoumaotubiao36 f-gold'></text>可用秒豆</text>
+   <navigator class="ph-link f-cheng" url="../ranking/ranking" hover-class="none">
+     排行榜
+  </navigator>
+</view>
+<view class='md-mid multiple-select bm_common bt_common'>
+  <text class='tit'>邀请经纪人注册</text>
+
+  <view class='yq-bd'>
+    <view class='md-mid-detail'>
+      <text>每邀请1位新经纪人注册，审核通过后即可获得<text class='f-b f-cheng ml5'>100秒豆</text></text>
+
+    </view>
+    <view class='md-btn' bindtap="fx">去邀请</view>
+
+  </view>
+</view>
+<view class='md-mid-yq multiple-select bm_common ' style="display:{{yyqViewShow}}">
+  <text class='tit'>已邀请<text  class='f-b f-cheng ml5'>{{yyqCount}}人</text></text>
+  <view class='md-mid-detail yq-detai {{yyqOpenClass}}' >
+    <view class='yq-tx' wx:for="{{recommendAllUsers}}" wx:for-item="item" wx:key="agentId">
+      <view class='yq-tx-d'>
+        <image src='{{item.wxImg?item.wxImg:"/resources/image/9.png"}}' mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <view class="hy_more" style='display:{{rau}}'  bindtap="yyqBtnFun">
+    <text class="{{yyqBtnClass}}" ></text>
+  </view>
+
+</view> 
+<view class=' md-mid-yq multiple-select bm_common ' style="display:{{ytgViewShow}}">
+  <text class='tit'>审核通过<text  class='f-b f-cheng ml5'>{{ytgCount}}人</text></text>
+  <view class='md-mid-detail yq-detai {{ytgOpenClass}}' >
+    <view class='yq-tx' wx:for="{{recommendSuccessUsers}}" wx:for-item="item" wx:key="agentId" >
+      <view class='yq-tx-d'>
+        <image src='{{item.wxImg}}' mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <view class="hy_more" style='display:{{rsu}}' bindtap="ytgBtnFun">
+    <text class="{{ytgBtnClass}}"></text>
+  </view>
+</view>
+
+<view class='md-bottom  multiple-select'>
+
+  <text class='tit'>秒豆介绍</text>
+  <text class='md-b-txt'>秒豆是秒卖房平台专属消费积分，可用于兑换奖品。</text>
+  <text class='tit'>秒豆获取</text>
+  <text class='md-b-txt'>邀请新用户、成交、带看、推荐房源等操作均可获得秒豆、功能陆续上线中。</text>
+
+  <text class='tit'>奖品兑换 </text>
+  <view class='md-b-img'>
+    <view class="jp-xm">
+      <image src="../../resources/image/gwk50.jpg"></image>
+      <text class='name'>50元购物卡</text>
+      <text class='name f-cheng '>500秒豆(邀请5人)</text>
+    </view>
+    <view class="jp-xm">
+      <image src="../../resources/image/gwk100.jpg"></image>
+      <text class='name'>100元购物卡</text>
+      <text class='name f-cheng '>1000秒豆(邀请10人)</text>
+    </view>
+    <view class="jp-xm">
+      <image src="../../resources/image/gwk200.jpg"></image>
+      <text class='name'>200元购物卡</text>
+      <text class='name f-cheng '>2000秒豆(邀请20人)</text>
+    </view>
+    <view class="jp-xm">
+      <image src="../../resources/image/gwk500.jpg"></image>
+      <text class='name'>500元购物卡</text>
+      <text class='name f-cheng '>5000秒豆(邀请50人)</text>
+    </view>
+    <view class="jp-xm">
+      <image src="../../resources/image/airpod.jpg"></image>
+      <text class='name'>AirPod</text>
+      <text class='name f-cheng '>10000秒豆(邀请100人)</text>
+    </view>
+    <view class="jp-xm">
+      <image src="../../resources/image/pinghengche.jpg"></image>
+      <text class='name'>小米平衡车</text>
+      <text class='name f-cheng '>20000秒豆(邀请200人)</text>
+    </view>
+    <view class="jp-xm">
+      <image src="../../resources/image/oppox.jpg"></image>
+      <text class='name'>OPPO find X</text>
+      <text class='name f-cheng '>50000秒豆(邀请500人)</text>
+    </view>
+    <view class="jp-xm">
+      <image src="../../resources/image/iphonex.jpg"></image>
+      <text class='name'>iphone X</text>
+      <text class='name f-cheng '>80000秒豆(邀请800人)</text>
+    </view>
+
+  </view>
+    <text class='tit t-foot' bindtap="makeCall">兑换联系客服:{{pointsTell}} </text>
+
+</view>

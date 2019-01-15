@@ -1,0 +1,171 @@
+<view class='content'>
+  <view class="youhui">
+    <view class="{{_num==0?'active':''}}" data-index='0' bindtap='toggle'>
+      日榜
+    </view>
+    <view class="{{_num==1?'active':''}}" data-index='1' bindtap='toggle'>
+      周榜
+    </view>
+    <view class="{{_num==2?'active':''}}" data-index='2' bindtap='toggle'>
+      月榜
+    </view>
+  </view>
+
+  <swiper current="{{_num}}" class="swiper-box" duration="200" bindchange="bindChange">
+    <!-- 未使用 -->
+    <swiper-item>
+      <view class="paihang_article">
+        <view class='md-b-my'>
+          <view class="my-pm">
+            <text class='pm-num'>{{dayPage.order}}</text>
+            <text class='name'>我的排名</text>
+
+          </view>
+          <view class="my-xinxi">
+            <view class='touxiang'>
+              <image src="{{avatarUrl}}" mode="widthFix"></image>
+            </view>
+            <text class='name'>{{agentName}}</text>
+
+          </view>
+          <view class="my-md">
+            <text class='md-num'>{{dayPage.mbean}}</text>
+            <text class='name'>今日秒豆</text>
+
+          </view>
+        </view>
+        <scroll-view scroll-y="true" class='ph-scroll' bindscrolltolower="loadMore">
+
+          <view class='paihang-bd'>
+            <view class="paihang-list" wx:for="{{dayPage.dataList}}" wx:for-item="item" wx:key="agentId" wx:for-index="idx">
+              <text class="ph-num">{{idx+1}}</text>
+              <view class='geren-xinxi'>
+                <view class='touxiang'>
+                  <image src="{{item.wxImg?item.wxImg:'/resources/image/9.png'}}" mode="widthFix"></image>
+                </view>
+                <text>{{item.agentName}}</text>
+              </view>
+              <text class='md-clum'><text class='mmf mmf-buoumaotubiao36 f-gold'></text>{{item.mbeanTotal}}</text>
+            </view>
+          </view>
+          <view class="weui-loadmore" hidden="{{dayPage.moreDataShow}}">
+              <view class="weui-loading"></view>
+              <view class="weui-loadmore__tips">正在加载...</view>
+          </view>
+          <view class="weui-loadmore weui-loadmore_line" hidden="{{dayPage.bottomShow}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+          </view>
+          <view class="list_none" hidden="{{dayPage.noDataShow}}">
+            <view>
+              <image src='../../resources/image/21.png' />
+            </view>
+            <view class="list_none_text">亲 暂无日排行数据～</view>
+          </view>
+        </scroll-view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="paihang_article">
+        <view class='md-b-my'>
+          <view class="my-pm">
+            <text class='pm-num'>{{weekPage.order}}</text>
+            <text class='name'>我的排名</text>
+
+          </view>
+          <view class="my-xinxi">
+            <view class='touxiang'>
+              <image src="{{avatarUrl}}" mode="widthFix"></image>
+            </view>
+            <text class='name'>{{agentName}}</text>
+
+          </view>
+          <view class="my-md">
+            <text class='md-num'>{{weekPage.mbean}}</text>
+            <text class='name'>本周秒豆</text>
+
+          </view>
+        </view>
+        <scroll-view scroll-y="true" class='ph-scroll' bindscrolltolower="loadMore">
+
+          <view class='paihang-bd'>
+            <view class="paihang-list" wx:for="{{weekPage.dataList}}" wx:for-item="item" wx:key="agentId" wx:for-index="idx">
+              <text class="ph-num">{{idx+1}}</text>
+              <view class='geren-xinxi'>
+                <view class='touxiang'>
+                  <image src="{{item.wxImg?item.wxImg:'/resources/image/9.png'}}" mode="widthFix"></image>
+                </view>
+                <text>{{item.agentName}}</text>
+              </view>
+              <text class='md-clum'><text class='mmf mmf-buoumaotubiao36 f-gold'></text>{{item.mbeanTotal}}</text>
+            </view>
+          </view>
+          <view class="weui-loadmore" hidden="{{weekPage.moreDataShow}}">
+              <view class="weui-loading"></view>
+              <view class="weui-loadmore__tips">正在加载...</view>
+          </view>
+           <view class="weui-loadmore weui-loadmore_line" hidden="{{weekPage.bottomShow}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+          </view>
+          <view class="list_none" hidden="{{weekPage.noDataShow}}">
+            <view>
+              <image src='../../resources/image/21.png' />
+            </view>
+            <view class="list_none_text">亲 暂无周排行数据～</view>
+          </view>
+        </scroll-view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="paihang_article">
+        <view class='md-b-my'>
+          <view class="my-pm">
+            <text class='pm-num'>{{monthPage.order}}</text>
+            <text class='name'>我的排名</text>
+
+          </view>
+          <view class="my-xinxi">
+            <view class='touxiang'>
+              <image src="{{avatarUrl}}" mode="widthFix"></image>
+            </view>
+            <text class='name'>{{agentName}}</text>
+
+          </view>
+          <view class="my-md">
+            <text class='md-num'>{{monthPage.mbean}}</text>
+            <text class='name'>本月秒豆</text>
+
+          </view>
+        </view>
+        <scroll-view scroll-y="true" class='ph-scroll' bindscrolltolower="loadMore">
+
+          <view class='paihang-bd'>
+            <view class="paihang-list" wx:for="{{monthPage.dataList}}" wx:for-item="item" wx:key="agentId" wx:for-index="idx">
+              <text class="ph-num">{{idx+1}}</text>
+              <view class='geren-xinxi'>
+                <view class='touxiang'>
+                  <image src="{{item.wxImg?item.wxImg:'/resources/image/9.png'}}" mode="widthFix"></image>
+                </view>
+                <text>{{item.agentName}}</text>
+              </view>
+              <text class='md-clum'><text class='mmf mmf-buoumaotubiao36 f-gold'></text>{{item.mbeanTotal}}</text>
+            </view>
+          </view>
+          <view class="weui-loadmore" hidden="{{weekPage.moreDataShow}}">
+              <view class="weui-loading"></view>
+              <view class="weui-loadmore__tips">正在加载...</view>
+          </view>
+          <view class="weui-loadmore weui-loadmore_line" hidden="{{monthPage.bottomShow}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+          </view>
+          <view class="list_none" hidden="{{monthPage.noDataShow}}">
+            <view>
+              <image src='../../resources/image/21.png' />
+            </view>
+            <view class="list_none_text">亲 暂无月排行数据～</view>
+          </view>
+        </scroll-view>
+      </view>
+    </swiper-item>
+  </swiper>
+  
+</view>

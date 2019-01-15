@@ -1,0 +1,54 @@
+<!--pages/me/orderlist/orderlist.wxml-->
+<block wx:for="{{list}}" wx:key="{{index}}">
+<view class="weui-panel__bd p-r">
+  <view class="weui-media-box weui-media-box_appmsg"  bindtap="onItemClick" data-item="{{item}}" >
+    <view class="weui-panel__bd">
+        <view class="weui_home_image">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <view class="efault_img">
+              <image src="../../../resources/image/18.png"></image>
+            </view>
+        <image class="weui-media-box__thumb" mode="scaleToFill" src="{{item.imgUrl}}"></image>
+          </view>
+          <view>
+              <image class="ico_1" wx:if="{{item.status==1}}"    src="../../../resources/image/22.png" />
+              <image class="ico_1" wx:elif="{{item.status==3}}"  src="../../../resources/image/23.png" />
+              <image class="ico_1" wx:elif="{{item.status==4}}"  src="../../../resources/image/iconSoldOut.png" />
+              <image class="ico_1" wx:elif="{{item.status==2}}"  src="../../../resources/image/iconYushou.png" />
+          </view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title-black">
+            <view>
+              {{item.houseTitle}}
+            </view>
+          </view>
+          <view class="clear mar_bom_15">
+            <view class="weui_home_h2">
+              <view class='tit'>售价:</view>
+              <view class='c-f60'> {{item.salesTotalPrice}}万元</view>
+            </view>
+            <view class="weui_home_h2">
+              <view class='tit'>预约:</view>
+              <view class='c-6'>{{item.appointDate}}</view>
+            </view>
+            <view class="weui_home_h2 p-r">
+              <view class='tit'>状态:</view>
+              <view class='c-6'>{{item.appointStatusStr}}</view>
+            </view>
+          </view>
+        </view>
+  </view>
+   </view>
+     <view  wx:if="{{item.appointStatus==1}}"  bindtap="cancelClick" data-item="{{item.id}}"  class="list-btn"><view>取消预约</view></view>
+</view>
+</block>
+ <view class="list_none" wx:if="{{show}}">
+    <view>
+      <image src='../../../resources/image/nolist.png' />
+    </view>
+    <view class="list_none_text">亲 暂无数据哦～</view>
+  </view>
+<view class="weui-loadmore weui-loadmore_line" wx:if="{{dixian}}">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+</view>

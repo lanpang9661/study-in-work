@@ -1,0 +1,12 @@
+<!--pages/houseDetail/yaoshi/yaoshi.wxml-->
+<view class='yaoshi_word'>
+  <text class='mmf c-6 mmf-weibiaoti5 mr5 yaoshi'></text>
+  <text>请通过以下方式获取钥匙</text>
+</view>
+<view class='yaoshi_xinxi'>
+  <view>{{keyAddress}}</view>
+  <!-- <view>万朝刚</view>
+  <view>13940884105</view> -->
+</view>
+
+

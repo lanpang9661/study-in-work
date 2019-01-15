@@ -1,0 +1,85 @@
+<!--pages/register/register.wxml-->
+<view class="main">
+  <image class="logo" src='../../resources/image/17.png' />
+  <view class="title">欢迎你</view>
+  <view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__bd address-input">
+        <navigator class='weui-cell__bd p-r' url="citylist/citylist">
+          <view class="picker weui-input">
+            <text wx-if="{{nowCity=='选择城市'}}" style='color:#999'>{{nowCity}}</text>
+            <text wx:else>{{nowCity}}</text>
+          </view>
+          <text class='mmf mmf-weizhi  ico-right'></text>
+        </navigator> 
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__bd">
+        <input placeholder-class="phcolor" maxlength="4" class="weui-input" placeholder="姓名" bindinput='bindNameInput' />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__bd">
+        <input placeholder-class="phcolor" maxlength="11" class="weui-input" placeholder="手机号" bindinput='bindPhoneInput' type='number' />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input weui-cell_vcode">
+      <view class="weui-cell__bd">
+        <input placeholder-class="phcolor" maxlength="6" class="weui-input" placeholder="验证码" bindinput='bindCodeInput' type='number' />
+      </view>
+      <view class="weui-cell__ft">
+        <button bindtap='onGetCodeClick' disabled="{{disableGetCodeBtn}}">{{getCodeBtnText}}</button>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input weui-cell_vcode">
+      <view class="weui-cell__bd">
+        <input placeholder-class="phcolor" maxlength="4" class="weui-input" placeholder="图片中的数字" bindinput='bindImgAutoCodeInput' type='number' />
+      </view>
+      <view class="weui-cell__ft">
+       <canvas canvas-id="canvasAuth" bindtap='canvasAuthChange' style="width:175rpx;" ></canvas>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__bd">
+        <input placeholder-class="phcolor" maxlength="50" class="weui-input" placeholder="所属公司信息" bindinput='bindStoreInput' />
+      </view>
+    </view>
+  </view>
+  <checkbox-group bindchange="bindAgreeChange">
+    <label class="weui-agree" for="weuiAgree">
+      <view class="weui-agree__text">
+        <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+        <view class="weui-agree__checkbox-icon">
+          <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+        </view>
+        我已阅读并同意
+        <navigator url="license/license" class="weui-agree__link">《秒卖房用户使用协议》</navigator>
+      </view>
+    </label>
+  </checkbox-group>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="onCommitClick">新用户注册</button>
+  </view> 
+  <!-- 
+  <view class="weui-btn-area" style="color:#ff0000;font-size:24rpx;text-align:center;margin-top:45rpx;">
+    <text bindtap="forwardingLogin">蜗牛家账号登录</text>
+  </view>
+  --> 
+</view>
+
+
+<view class="modal" style='display:none'>
+  <view class="modal-mask"></view>
+  <view class="modal-layer modal-layer-radius modal-layer-md">
+    <view class="modal-header"><text></text></view>
+    <view class="modal-body "> 
+        <view class='h3'> 未能获取到位置信息</view>  
+        <view class='txt'> 已切换至默认城市，可手动选择</view>   
+     </view>
+    <view class="modal-footer">
+     <text class="btn btn-primary">我知道了</text>
+    </view>
+  </view>
+  
+</view>

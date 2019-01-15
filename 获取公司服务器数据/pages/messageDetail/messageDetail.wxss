@@ -1,0 +1,288 @@
+/* pages/newsdetail/newsdetail.wxss */
+@import '../housing/housing.wxss';
+.space-between{
+    display: flex;
+    flex-flow: column;
+    align-content: stretch;
+    justify-content: space-between;
+    height: 100%
+  }
+.bottom-btn {
+  
+  padding-bottom: 10px;
+  padding-top: 10px;
+  
+}
+
+.bottom-btn .promotion-tips {
+  height: 36px;
+  line-height: 36px;
+  color: #303741;
+  font-weight: 300;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+button, input, select, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.dh-mob{ position: fixed; bottom:101px; left: 0; background-color: #fff; padding: 30rpx;border-radius:10px;
+ }
+
+.dh-mob .tips{ color: #333;font-size: 28rpx; padding: 10px;text-align: center}
+
+.bottom-btn .promotion-tips {
+  height: 36px;
+  line-height: 36px;
+  color: #999;
+  font-weight: 300;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+.newstxt .time{ color: #fff; background-color: #ccc; font-size: 12px;padding: 0 5px; margin: 20px auto 0; border-radius: 3px;    width: fit-content;}
+.newstxt .news-bd{  margin: 20px 20% 0 10%; position: relative; font-size: 14px; color: #333 }
+.newstxt .news-bd .news-txt-bd{background-color: #fff; width: fit-content;padding:10px; border-radius:5px; position: relative }
+.newstxt .news-bd.news-bd-r .news-txt-bd{background: #99c8f5}
+.newstxt .news-bd.news-bd-r .news-txt-bd.fy-info{background-color: #fff;}
+.newstxt .news-bd text{ font-size: 16px;line-height: 18px}
+.newstxt .news-bd.news-bd-l{margin: 20px 10% 0 20%;}
+.newstxt .time-tips{ color: #ccc;margin: 20px auto 0;font-size: 12px; width: fit-content;}
+.mews-agent{ position: absolute; right: -112rpx; top: 0}
+.newstxt .news-bd.news-bd-l .mews-agent{right:auto;left: -112rpx;}
+.mews-agent .name{display: block; text-align: center}
+.mews-agent .img-wrapper {
+  display: block;
+  overflow: hidden;
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 92rpx;
+  background-size: 100%;
+  border:1px solid #e7e7e7;
+box-sizing:border-box;
+
+}
+.mews-agent .img-wrapper image {
+  width: 100%;
+  height: 100%;
+}
+.mob-list button{ padding: 0;border: none; background: none;font-size:28rpx;
+color: #333;line-height: 36rpx;text-align: left;
+
+}
+.mob-list button:before, .mob-list button:after{content: none}
+
+.index-menu {
+  width: 100%;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index:1;
+}
+
+.index-menu-item {
+  -webkit-flex: 0 0 100%;
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 4rpx;
+  padding: 14rpx 0;
+  box-sizing: border-box;
+
+}.index-menu-item text.name {
+  display: block;
+  font-size: 24rpx;
+  line-height: 1.4;
+  white-space: nowrap;
+  margin-top: 10rpx;
+}
+.box_r {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  color: #fff;
+  font-size: 36rpx;
+}
+.c_weizhi {
+   border:1px solid #f60;
+   color: #f60
+}
+.mmf-weizhi{ font-size: 18px; text-align: center; line-height:45px;
+ }
+.c_dianhua {
+  border:1px solid #0fa6e8;
+  color: #0fa6e8;
+}
+.c_dianhua1{
+  color: #fff;
+  position: absolute;
+  top: -40px;
+  right: 0px;
+}
+.fz_xinxi{
+  width: 426rpx;
+  color: #e7e7e7;
+  border: 2px solid #fff;
+  margin: 20px auto 0;
+  vertical-align:middle;
+  text-align: center;
+  position: relative;
+  padding:15px 20px ;
+}
+.fz_name{
+  display: block;
+  color: #142c3659;
+}
+.fz_phone{
+  color: #0fa6e8;
+  display: block;
+
+}
+.triangle-topright {
+    width: 0;
+    height: 0;
+    border-top: 40px solid #0fa6e8;
+    border-left: 40px solid transparent; 
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+.weui-panel__bd {
+  background: #fff;
+  margin: 0 30rpx;
+  border-radius:20rpx;
+}
+.weui-media-box__bd_in-appmsg {
+  width: 340rpx;
+}
+.sent-massage{ position: fixed; bottom: 0;width: 100%}
+.dh-mob, .biaoqing-list-swip{position: absolute; bottom: 103rpx; background-color: #fff; padding: 20rpx;border-radius:10px 10px 0px 0px;width:100%;box-shadow:0px -1px 1px #ddd;box-sizing: border-box;
+height: 320rpx;z-index: 2;overflow-y:auto
+ }
+.mob-list view{ margin-bottom: 0;  font-size: 28rpx; padding: 10px; border-radius: 3px; color: #333;border-bottom:1px solid #f4f4f4;
+}
+.dh-mob .tips{ font-size: 28rpx; padding: 2rpx;text-align: center; background-color: #fff;border-bottom:0;
+}
+.xiaolian_icon{
+  position:absolute;
+bottom:14rpx;
+right:200rpx;
+z-index:2;
+ 
+
+}
+.icon-xiaolian{font-size:48rpx;
+display:block;
+width:90rpx;
+height:72rpx;
+line-height:72rpx;
+text-align:center;
+color:#aaa
+}
+.read-tip{  position: absolute; bottom:0; left:-60rpx; font-size: 24rpx; color: #aaa }
+.read-tip.refresh{ color: #E74C3C}
+.new-massage{ position: fixed; top:100rpx;right: 0; background: #fff; border:1px solid #e7e7e7; border-right: 0; border-radius: 50rpx 0 0 50rpx; color: #2687e5; text-align: center; padding: 5px 15px; font-size:26rpx}
+.biaoqing-list swiper-item{display: flex;flex-wrap:wrap;align-content:flex-start;
+}
+.biaoqing-list swiper-item image{ width:56rpx; height: 56rpx}
+.biaoqing-list-swip{ padding-top: 50rpx}
+.biaoqing-list swiper-item view{ width:100rpx; height: 100rpx; display: flex; align-items: center;justify-content: center}
+.icon-shuangjiantoushang{
+  font-size: 24rpx;
+  margin-right: 10rpx;
+  
+}.mob-list button{ padding: 0;border: none; background: none;font-size:28rpx;
+color: #333;line-height: 36rpx;text-align: left;
+
+}.mob-list button:before, .mob-list button:after{content: none}
+.input-panel {
+    height: 100rpx;
+    box-sizing: border-box;
+    padding: 13rpx 20rpx 0;
+    background: #f5f5f7;
+    border-top:#d7d7d9 1rpx solid;
+    position: relative;
+    display: flex;
+}
+.send-input {
+    flex: 1;
+    height: 72rpx;
+    background: #fff;
+    border:#ddd 1rpx solid;
+    border-radius: 3px;
+    margin-right: 20rpx;
+    box-sizing: border-box;
+    padding: 0 10rpx;
+    position:relative;
+z-index:1;
+
+}
+.send-btn {
+    width: 160rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    background-color: #2687e5;
+    font-size: 28rpx;
+    color: #fff
+}
+.send-btn.send-btn-default{ background-color: #ddd; color: #666}
+.newstxt .news-bd.news-bd-r{  margin: 15px 20% 15px 15%;display:flex;
+justify-content:flex-end;
+ }
+.newstxt .news-bd.news-bd-l{  margin: 15px 15% 15px 20%;display:flex;
+justify-content:flex-start;}
+.news-top{
+
+
+overflow-y:auto;
+overflow-x:hidden;
+
+}
+.huibo{
+  font-size: 32rpx;
+}
+.c-f60 {
+  color: #f60;
+}
+.c-orange {
+  color: #fff99e;
+}
+.newstxt .news-bd .news-txt-bd .news-tit{display: block; width: 100%; font-size: 32rpx; line-height: 40rpx}
+.sell-inform-mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}

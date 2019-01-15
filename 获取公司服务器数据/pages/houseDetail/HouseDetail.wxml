@@ -1,0 +1,318 @@
+<!--房源详细-->
+<view>
+  <!-- 图片滑块 -->
+  <view class="efault">
+    <!-- 默认图片覆盖层 -->
+    <swiper bindchange="onBannerChange" bindtap="onBannerClick" class="ImageBanner" autoplay="true" interval="5000" duration="300" circular="true">
+      <block wx:for="{{bannerImageUrlArray}}" wx:key="index">
+        <swiper-item>
+          <image mode="scaleToFill" style="background: url({{item}}) no-repeat center;background-size:cover;" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 阴影遮罩文字显示 -->
+    <view class="baner_h2">{{waterMarkText}}</view>
+    <!-- 指示器 -->
+    <view class="baner_num">
+      <text>{{bannerCurrentItemId}}</text>
+      <text>/</text>
+      <text>{{bannerImageUrlArray.length}}</text>
+    </view>
+  </view>
+  <view class="clear">
+    <!-- 控制预售显示隐藏 -->
+    <view wx:if="{{!isShowDaojishi}}" class="home_title_left home_title_left1">
+      <!-- 房源描述 -->
+      <view class="home_con_h2">
+        <view class="h2_label" hidden="{{ziyingStatus != '1'}}">
+          优选
+        </view>{{houseDescription}}
+      </view>
+      <!-- 房源标签 -->
+      <view class="home_con_label_list">
+        <block wx:for="{{houseTagArray}}" wx:key="index">
+          <text>{{item}}</text>
+        </block>
+      </view>
+    </view>
+    <view wx:else class="home_title_left">
+      <!-- 房源描述 -->
+      <view class="home_con_h2">
+        <view class="h2_label" hidden="{{ziyingStatus != '1'}}">
+          优选
+        </view>{{houseDescription}}
+      </view>
+      <!-- 房源标签 -->
+      <view class="home_con_label_list">
+        <block wx:for="{{houseTagArray}}" wx:key="index">
+          <text>{{item}}</text>
+        </block>
+      </view>
+    </view>
+    <!-- 即将开盘倒计时 -->
+    <view class="tishi" hidden='{{!isShowDaojishi}}'>
+      <text class="tishi_1">{{yushouWenziDay}}</text>
+      <text class="tishi_2">{{yushouWenziUnit}}</text>
+      <text class="tishi_3">{{yushouWenziContent}}</text>
+    </view>
+  </view>
+  <!-- 佣金成交奖励 -->
+  <view class="home_title_1">
+    <image src='../../resources/image/yong1.png' />
+    <text>{{yongjinchengjiaojiang}}</text>
+  </view>
+  <!-- 房源详细描述 -->
+  <view class="home_con_layer2">
+    <!-- 户型面积价格一行 -->
+    <view class="home_con_layer2_top">
+      <!-- 总价 -->
+      <view class="home_con_layer2_top_list">
+        <text class="home_con_layer2_top_list_name">价格</text>
+        <text class="home_con_layer2_top_list_text">¥{{zongjia}}万</text>
+      </view>
+      <!-- 户型 -->
+      <view class="home_con_layer2_top_list">
+        <text class="home_con_layer2_top_list_name">户型</text>
+        <text class="home_con_layer2_top_list_text">{{huxing}}</text>
+      </view>
+      <!-- 面积 -->
+      <view class="home_con_layer2_top_list">
+        <text class="home_con_layer2_top_list_name">面积</text>
+        <text class="home_con_layer2_top_list_text">{{mianji}}㎡</text>
+      </view>
+    </view>
+    <!-- 单价年代一行 -->
+    <!-- 单价 -->
+    <view class="home_con_layer2_bottom_list">
+      <text class="home_con_layer2_bottom_list_title">单价:</text>
+      <text class="home_con_layer2_bottom_list_con">{{danjia}}元/㎡</text>
+    </view>
+    <!-- 年代 -->
+    <view class="home_con_layer2_bottom_list">
+      <text class="home_con_layer2_bottom_list_title">年代:</text>
+      <text class="home_con_layer2_bottom_list_con">{{niandai}}</text>
+    </view>
+    <!-- 装修产权一行 -->
+    <!-- 装修 -->
+    <view class="home_con_layer2_bottom_list">
+      <text class="home_con_layer2_bottom_list_title">装修:</text>
+      <text class="home_con_layer2_bottom_list_con">{{zhuangxiu}}</text>
+    </view>
+    <!-- 产权 -->
+    <view class="home_con_layer2_bottom_list">
+      <text class="home_con_layer2_bottom_list_title">产权:</text>
+      <text class="home_con_layer2_bottom_list_con">{{chanquan}}</text>
+    </view>
+    <!-- 楼层类型一行 -->
+    <!-- 楼层 -->
+    <view class="home_con_layer2_bottom_list">
+      <text class="home_con_layer2_bottom_list_title">楼层:</text>
+      <text class="home_con_layer2_bottom_list_con">{{louceng}}</text>
+    </view>
+    <!-- 类型 -->
+    <view class="home_con_layer2_bottom_list">
+      <text class="home_con_layer2_bottom_list_title">类型:</text>
+      <text class="home_con_layer2_bottom_list_con">{{leixing}}</text>
+    </view>
+    <!-- 朝向用途一行 -->
+    <!-- 朝向 -->
+    <view class="home_con_layer2_bottom_list">
+      <text class="home_con_layer2_bottom_list_title">朝向:</text>
+      <text class="home_con_layer2_bottom_list_con">{{chaoxiang}}</text>
+    </view>
+    <!-- 用途 -->
+    <view class="home_con_layer2_bottom_list">
+      <text class="home_con_layer2_bottom_list_title">用途:</text>
+      <text class="home_con_layer2_bottom_list_con">{{yongtu}}</text>
+    </view>
+    <!-- 楼盘一行 -->
+    <view class="home_con_layer2_bottom">
+      <text class="home_con_layer2_bottom_list_title home_con_layer2_titlets">小区:</text>
+      <text class="home_con_layer2_bottom_list_con home_con_layer2_conts">{{loupan}}</text>
+    </view>
+    <!-- 地址一行 -->
+    <view bindtap="onLocationClick" class="home_con_layer2_bottom">
+      <text class="home_con_layer2_bottom_list_title home_con_layer2_titlets">地址:</text>
+      <view class="home_con_layer2_bottom_list_con home_con_layer2_conts">
+        <text  wx:if="{{lookHouseType ==2}}">{{dizhi}}</text>
+        <text  wx:if="{{lookHouseType !=2}}">{{dizhi}}</text>
+        <image wx:if="{{lookHouseType ==2}}" class="iconadress" src="../../resources/image/iconAdress.png" />
+      </view>
+    </view>
+  </view>
+  <!-- 房主自述 -->
+  <view hidden="{{!isSelfDescriptionFlag}}" class="home_con_layer3">
+    <text class="home_con_layer3_h2">房主自述</text>
+    <view class="home_con_layer3_list margin_top_32 zishu-txt">
+      <text class="home_con_layer3_list_con">{{selfDescription}}</text>
+    </view>
+  </view>
+  <!-- 房源介绍 
+  <view hidden="{{!isShowSellReason && !isShowHouseZhuangkuang && !isShowspecialYoushi && !isShowZhuangxiuJieshao && !isShowXuequDetail && !isShowHouseMaidian}}" class="home_con_layer3">
+    <text class="home_con_layer3_h2">房源介绍</text>-->
+    <!-- 出售理由一行 
+    <view hidden="{{!isShowSellReason}}" class="home_con_layer3_list margin_top_32">
+      <text class="home_con_layer3_list_title">出售理由:</text>
+      <text class="home_con_layer3_list_con">{{sellReason}}</text>
+    </view>-->
+    <!-- 房屋状况一行
+    <view hidden="{{!isShowHouseZhuangkuang}}" class="home_con_layer3_list">
+      <text class="home_con_layer3_list_title">房屋状况:</text>
+      <text class="home_con_layer3_list_con">{{houseZhuangkuang}}</text>
+    </view> -->
+    <!-- 特别优势一行 
+    <view hidden="{{!isShowspecialYoushi}}" class="home_con_layer3_list">
+      <text class="home_con_layer3_list_title">特别优势:</text>
+      <text class="home_con_layer3_list_con">{{specialYoushi}}</text>
+    </view>-->
+    <!-- 装修介绍一行 
+    <view hidden="{{!isShowZhuangxiuJieshao}}" class="home_con_layer3_list">
+      <text class="home_con_layer3_list_title">装修介绍:</text>
+      <text class="home_con_layer3_list_con">{{zhuangxiuJieshao}}</text>
+    </view>-->
+    <!-- 学区详情一行 
+    <view hidden="{{!isShowXuequDetail}}" class="home_con_layer3_list">
+      <text class="home_con_layer3_list_title">学区详情:</text>
+      <text class="home_con_layer3_list_con">{{xuequDetail}}</text>
+    </view>-->
+    <!-- 房屋卖点一行 
+    <view hidden="{{!isShowHouseMaidian}}" class="home_con_layer3_list">
+      <text class="home_con_layer3_list_title">核心卖点:</text>
+      <text class="home_con_layer3_list_con">{{houseMaidian}}</text>
+    </view>
+  </view>-->
+
+  <!-- 交易信息 -->
+  <view class="home_con_layer4" style="overflow:hidden">
+    <text class="home_con_layer4_h2">交易信息</text>
+    <!-- 两税户口一行 -->
+    <!-- 两税   -->
+    <view hidden="{{!isShowLiangshui}}" class="home_con_layer4_list">
+      <text class="home_con_layer4_list_title">两税:</text>
+      <text class="home_con_layer4_list_con">{{liangshui}}</text>
+    </view>
+  
+    <!-- 户口 -->
+    <view hidden="{{!isShowHukou}}" class="home_con_layer4_list">
+      <text class="home_con_layer4_list_title">户口:</text>
+      <text class="home_con_layer4_list_con">{{hukou}}</text>
+    </view>
+    <!-- 税费, 最佳带看时间一行 -->
+    <!-- 两税承担 -->
+    <view class="home_con_layer4_list">
+      <text class="home_con_layer4_list_title">两税承担:</text>
+      <text class="home_con_layer4_list_con">{{shuifeichengdan}}</text>
+    </view>
+    <!-- 最佳带看时间 -->
+    <view hidden="{{!isShowBestDaikanTime}}" class="home_con_layer4_list">
+      <text class="home_con_layer4_list_title">带看时间:</text>
+      <text class="home_con_layer4_list_con">{{bestDaikanTime}}</text>
+    </view>
+    <!-- 欠缴, 倒房时间一行 -->
+    <!-- 是否欠缴 -->
+    <view hidden="{{!isShowQianjiao}}" class="home_con_layer4_list">
+      <text class="home_con_layer4_list_title">是否欠缴:</text>
+      <text class="home_con_layer4_list_con">{{qianjiao}}</text>
+    </view>
+    <!-- 倒房时间 -->
+    <view hidden="{{!isShowDaofangTime}}" class="home_con_layer4_list">
+      <text class="home_con_layer4_list_title">倒房时间:</text>
+      <text class="home_con_layer4_list_con">{{daofangTime}}</text>
+    </view>
+    <!-- 其他说明一行 
+    <view hidden="{{!isShowOtherShuoming}}" class="home_con_layer4_bottom">
+      <text class="home_con_layer4_list_title home_con_layer4_list_titlets">其他说明:</text>
+      <text class="home_con_layer4_list_con home_con_layer4_list_conts">{{otherShuoming}}</text>
+    </view>-->
+  </view>
+
+  <!-- 位置 -->
+  <view bindtap="onLocationClick" class="home_con_layer5">
+    <text class="home_con_layer5_h2">位置</text>
+    <!-- <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{mapMarkers}}" bindmarkertap="markertap" show-location style="width: 100%; height: 300rpx; " /> -->
+    <image class="map" id="map" mode="aspectFit" src="{{gaodeMapImageUrl}}" />
+  </view>
+
+  <!-- 位置图片滑块 -->
+  <view hidden="{{!isShowLoacationImage}}" class="home_con_layer8">
+    <!-- 位置图片文字提示 -->
+    <text class="home_con_layer8_h2">位置图片</text>
+    <view class="home_con_layer8_con">
+      <scroll-view class="locationScrollView" scroll-x="true">
+        <block wx:for="{{galaryPreviewImageUrlArray}}" wx:key="index">
+          <view class="locationScrollItemView" bindtap="onLocationImageItemClick" data-index="{{index}}">
+            <!-- 默认图片覆盖层 -->
+            
+            <view class="home_con_layer8_con_image">
+              <image src="{{item}}" />
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 注意事项 -->
+  <view hidden="{{!isShowWarningContent}}" class="home_con_layer6">
+    <text class="home_con_layer6_h2">注意事项</text>
+    <text class="home_con_layer6_con">{{warningContent}}</text>
+  </view>
+
+  <!-- 带看流程 -->
+  <view hidden="{{!isShowDaikanLiucheng}}" class="home_con_layer7">
+    <text class="home_con_layer7_h2">带看流程</text>
+    <!-- 带看流程Item -->
+    <view class='liup'>
+      <block wx:for="{{daikanLiuchengArray}}" wx:key="index">
+        <view hidden="{{!item.isShowItem}}" class='liu'>
+          <view class='dian'></view>
+          <!-- 流程文字 -->
+          <text class='zi'>{{item.data}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="home_foot">
+    <view class="home_foot_list" bindtap="onShoucangClick">
+      <text class='mmf {{shoucangClass}}'></text>
+      <text>{{shoucang}}</text>
+    </view>
+    <view wx:if="{{showIMFlag}}" class="home_foot_list" bindtap="messagefuClick">
+      <text class='mmf mmf-news'></text>
+      <text>房主</text>
+    </view>
+    <view wx:else class="home_foot_list" bindtap="dialPhone">
+      <text class='mmf mmf-dianhua'></text>
+      <text>经纪人</text>
+    </view>
+    <view class="home_foot_list" bindtap='createForwardImg'>
+      <canvas canvas-id='myCanvas'></canvas>
+      <text class='mmf mmf-fenxiang'></text>
+      <text>分享</text>
+    </view>
+    <view class="home_foot_list kaisuo  {{weixiuClass}}" hidden="{{houseBtnShow}}" bindtap="checkHouseBtn">
+      <text>{{newSuoTip2}}</text>
+      <text>{{newSuoTip}}</text>
+    </view>
+  </view>
+  <view wx-if="{{!showShouYe}}" class="createForwardImg to-index" bindtap='goShouye'>首页</view>
+  <view wx-if="{{dialogueFlag}}" class="createForwardImg" bindtap="onKefuClick"><image src="../../resources/image/guanjia1.png" /></view>
+</view>
+
+<view wx-if="{{dialingFlag}}" class="popup-mobile pop-notit auth-code active" style="display: block;">
+  <view class='boda_juzhong'>
+    <text class='tit'>用加密号码直接联系房主</text>
+    <view class='img_boda'>
+      <image wx:if="{{friendHeadImg!=''&& friendHeadImg!=null}}" src="{{friendHeadImg}}" />
+      <image wx:if="{{friendHeadImg==''||friendHeadImg==null}}" src="../../resources/image/jingjiren.png" />
+    </view>
+    <text>{{friendName}}</text>
+  </view>
+  <text class="pop_text" style='font-size:27rpx;'>直接索要房主真实号码可能会被投诉，拨号过程使用加密号码，只能用{{myPhoneShow}}的手机号拨打哦。
+  <text style='color:red'>*本次通话的加密号码5分钟内有效，请及时拨打。若需要再次使用加密号码沟通，请回到本页面重新拨打。</text></text>
+  <view class="pop-btn">
+    <button bindtap="dialingHiddenMethod" class="btn btn-cancel code-cancel-btn" type="button">取消</button>
+    <!-- 无内容是btn btn-default，填写后是btn btn-sure -->
+    <button bindtap="dialingMethod" class="btn btn-sure code-button" type="button">立即拨打</button>
+  </view>
+ </view> 

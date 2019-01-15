@@ -1,0 +1,10 @@
+<!--pages/me/information/information.wxml-->
+<view>
+  <view class="header bm_common l-center">开锁步骤</view>
+  <view class="buzhou"><image src='../../../resources/image/bluekey.jpg'></image></view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="searchBluetooth">申请钥匙</button>
+   
+  </view>
+  
+</view>

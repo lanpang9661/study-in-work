@@ -1,0 +1,17 @@
+<view class='mask'  wx:if="{{show}}">
+  <view class="bai">
+    <view class='di'>
+      <text>
+        小程序需要获取您的微信公开信息,才能继续使用
+      </text>
+    </view>
+     <view class="weui-flex">
+           <view class="weui-flex__item">
+            <button bindtap='cancal'>拒  绝</button>
+          </view>
+          <view class="weui-flex__item">
+            <button class="btn" bindgetuserinfo="userinfo" open-type="getUserInfo">确  定</button>
+          </view>
+      </view>
+  </view>
+</view>

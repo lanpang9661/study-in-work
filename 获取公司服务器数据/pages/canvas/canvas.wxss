@@ -1,0 +1,9 @@
+/* pages/canvas/canvas.wxss */
+canvas{
+  height: 1334px;
+  width: 750px;
+  opacity: 0;
+}
+scroll-view{
+  width: 100%;
+}

@@ -1,0 +1,160 @@
+<!--pages/newsdetail/newsdetail.wxml-->
+<view class='newsdetail space-between' bindtap="closeWindow">
+    
+  <view class="index-menu" bindtap="dialingShowMethod">
+    <navigator class="index-menu-item" url="" hover-class="none">
+      <text class='icon mmf box_r c_dianhua mmf-dianhua'></text>
+      <text class='name'>加密拨号</text>
+    </navigator>
+    <!-- <navigator class="index-menu-item" url="" hover-class="none">
+      <text class='icon mmf box_r c_dianhua mmf-weizhi'></text>
+      <text class='name'>求房源地址</text>
+    </navigator> -->
+  </view>
+  <scroll-view class='news-top' scroll-y style="height:100vh;" scroll-with-animation="true"  scroll-top="{{scrollTop}}">
+    <view class='newstxt' wx:for='{{chatList}}' data-item="{{item}}">
+      <view class='time' wx:if="{{item.showTime}}" >{{item.sendTime}}</view>
+      <view wx:if="{{item.showOne}}">
+        <view wx:if="{{item.from == myUserName}}" class='news-bd news-bd-r'>
+          <view class='news-txt-bd'>
+            <text class='news-tit'>{{item.messageData}}</text>
+            <view wx:if="{{item.readFlag == '1'}}" class='read-tip'>已读</view>
+            <view wx:else class='read-tip'>未读</view>
+          </view>
+          <view class='mews-agent'>
+            <view class="img-wrapper">
+              <!-- <image src="{{myHeadImg}}" /> -->
+              <image wx:if="{{myHeadImg!=''&& myHeadImg!=null}}" src="{{myHeadImg}}" />
+              <image wx:if="{{myHeadImg==''||myHeadImg==null}}" src="../../resources/image/jingjiren.png" />
+            </view>
+          </view>
+        </view>
+        <view wx:else class='news-bd news-bd-l'>
+          <view class='news-txt-bd'>
+            <text class='news-tit'>{{item.messageData}}</text>
+          </view>
+          <view class='mews-agent'>
+            <view class="img-wrapper">
+              <!-- <image src="{{friendHeadImg}}" /> -->
+              <image wx:if="{{friendHeadImg!=''&& friendHeadImg!=null}}" src="{{friendHeadImg}}" />
+              <image wx:if="{{friendHeadImg==''||friendHeadImg==null}}" src="../../resources/image/jingjiren.png" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class='news-bd news-bd-r'>
+          <view class='news-txt-bd fy-info'>
+            <text class='news-tit'>{{item.houseSourceInfo.houseDescription}}</text>
+            <view class='news-bot'>{{item.houseSourceInfo.huxing}} {{item.houseSourceInfo.mianji}}<text class='c-f60'>{{item.houseSourceInfo.moneySum}}</text></view> 
+          </view>
+          <view class='mews-agent'>
+            <view class="img-wrapper">
+              <image wx:if="{{myHeadImg!=''&& myHeadImg!=null}}" src="{{myHeadImg}}" />
+              <image wx:if="{{myHeadImg==''||myHeadImg==null}}" src="../../resources/image/jingjiren.png" />
+              <!-- <image src="{{myHeadImg}}" /> -->
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class='new-massage'>
+        <text class='icon iconfont c_xiaolian icon-shuangjiantoushang'></text>16条新消息
+      </view> -->
+
+      <!-- <view class='time'>11月24日 下午 17：00</view>
+      <view class='time-tips'>房主已读，电话已发送，请保持信号畅通。</view> -->
+    </view>
+
+  </scroll-view>
+</view>
+
+<view class='sent-massage'>
+  <view class='biaoqing-list-swip'style="display:none;">
+    <swiper class="biaoqing-list" indicator-dots="{{true}}" indicator-color='#e7e7e7' indicator-active-color='#0fa6e8'>
+      <swiper-item>
+        <view>
+          <image src="../../resources/image/1.png" />
+        </view>
+        <view>
+          <image src="../../resources/image/2.png" />
+        </view>
+        <view>
+          <image src="../../resources/image/3.png" />
+        </view>
+        <view>
+          <image src="../../resources/image/4.png" />
+        </view>
+        <view>
+          <image src="../../resources/image/4.png" />
+        </view>
+        <view>
+          <image src="../../resources/image/4.png" />
+        </view>
+        <view>
+          <image src="../../resources/image/4.png" />
+        </view>
+        <view>
+          <image src="../../resources/image/4.png" />
+        </view>
+        <view>
+          <image src="../../resources/image/4.png" />
+        </view>
+        <view>
+          <image src="../../resources/image/4.png" />
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class='dh-mob' wx:if="{{showReplyFlag}}" style="display:none;">
+    <view class='mob-list'>
+      <view class='tips'>点击快捷回复</view>
+      <view>
+        <button bindtap="sendQuickMessage" data-message="业主你好，您的房子还在出售么？">业主你好，您的房子还在出售么？</button>
+      </view>
+      <view>
+        <button bindtap="sendQuickMessage" data-message="房子是您的名字么？">房子是您的名字么？</button>
+      </view>
+      <view>
+        <button bindtap="sendQuickMessage" data-message="房子有产权证么？">房子有产权证么？</button>
+      </view>
+      <view>
+        <button bindtap="sendQuickMessage">客户比较看好您的房子，想和您具体谈谈。</button>
+      </view>
+      <view>
+        <button bindtap="sendQuickMessage">有客户想看房，您什么时间比较方便？</button>
+      </view>
+      <view>
+        <button bindtap="sendQuickMessage">您这边的价格还有沟通的余地吗？</button>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="input-panel">
+    <view class='xiaolian_icon' style='display:none;'>
+      <text class='icon iconfont box_r c_xiaolian icon-xiaolian'></text>
+    </view>
+    <input type="" class="send-input" name="messageDetail" bindinput ="messageDetailInput" value='{{messageDetail}}'></input>
+    <button class="{{messageDetail==''?'send-btn send-btn-default':'send-btn'}}" bindtap="{{messageDetail==''?'':'sendMessage'}}">发送</button>  <!--选中去掉send-btn-default-->
+  </view>
+</view>
+
+<view wx-if="{{dialingFlag}}" class="has-no-css sell-inform-mask" style="display: block;"></view>
+<view wx-if="{{dialingFlag}}" class="popup-mobile pop-notit auth-code active" style="display: block;">
+  <view class='boda_juzhong'>
+    <text class='tit'>用加密号码直接联系房主</text>
+    <view class='img_boda'>
+      <image wx:if="{{friendHeadImg!=''&& friendHeadImg!=null}}" src="{{friendHeadImg}}" />
+      <image wx:if="{{friendHeadImg==''||friendHeadImg==null}}" src="../../resources/image/jingjiren.png" />
+    </view>
+    <text>{{friendName}}</text>
+  </view>
+  <text class="pop_text" style='font-size:27rpx;'>直接索要房主真实号码可能会被投诉，拨号过程使用加密号码，只能用{{myPhoneShow}}的手机号拨打哦。
+  <text style='color:red'>*本次通话的加密号码5分钟内有效，请及时拨打。若需要再次使用加密号码沟通，请回到本页面重新拨打。</text></text>
+  <view class="pop-btn">
+    <button bindtap="dialingHiddenMethod" class="btn btn-cancel code-cancel-btn" type="button">取消</button>
+    <!-- 无内容是btn btn-default，填写后是btn btn-sure -->
+    <button bindtap="dialingMethod" class="btn btn-sure code-button" type="button">立即拨打</button>
+  </view>
+ </view> 

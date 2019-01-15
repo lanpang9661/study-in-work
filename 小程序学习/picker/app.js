@@ -1,5 +1,21 @@
 //app.js
 App({
+  globalData: {
+    userInfo: null,
+    // baseUrl: "http://192.168.0.23:8081/snail-app", // 开发环境
+    // baseUrl: "http://192.168.0.100:8085/snail-app",// 正式环境
+    // baseUrl: "https://www.maifang.com/v-imtest",// 测试环境
+    openId: "",
+    gaodeMapAPIKey: "b2a85340a13d6ed8a6505302651d9526",
+    agentInfo: null,
+    fxjs: "",
+    extraData: "",
+    unionId: "",
+    //环境,用于测试跳转小程序使用,当为正式时不用修改,微信自动跳转到正式版,正式：release，体验：trial，开发：develop
+    environmental: 'develop',
+    //名片小程序appId
+    xcx_card_appId: 'wx193c25dc086b6e68'
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

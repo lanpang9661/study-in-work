@@ -1,0 +1,5 @@
+<!--pages/waitAuth/waitAuth.wxml-->
+<view class="prompt">
+  <text>注册已完成，小伙伴们加速审核中，请稍作等待哦！\n审核通过后，下拉刷新即可使用了。</text>
+</view>
+<image class="bit" src="../../resources/image/bitmap.png"></image>

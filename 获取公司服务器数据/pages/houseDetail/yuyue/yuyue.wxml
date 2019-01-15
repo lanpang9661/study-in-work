@@ -1,0 +1,45 @@
+<wxs module="filter" src="../../../utils/indexOf.wxs"></wxs>
+<view class="header">可选时间</view>
+<view class=" group ">
+ <block wx:for="{{list}}" wx:key="{{index}}">
+    <view class="group-header ">{{item.appointDate}}</view>
+    <view class="group-body ">
+      <view class="multiple-select ">
+        <block wx:for="{{item.list}}" wx:key="{{index}}">
+          <view   wx:if="{{item.status==1}}" class='closed'>
+            <text>{{item.periodTime}} </text>
+            <view class='tips'>已预约</view>
+          </view>
+          <view class="{{(filter.indexOf(selected,item.id,item.id)>-1)?'chose':''}}"  wx:elif="{{item.status!=1}}" bindtap="onItemClick" data-item="{{item}}">
+              <text>{{item.periodTime}}</text>
+              <icon wx:if="{{filter.indexOf(selected,item.id,item.id)>-1}}"  class='mmf mmf-duihao'></icon>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+
+
+</view>
+<view class="modal" wx:if="{{confirmBtn==1}}">
+  <view class="modal-mask"></view>
+  <view class="modal-layer modal-layer-radius modal-layer-md">
+    <view class="modal-header">
+      <text></text>
+    </view>
+    <view class="modal-body ">
+      <view class='h3'>预约成功</view>
+      <view class='txt'> 请到“我的”-“预约记录”查看</view>
+    </view>
+    <view class="modal-footer">
+      <text class="btn btn-primary" bindtap="closeClick">我知道了</text>
+    </view>
+  </view>
+
+</view>
+
+<view class="home_foot">
+  <view class="home_foot_list">
+    <view bindtap="confirmClick">确定预约</view>
+  </view>
+</view>

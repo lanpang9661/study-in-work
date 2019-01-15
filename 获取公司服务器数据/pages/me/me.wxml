@@ -1,0 +1,77 @@
+<page>
+  <view>
+    <view class="my_baner">
+      <image src="../../resources/image/bg.png" />
+      <view class="my_baner_title">
+        <image src="{{userInfo.avatarUrl}}" />
+        <view class='info-group'>
+          <view class="my_baner_title_name">{{userInfo.nickName}}</view>
+          <view class="my_baner_title_h2">{{agentInfo.agentName}}</view>
+        </view>
+      </view>
+      <view class='my_baner_title_mp' bindtap='bindMyCard'>
+        <text class='icon mmf box_r mmf-mingpian'></text>
+        <text class='mingpian-text'>我的名片</text>
+      </view>
+    </view>
+    <view class="gray-blank"></view>
+    <!-- 个人信息 -->
+    <view class='write-bank gerenxinxi'>
+      <text class="sell-tit bm0">个人信息</text>
+      <view class='my-grxx'>
+        <view class='my-xinxi' data-url='information/information' bindtap='navigatorPage'>
+          <text class='icon iconfont icon-bianji1'></text>
+          <text class='grxx-text'>修改信息</text>
+        </view>
+        <view class='my-xinxi'>
+          <text class='icon mmf mmf-maodou' bindtap='bindMyPoints'></text>
+          <text class='grxx-text'>我的秒豆</text>
+        </view>
+      </view>
+      <view>
+      </view>
+    </view>
+    <view class="gray-blank"></view>
+    <!-- 跟进及沟通记录 -->
+    <view class='write-bank genjin'>
+      <text class="sell-tit bm0">跟进及沟通记录</text>
+      <view class='my-grxx'>
+        <view class='my-xinxi' data-url='collection/collection' bindtap='navigatorPage'>
+          <text class='icon mmf mmf-shoucang1'></text>
+          <text class='grxx-text'>关注记录</text>
+        </view>
+        <view class='my-xinxi'>
+          <text class='icon mmf mmf-yuyue' data-url='orderlist/orderlist' bindtap='navigatorPage'></text>
+          <text class='grxx-text'>预约记录</text>
+        </view>
+        <view class='my-xinxi'>
+          <text class='icon mmf mmf-tianxiedaikan1' data-url='../me/record/record' bindtap='navigatorPage'></text>
+          <text class='grxx-text'>带看记录</text>
+        </view>
+        <view class='my-xinxi'>
+          <text class='icon mmf mmf-gouxuanicon' data-url='clicklist/clicklist' bindtap='navigatorPage'></text>
+          <text class='grxx-text'>浏览记录</text>
+        </view>
+      </view>
+      <view>
+      </view>
+    </view>
+    <view class="gray-blank"></view>
+    <!-- 其他 -->
+    <view class='write-bank qita'>
+      <text class="sell-tit bm0">其他</text>
+      <view class='my-grxx'>
+        <view class='my-xinxi'>
+          <text class='icon iconfont icon-loupan1' data-url='about/about' bindtap='navigatorPage'></text>
+          <text class='grxx-text'>关于我们</text>
+        </view>
+        <view class='my-xinxi' bindtap="fx">
+          <text class='icon mmf mmf-fenxiang1'></text>
+          <text class='grxx-text'>推荐给朋友</text>
+        </view>
+      </view>
+      <view>
+      </view>
+    </view>
+  </view>
+</page>

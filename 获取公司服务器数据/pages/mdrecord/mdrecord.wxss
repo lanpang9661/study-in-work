@@ -1,0 +1,36 @@
+/* pages/mdrecord/mdrecord.wxss */
+
+.multiple-select {
+  padding: 40rpx;
+}
+
+.yq-bd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.md-mid {
+  font-size: 28rpx;
+}
+
+.md-mid text {
+  display: block ;
+}
+
+.md-mid-detail .time {
+  color: #999;
+}
+.list_none image{
+  width: 195rpx;
+  height: 198rpx;
+  margin: 142rpx auto 24rpx auto;
+  display: block;
+}
+.list_none_text{
+  width: 100%;
+  line-height: 42rpx;
+  font-size:30rpx;
+  color:rgba(102,102,102,1);
+  text-align: center;
+}

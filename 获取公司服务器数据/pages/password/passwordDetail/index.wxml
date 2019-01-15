@@ -1,0 +1,36 @@
+<!--pages/passwordDetail/index.wxml-->
+<scroll-view>
+  <view class="baner">
+    <view class="efault">
+      <!-- 默认图片覆盖层 -->
+      <view class="efault_img"><image src="../../../resources/image/19.png" /></view>
+      <image mode="scaleToFill" class="efoault_img_con" src="{{entity.imgUrl}}" />
+    </view>
+
+    <view class="baner_h2">{{entity.estate}}</view>
+  </view>
+  <view class="lock_layer1">
+    <view class="lock_layer1_top" bindlongpress='longClickPassword'>
+      <view class="lock_layer1_top_name">密码：</view>
+      <view class="lock_layer1_top_num">{{entity.password}}</view>
+    </view>
+    <view class="lock_layer1_bottom">
+      <view class="lock_layer1_bottom_name">本次密码有效时间：</view>
+      <view class="lock_layer1_bottom_num">{{clock}}</view>
+    </view>
+  </view>
+  <view class="weui-cells weui-cells_after-title lock_layer2">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">申请时间</view>
+      <view class="weui-cell__ft">{{entity.requestTime}}</view>
+    </view>
+    <!-- <view class="weui-cell">
+      <view class="weui-cell__bd">开锁时间</view>
+      <view class="weui-cell__ft">{{entity.openLockTimeStr}}</view>
+    </view> -->
+    <view class="weui-cell">
+      <view class="weui-cell__bd">截止时间</view>
+      <view class="weui-cell__ft">{{entity.effectiveTimeStr}}</view>
+    </view>
+  </view>
+</scroll-view>

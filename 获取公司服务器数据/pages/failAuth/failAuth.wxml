@@ -1,0 +1,6 @@
+<view class='im'>
+  <image src='/resources/image/authcancal.png'></image>
+</view>
+<view class="btn">
+<button open-type="openSetting">打开授权设置页</button>
+</view>

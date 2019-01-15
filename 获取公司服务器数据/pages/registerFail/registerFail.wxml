@@ -1,0 +1,9 @@
+<!--pages/registerFail/registerFail.wxml-->
+<view>
+  <image class="zhu1" src="../../resources/image/backgroundShenheFail.png" />
+  <view class="prompt">
+    <text>审核失败</text>
+    <text class="prompt_text">{{reason}}</text>
+  </view>
+  <button class="btn" bindtap="onReRegisterClick">重新注册</button>
+</view>

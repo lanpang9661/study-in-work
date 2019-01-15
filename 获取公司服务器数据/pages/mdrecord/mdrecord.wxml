@@ -1,0 +1,24 @@
+
+<view class='md-mid  '>
+  <view class='yq-bd multiple-select  bm_common ' wx:for="{{myPage.dataList}}" wx:for-item="item" wx:key="agentId">
+    <view class='md-mid-detail'>
+      <text>{{item.detailContext}}</text>
+      <text class='time'>{{item.createDateStr}}</text>
+    </view>
+    <text>{{item.mbean > 0 ? "+" + item.mbean: item.mbean}}</text>
+  </view>
+ 
+</view>
+<view class="weui-loadmore" hidden="{{myPage.noMore || myPage.isEmpty}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载...</view>
+</view>
+<view class="weui-loadmore weui-loadmore_line" hidden="{{!myPage.noMore || myPage.isEmpty}}">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+</view>
+<view class="list_none" hidden="{{!myPage.isEmpty}}">
+  <view>
+    <image src='../../resources/image/21.png' />
+  </view>
+  <view class="list_none_text">亲 暂无数据哦～</view>
+</view>

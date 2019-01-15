@@ -1,0 +1,118 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/housing/housing",
+    "pages/password/password",
+    "pages/password/passwordDetail/index",
+    "pages/password/passwordRequest/LockRequest",
+    "pages/password/bluetooth/bluetooth",
+    "pages/password/bluekey/bluekey",
+    "pages/failAuth/failAuth",
+    "pages/register/register",
+    "pages/register/citylist/citylist",
+    "pages/waitAuth/waitAuth",
+    "pages/registerFail/registerFail",
+    "pages/me/me",
+    "pages/me/information/information",
+    "pages/me/record/record",
+    "pages/me/collection/collection",
+    "pages/me/about/about",
+    "pages/me/clicklist/clicklist",
+    "pages/houseDetail/HouseDetail",
+    "resources/lib/weui/example/index",
+    "resources/lib/weui/example/button/button",
+    "resources/lib/weui/example/list/list",
+    "resources/lib/weui/example/input/input",
+    "resources/lib/weui/example/slider/slider",
+    "resources/lib/weui/example/uploader/uploader",
+    "resources/lib/weui/example/article/article",
+    "resources/lib/weui/example/badge/badge",
+    "resources/lib/weui/example/flex/flex",
+    "resources/lib/weui/example/footer/footer",
+    "resources/lib/weui/example/gallery/gallery",
+    "resources/lib/weui/example/grid/grid",
+    "resources/lib/weui/example/icons/icons",
+    "resources/lib/weui/example/loadmore/loadmore",
+    "resources/lib/weui/example/panel/panel",
+    "resources/lib/weui/example/preview/preview",
+    "resources/lib/weui/example/progress/progress",
+    "resources/lib/weui/example/actionsheet/actionsheet",
+    "resources/lib/weui/example/dialog/dialog",
+    "resources/lib/weui/example/msg/msg",
+    "resources/lib/weui/example/msg/msg_success",
+    "resources/lib/weui/example/msg/msg_fail",
+    "resources/lib/weui/example/picker/picker",
+    "resources/lib/weui/example/toast/toast",
+    "resources/lib/weui/example/navbar/navbar",
+    "resources/lib/weui/example/tabbar/tabbar",
+    "resources/lib/weui/example/searchbar/searchbar",
+    "pages/error/error",
+    "pages/houseDetail/location/LocationInfo",
+    "pages/accountDisabled/accountDisabled",
+    "pages/canvas/canvas",
+    "pages/register/license/license",
+    "pages/transit/transit",
+    "pages/activation/activation",
+    "pages/points/points",
+    "pages/ranking/ranking",
+    "pages/mdrecord/mdrecord",
+    "pages/search/search",
+    "pages/message/message",
+    "pages/messageDetail/messageDetail",
+    "pages/houseDetail/yuyue/yuyue",
+    "pages/me/orderlist/orderlist",
+    "pages/houseDetail/keyAddress/keyAddress"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2687e5",
+    "navigationBarTitleText": "秒卖房",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#666666",
+    "selectedColor": "#2687e5",
+    "list": [
+      {
+        "pagePath": "pages/housing/housing",
+        "text": "房源",
+        "iconPath": "resources/image/5.png",
+        "selectedIconPath": "resources/image/6.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "resources/image/xiaoxi-h.png",
+        "selectedIconPath": "resources/image/xiaoxi-l.png"
+      },
+      {
+        "pagePath": "pages/points/points",
+        "text": "秒豆",
+        "iconPath": "resources/image/miaodou-02.png",
+        "selectedIconPath": "resources/image/miaodou-01.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "resources/image/9.png",
+        "selectedIconPath": "resources/image/10.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序地理位置展示"
+    }
+  },
+  "plugins": {
+    "smartLock": {
+      "version": "1.1.1",
+      "provider": "wx4750a49868f92a31"
+    }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx8f3556af2f98a160",
+    "wx193c25dc086b6e68"
+  ]
+}

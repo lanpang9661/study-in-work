@@ -1,0 +1,60 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.5.0",
+	"appid": "wx9a5f04cb8497c3b5",
+	"projectname": "%E5%AD%A6%E4%B9%A0%E7%BA%BF%E4%B8%8A%E9%A1%B9%E7%9B%AE%E4%B8%93%E7%94%A8",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "测试",
+					"pathName": "pages/transit/transit",
+					"query": "",
+					"scene": "1037",
+					"referrerInfo": {
+						"appId": "wx978d4203b0e82e07",
+						"extraData": "{ \"agentName\" : \"李政澳\",  \"company\" : \"测试\",  \"createDate\" : 1535634849000,  \"createDateStr\" : \"2018-08-30 21:14:09\",  \"id\" : 2138,  \"openId\" : \"oI7LD5KnmuzDxR4cvFQabvODe9yY\",  \"status\" : 2,  \"statusStr\" : \"待审核\",  \"tell\" : \"18500333982\",  \"unionId\" : \"\",  \"updateDate\" : 1535634849000,  \"updateDateStr\" : \"2018-08-30 21:14:09\" }"
+					}
+				},
+				{
+					"id": 1,
+					"name": "推荐",
+					"pathName": "pages/welcome/welcome",
+					"query": "unionId=oMzdL1E5Eou-xwia-mIUpzNTZlzc",
+					"scene": "1011"
+				}
+			]
+		}
+	}
+}

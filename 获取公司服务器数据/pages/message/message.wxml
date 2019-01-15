@@ -1,0 +1,34 @@
+<!-- <view class="weui-panel dkjjr" bindlongpress="closeWindow" bindtap="closeWindow">
+  <block wx:for="{{friendList}}" wx:key="{{id}}" wx:for-index="i">
+    <view class="agent-item ">
+      <view class="agent" bindlongpress="handleLongPress" bindtap="messageDetailClick" data-item="{{item}}" data-id="{{i}}" >
+        <view class='p-r'>
+          <view class="img-wrapper">
+            <image wx:if="{{item.friendHeadImg!=''&& item.friendHeadImg!=null}}" src="{{item.friendHeadImg}}" />
+            <image wx:if="{{item.friendHeadImg==''||item.friendHeadImg==null}}" src="../../resources/image/jingjiren.png" />
+          </view>
+          <text wx:if="{{item.tipsShowFlag == '0'}}" class='red-dot'></text>
+        </view>
+        <view class="agent-info">
+          <view class='flex align-center mb5'>
+            <text class="agent-name">{{item.friendName}}</text>
+            <text class='company'>房主</text>
+          </view>
+          <view class="agent-desc">
+            <text class="daikan">{{item.lastChat}}</text>
+          </view>
+        </view>
+        <view class="contact text">
+          {{item.lastDate}}
+        </view>
+        <view style="display:{{i==shownone?'block':'none'}}" data-item="{{item}}" bindtap="messageDetailDelete" data-id="{{i}}" class='delete-btn'>删除</view>
+      </view>
+    </view>
+  </block>
+</view> -->
+
+<view class="list_none" wx:if="{{friendList.length==0}}">
+      <image src='../../resources/image/nodate.png' />
+      <view class="list_none_text">还没有任何消息哦</view>
+ </view>
+

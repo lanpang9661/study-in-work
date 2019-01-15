@@ -1,0 +1,96 @@
+/* pages/register/register.wxss */
+page{
+  background-color: #fff;
+  height: 100%;
+}
+.main{
+  background: #fff;
+  padding-bottom: 60rpx;
+}
+.logo{
+  width: 218rpx;
+  height: 66rpx;
+  margin: 50rpx 0 0 50rpx;
+}
+.title{
+  color:rgba(51,51,51,1);
+  font-size: 42rpx;
+  font-weight: bold;
+  margin: 23rpx 0 0rpx 50rpx;
+}
+.weui-cells{
+  position: initial;
+}
+.weui-cell{
+  position: initial;
+  padding: 0 50rpx;
+  margin-top: 32rpx;
+}
+.weui-input{
+  border-bottom: 1rpx solid #F0F0F0;
+  height: 77rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+.weui-cell__ft{
+  height: 80rpx;
+ 
+}
+.weui-cell__ft button{
+  width: 176rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding: 0rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color:rgba(153,153,153,1);
+  background: #fff;
+  border-radius: 5rpx;
+}
+.weui-btn-area{
+  width: 600rpx;
+  height: 88rpx;
+  margin: 48rpx auto 0 auto;
+}
+.weui-btn-area button{
+  width: 600rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background:rgb(38, 135, 229);
+  color: #fff;
+  border-radius: 10rpx;
+}
+.weui-btn-area button:active{
+  background:rgb(38, 135, 229);
+  color: #fff;
+}
+.weui-agree{
+  font-size: 22rpx;
+  padding-top: 32rpx;
+}
+.weui-agree__checkbox-icon{
+  width: 19rpx;
+  height: 19rpx;
+  border-radius: 2rpx;
+  border: 1rpx solid #999;
+}
+.weui-agree__text{
+  font-size: 22rpx;
+}
+.weui-agree__link{
+  color:#0B52B2;
+}
+.weui-agree__checkbox-icon-check{
+  top: 0rpx;
+  left: 0rpx;
+}
+.phcolor{
+  color: #999;
+}.weui-cells:after {
+  bottom: 0;
+  border-bottom: none
+}
+.modal-body{ text-align: center}
+.modal-body h3{ font-size: 32rpx; color: #333}
+.modal-body .txt{ font-size: 28rpx; color: #999; margin-top: 30rpx}

@@ -1,0 +1,11 @@
+<!--pages/me/information/information.wxml-->
+<view>
+  <view class="header bm_common l-center">开锁步骤</view>
+  <view class="buzhou"><image src='../../../resources/image/ksbuzhou.png'></image></view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="openLock">开锁</button>
+    <text>若蓝牙开锁失败，点击下方按钮，进行密码开锁</text>
+    <button class="weui-btn btn-border" type="primary" bindtap="openLockByPwd">获取密码</button>
+  </view>
+  
+</view>

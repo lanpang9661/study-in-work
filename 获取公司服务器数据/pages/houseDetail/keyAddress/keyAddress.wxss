@@ -1,0 +1,17 @@
+/* pages/houseDetail/yaoshi/yaoshi.wxss */
+.yaoshi_word{
+  padding: 20rpx 40rpx;
+  color: #999;
+  display: flex;
+  font-size: 34rpx;
+  background-color: #f4f4f4;
+
+}
+.yaoshi_xinxi{
+  margin-top: 60rpx;
+  padding: 20rpx 0rpx;
+  text-align: center;
+}
+.yaoshi{
+  color: #999;
+}

@@ -1,0 +1,134 @@
+page {
+  height: 100%;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-family: ;
+  font: normal 30rpx/1.68 -apple-system-font,
+          'Helvetica Neue',
+          Helvetica,
+          'Microsoft YaHei',
+          sans-serif;
+}
+.agent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.agent .img-wrapper {
+  display: block;
+  overflow: hidden;
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 92rpx;
+  background-size: 100%;
+  border:1px solid #e7e7e7;
+box-sizing:border-box;
+
+}
+
+.agent .img-wrapper image {
+  width: 100%;
+  height: 100%;
+}
+
+.agent .agent-info {
+  margin-left: 24rpx;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.agent .agent-info .company{font-size:12px; color:#9dd0d3; background-color: #f2f2f2; padding: 0 3px; margin-left: 5px}
+.agent .agent-info .renzheng{font-size:12px;color:#f80;margin-left: 5px }
+.agent .agent-info .agent-name {
+  color: #394043;
+  font-size: 34rpx;
+  line-height: 34rpx;
+}
+
+.agent .agent-info .agent-desc {
+  padding-top: 0;
+  color: #9c9fa1;
+  font-size: 26rpx;
+}
+.agent .agent-info .agent-desc .daikan{ font-size: 14px;line-height: 18px;white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+display:inline-block;
+width: 574rpx}
+.agent .contact {
+  position: absolute;
+  right: -30rpx;
+  z-index: 1;
+  top: -20rpx;
+}
+
+.agent .contact button {
+  width: 100%;
+  text-align: right;
+  height: 132rpx;
+  width: 132rpx;
+  display: block;
+  font-size: 64rpx;
+  line-height: 132rpx;
+  background: none;
+  padding-right: 14px;
+  
+}
+
+.agent .contact button::after {
+  border: none;
+}
+
+.agent .contact .icon-contact {
+  position: absolute;
+  top: 50%;
+  display: block;
+  margin-top: -20rpx;
+  width: 100%;
+  height: 40rpx;
+}.diagram, .dynamic, .dkjjr {
+  padding: 30rpx;
+  padding-top: 0;
+}.dkjjr .agent {
+margin-top:15px;
+border-bottom:1px solid #eee;
+padding-bottom:15px;
+
+}
+.agent .contact {
+position:absolute;
+right:0;
+z-index:1;
+top:0rpx;
+color: #bbb
+
+}
+.agent .img-wrapper{position: relative}
+.weui-panel:first-child:before {
+  border-top: 0;
+}
+
+.weui-panel {
+  overflow: visible;
+}.weui-panel:after {
+  bottom: 0;
+  border-bottom: 0;
+}.delete-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #fff;
+  color: #333;
+  font-size: 32rpx;
+  padding: 14rpx 60rpx;
+  box-shadow: 0 0 10px #aaa;
+  border-radius: 2px;
+  z-index: 2
+}

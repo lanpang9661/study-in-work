@@ -1,0 +1,94 @@
+<!--pages/me/collection/collection.wxml-->
+<view>
+  <scroll-view scroll-y="true">
+    <block wx:for="{{list}}" wx:key="{{index}}">
+      <view class='item' data-index="{{index}}">
+        <view bindtap="onItemClick" data-item="{{item}}" class="weui-panel__bd" style="{{item.txtStyle}}">
+          <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui_home_image">
+              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg efault_main">
+                <!-- 默认图片覆盖层 -->
+                <view class="efault_img">
+                  <image src="../../../resources/image/18.png" />
+                </view>
+                <image mode="scaleToFill" class="weui-media-box__thumb" src="{{item.imgUrl}}" />
+              </view>
+              <!-- 左上角标签图片 -->
+              <view>
+                <image class="ico_1" wx:if="{{item.status==1}}" src="../../../resources/image/22.png" />
+                <image class="ico_1" wx:elif="{{item.status==3}}" src="../../../resources/image/23.png" />
+                <image class="ico_1" wx:elif="{{item.status==4}}" src="../../../resources/image/iconSoldOut.png" />
+                <image class="ico_1" wx:elif="{{item.status==2}}" src="../../../resources/image/iconYushou.png" />
+                <image class="ico_1" wx:elif="{{item.status==-1}}" src="../../../resources/image/iconXinshang.png" />
+              </view>
+
+              <!-- 即将开盘文字显示 -->
+              <view wx:if="{{item.remainingTime > 0}}" class="tishi" hidden='{{!item.showRemainTime}}'>
+                <text class="tishi_1">{{item.yushouWenziDay}}</text>
+                <text class="tishi_2">{{item.yushouWenziUnit}}</text>
+                <text class="tishi_3">{{item.yushouWenziContent}}</text>
+              </view>
+              <view wx:else class="tishi tishi1" hidden='{{!item.showRemainTime}}'>
+                <text class="tishi_1">1</text>
+                <text class="tishi_2">天</text>
+                <text class="tishi_3">即将开盘</text>
+              </view>
+            </view>
+
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <!-- 显示自营的标签 -->
+              <view wx:if="{{item.status==1 || item.status==-1 || item.status==2}}" class="weui-media-box__title-black">
+                <view>
+                  <view class="h2_label" hidden="{{item.ziyingStatus != '1'}}">
+                    优选
+                  </view>
+                  {{item.houseTitle}}
+                </view>
+              </view>
+              <view wx:else class="weui-media-box__title-gray">
+                <view>
+                  <view class="h2_label" hidden="{{item.ziyingStatus != '1'}}">
+                    优选
+                  </view>
+                  {{item.houseTitle}}
+                </view>
+              </view>
+              <!-- 房源标签 -->
+              <block wx:for="{{item.features}}" wx:for-item="tag" wx:for-index="i" wx:key="{{i}}">
+                <view wx:if="{{i < 3}}" class="weui_home_em">{{tag}}</view>
+              </block>
+              <!-- 价格和单价一行 -->
+              <view class="clear mar_bom_15">
+                <view class="weui_home_h2">{{item.doorModel}}|{{item.area}}㎡|{{item.floor}}/{{item.floorTotal}}</view>
+                <view class="weui_home_con_bottom">
+                  <view class="weui_home_con_bottom_text1">￥{{item.salesTotalPrice}}万</view>
+                  <view class="weui_home_con_bottom_text2">{{item.collectTimeStr}}</view>
+                </view>
+              </view>
+            </view>
+            <!-- 佣金和红包 -->
+            <view class="yong">
+              <image src="../../../resources/image/yong.png" />
+              <text>{{item.yongjinhongbao}}</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="list_none" hidden="{{noData}}">
+    <view>
+      <image src='../../../resources/image/21.png' />
+    </view>
+    <view class="list_none_text">亲 暂无数据哦～</view>
+  </view>
+  <view class="weui-loadmore" hidden='{{more}}'>
+    <view class="weui-loadmore__tips">正在加载...</view>
+  </view>
+  <view class="weui-loadmore" hidden='{{!more || !end|| !noData}}'>
+    <view class="weui-loadmore__tips">正在加载...</view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line" hidden="{{end}}">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+  </view>
+</view>

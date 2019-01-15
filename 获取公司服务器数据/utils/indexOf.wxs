@@ -1,0 +1,13 @@
+// 支持es4语法
+var filter = {
+  indexOf: function (a,b,c) {
+    if(c&& c!=''){
+      return a.indexOf("," + b + ",");
+    }
+    return a.indexOf(b);
+  }
+}
+// 导出对外暴露的属性
+module.exports = {
+  indexOf: filter.indexOf
+}

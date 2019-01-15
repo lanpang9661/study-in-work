@@ -1,0 +1,50 @@
+<!--pages/me/record/record.wxml-->
+<view>
+  <scroll-view scroll-y="true">
+    <!-- ItemView -->
+    <view>
+      <block wx:for="{{dataList}}" wx:key="{{index}}">
+        <view class='item' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
+          <view class="list" bindtap="onItemClick" data-item="{{item}}" style="{{item.txtStyle}}">
+            <!-- 左边的图片 -->
+            <view class="efault_main">
+              
+              <image class="list_img" mode="scaleToFill" src="{{item.fmt}}" />
+            </view>
+            <!-- 右边的一堆文字 -->
+            <view class="list_main">
+              <!-- 标题 -->
+              <text class="list_h2">{{item.title}}</text>
+              <!-- 价格 -->
+              <text class="list_h3">{{item.salesTotalPriceStr}}万</text>
+              <!-- 时间一行 -->
+              <view class="list_con2">
+                <text class="list_con2_layer1">看房时间:</text>
+                <text class="list_con2_layer2">{{item.takeTimeStr}}</text>
+              </view>
+            </view>
+          </view>
+          <view data-item="{{item}}" data-index="{{index}}" bindtap="onDeleteClick" class="del">
+            <text>删除</text>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 加载更多View -->
+    <view class="weui-loadmore" hidden="{{noMore || dataList.length == 0}}">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载...</view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" hidden="{{!noMore || dataList.length == 0}}">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+    </view>
+  </scroll-view>
+
+  <view class="list_none" hidden='{{dataList.length != 0}}'>
+    <view>
+      <image src='../../../resources/image/21.png' />
+    </view>
+    <view class="list_none_text">亲 暂无数据哦～</view>
+  </view>
+</view>

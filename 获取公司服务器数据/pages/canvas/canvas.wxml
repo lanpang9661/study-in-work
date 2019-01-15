@@ -1,0 +1,4 @@
+<scroll-view scroll-y>
+  <canvas canvas-id="myCanvas" >
+  </canvas>
+</scroll-view>

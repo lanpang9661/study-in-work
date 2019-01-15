@@ -1,0 +1,134 @@
+/* pages/houseDetail/yuyue/yuyue.wxss */
+
+page {
+  background: #f4f4f4;
+  padding-bottom: 155rpx;
+}
+
+.header {
+  font-size: 16px;
+  padding: 30rpx 32rpx;
+  color: #666;
+}
+
+.group {
+  display: block;
+  width: 100%;
+}
+
+.group-header {
+  line-height: 80rpx;
+  display: flex;
+  padding: 0 32rpx;
+  font-size: 16px;
+}
+
+.group-body {
+}
+
+.multiple-select {
+  padding: 0 22rpx 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.multiple-select>view {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  height: 52px
+}
+
+.closed .tips {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  font-size: 12px;
+  color: #ccc;
+  transform: rotate(30deg);
+}
+
+.multiple-select view.chose, .multiple-select view.closed {
+  position: relative;
+}
+
+.multiple-select view.chose icon {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+}
+
+.multiple-select text {
+  display: block;
+  line-height: 40px;
+  color: #666;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 4rpx;
+  background-color: #fff;
+}
+
+.multiple-select .chose text {
+  border: 1px solid #2687e5;
+}
+
+.multiple-select .closed text {
+  color: #bbb;
+}
+
+.multiple-select .chose icon {
+  color: #2687e5;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-body h3 {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.modal-body .txt {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 30rpx;
+}
+
+.home_foot {
+  height: 98rpx;
+  position: fixed;
+  bottom: 0rpx;
+  border-top: 1rpx solid #d9d9d9;
+  width: 100%;
+}
+
+.home_foot_list {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.home_foot_list>view {
+  flex: 1;
+  height: 98rpx;
+  line-height: 98rpx;
+  display: block;
+  text-align: center;
+  background: #2687e5;
+  color: #fff;
+  border-left: 1rpx solid #fff;
+  font-size: 16px;
+}
+
+.home_foot_list>view.time-chose {
+  flex: 2;
+  background-color: #fff;
+  color: #666;
+  font-size: 15px;
+}
+
+.home_foot_list>view:first-child {
+  border-left: none;
+}

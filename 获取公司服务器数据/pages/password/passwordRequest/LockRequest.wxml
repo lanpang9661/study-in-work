@@ -1,0 +1,52 @@
+<!--pages/me/information/information.wxml-->
+<view>
+  <view class="weui-cells weui-cells_after-title">
+    <!-- 客户姓名一行 -->
+    <view hidden="true" class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">客户姓名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input placeholder-class="phcolor" maxlength="10" class="weui-input" placeholder="姓名" value='{{name}}' bindinput='onNameInput' />
+      </view>
+    </view>
+    <!-- 联系电话一行 -->
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">联系电话</view>
+      </view>
+      <view class="weui-cell__bd shoujiView {{shoujiFouce?'active':''}}" bindtap='shoujiFouceFn'>
+        <view class="weui-flex">
+          <view class="weui-flex__item">{{shoujiNum[0]}}</view>
+          <view class="weui-flex__item">{{shoujiNum[1]}}</view>
+          <view class="weui-flex__item">{{shoujiNum[2]}}</view>
+          <view class="weui-flex__item">*</view>
+          <view class="weui-flex__item">*</view>
+          <view class="weui-flex__item">*</view>
+          <view class="weui-flex__item">*</view>
+          <view class="weui-flex__item">{{shoujiNum[3]}}</view>
+          <view class="weui-flex__item">{{shoujiNum[4]}}</view>
+          <view class="weui-flex__item">{{shoujiNum[5]}}</view>
+          <view class="weui-flex__item">{{shoujiNum[6]}}</view>
+        </view>
+        <input class='shouji' maxlength="7" type="number" focus="{{shoujiFouce}}" bindinput='shoujiNumInput' confirm-type="next"></input>
+      </view>
+    </view>
+    <!-- 备注信息一行 -->
+    <view hidden="true" class="weui-cell weui-cell_input weui-cell-textarea">
+      <view class="weui-cell__hd">
+        <view class="weui-label">备注信息</view>
+      </view>
+      <view class="weui-cell__bd">
+        <textarea placeholder-class="phcolor" maxlength="150" class="weui-textarea" placeholder="备注信息" value='{{store}}' bindinput='onRemarkInput' />
+      </view>
+    </view>
+  </view>
+  <!-- 新增的提示信息 -->
+  <view class="shen_ti">
+    <view>提示：为了防止带看信息与其他经纪人冲突, 请输入客户电话区分</view>
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="onConfirmClick">获取锁密码</button>
+  </view>
+</view>

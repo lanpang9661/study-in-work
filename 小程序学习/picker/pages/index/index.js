@@ -12,7 +12,11 @@ Page({
     multiArrIndex: [0,0,0],
     time: '09:01',
     date: '2019-01-12',
-    nowCity: [ '广东省', '广州市', '黄埔区' ]
+    nowCity: [ '广东省', '广州市', '黄埔区' ],
+    cityAreaList: [],
+    cityIndex: [0, 0],
+    regionList: [],
+    saveArr: []
   },
   countryChangeFn(e){
     this.setData({
@@ -99,7 +103,40 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    var that = this;
+    wx.request({
+      url:"http://192.168.0.23:8081/snail-app/xcx/xcxHouse/getAreaList",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "GET",
+      dataType: "json",
+      data: {
+        openId: 'o7vUu5cp5sIH-9dZlTebT3r-t42M',
+        cityCode: 210200
+      },
+      complete: function (res) {
+        var emptyItem = new Object()
+        emptyItem.areaCode = ""
+        emptyItem.name = "不限"
+        var tmp = [emptyItem];
+        var testArr = [ [], [] ];
+        testArr[0].push('不限')
+        res.data.forEach( item => {
+          testArr[0].push(item.name)
+        } )
+        testArr[1].push('不限')
+        var testArrTwo = testArr[0];
+        that.setData({
+          cityAreaList: testArr,
+          saveArr: testArrTwo
+        })
+        // that.refresh()
+        wx.startPullDownRefresh()
+
+        console.log(that.data.cityAreaList)
+      }
+    })
   },
 
   /**
@@ -142,5 +179,44 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  mmfColChange(e){
+    var that = this;
+    var indexId = 210201 + e.detail.value;
+    var testIndex = that.data.cityIndex;
+    testIndex[e.detail.column] = e.detail.value
+    
+    wx.request({
+      url: "http://192.168.0.23:8081/snail-app/xcx/xcxHouse/getRegionList",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "GET",
+      dataType: "json",
+      data: {
+        openId: 'o7vUu5cp5sIH-9dZlTebT3r-t42M',
+        areaId: indexId
+      },
+      complete: function (res) {
+        var emptyItem = new Object()
+        emptyItem.id = ""
+        emptyItem.name = "不限"
+        var tmp = [emptyItem];
+        var testArr = [that.data.saveArr, []];
+        that.setData({
+          regionList: tmp.concat(res.data)
+        })
+        testArr[1].push('不限')
+        res.data.forEach( item => {
+          testArr[1].push(item.name)
+        } )
+        that.setData({
+          cityAreaList: testArr,
+          cityIndex: testIndex
+        })
+
+        console.log(testIndex)
+      }
+    })
   }
 })

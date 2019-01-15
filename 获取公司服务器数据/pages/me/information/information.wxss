@@ -1,0 +1,93 @@
+/* pages/me/information/information.wxss */
+page{
+  background: #f0f0f0;
+}
+.weui-cells{
+  position:initial;
+  margin-top: 32rpx;
+}
+.weui-cell{
+  position: initial;
+  padding: 0;
+  height: 109rpx;
+}
+.weui-cell__hd{
+  width: 120rpx;
+  line-height: 109rpx;
+  color:rgba(51,51,51,1);
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  padding-left: 32rpx;
+  height: 108rpx;
+}
+.weui-label{
+  width: 120rpx;
+}
+.weui-cell__bd{
+  height: 108rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  padding-right: 32rpx;
+}
+.weui-input{
+  height: 109rpx;
+  font-size: 32rpx;
+  color: #999;
+}
+.weui-cell-textarea{
+  height: 182rpx;
+}
+.weui-cell-textarea textarea{
+  height: 109rpx;
+  line-height: 51rpx;
+  color: #999;
+  margin-top: 18rpx;
+}
+.weui-btn-area{
+  width: 600rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin: 55rpx auto 0 auto;
+  border-radius: 10rpx;
+}
+.weui-btn-area button{
+  background-color:#2687e5;
+  font-size: 36rpx;
+  color: #fff;
+  display: block;
+  width: 600rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0rpx;
+}
+.weui-btn-area button:active{
+  background-color:#2687e5;
+  color: #fff;
+}
+.weui-input1{
+  float: left;
+  width: 360rpx;
+}
+.weui-input-btn{
+  width: 176rpx;
+  float: right;
+}
+.weui-input-btn button{
+  width:176rpx;
+  height:64rpx;
+  font-size:28rpx;
+  color:#999;
+  background:#fff;
+  outline:none;
+  line-height:64rpx;
+  margin-top:22rpx;
+  padding: 0rpx;
+}
+.weui-cell__hd_label{
+  position:relative;
+  top:0rpx;
+  background:#fff;
+}
+.phcolor{
+  color: #999;
+}

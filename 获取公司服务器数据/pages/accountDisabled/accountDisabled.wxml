@@ -1,0 +1,5 @@
+<!--pages/accountDisabled/accountDisabled.wxml-->
+<view class="prompt">
+  <text>账号已停用</text>
+</view>
+<image class="bit" src="../../resources/image/bitmap.png"></image>
