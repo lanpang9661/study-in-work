@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx;margin:100rpx"></view>
+</view>
+
+<button bind:tap="rotateFn">旋转</button>
+<button bind:tap="scaleFn">缩放</button>
