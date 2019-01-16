@@ -1,0 +1,54 @@
+@keyframes changeWid{
+  0%{
+    background-color: yellow;
+  }
+  100%{
+    background-color: red;
+
+  }
+}
+
+.container{
+  height: 2000px;
+}
+
+.box{
+
+  height: 200px;
+  background-color: #999;
+
+}
+
+.red-box{
+  background-color: black;
+  height: 200px;
+}
+
+.fix{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+
+.fix-margin{
+  margin-top: 62rpx;
+}
+
+.nav .item{
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  flex: 1;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.nav .active{
+  animation: changeWid 1s;
+  background-color: red;
+}

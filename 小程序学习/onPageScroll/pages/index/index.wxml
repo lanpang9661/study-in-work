@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  
+  <view class='box'></view>
+
+  <view class='nav-box {{isFixed ? "fix" : ""}}'>
+    <view class='nav'>
+      <view class='item {{nowIndex === item.index ? "active" : ""}}' bind:tap="itemTap" data-index="{{index}}" wx:for="{{list}}" wx:key="{{item.index}}">{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class='red-box {{isFixed ? "fix-margin" : ""}}'></view>
+
+</view>
