@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='box'>
+    testbox
+  </view>
+</view>
+
+<button bind:tap="btnTap">按我</button>
