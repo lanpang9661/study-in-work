@@ -145,10 +145,102 @@ anis({
 });
 var Clock = /** @class */ (function () {
     function Clock(h, m) {
-        this.currentTime = new Date();
-        console.log(this.currentTime);
+        var now = new Date;
+        this.currentTime = now;
+        this.setTime(now);
     }
+    Clock.prototype.setTime = function (now) {
+        this.currentTime = new Date();
+    };
     return Clock;
 }());
 var clock = new Clock(12, 12);
-var llld;
+var square = {};
+// let square = {} as Square;
+//两种声明都可以
+square.color = "blue";
+square.sideLength = 10;
+console.log(square);
+// let sut : Array<Person> = [];
+var sut = {}; //定义一个sut对象，这个对象跟Person接口一样,有Person接口的name和age属性
+sut.age = 18;
+sut.name = 'ddd';
+console.log(sut);
+var Persons = /** @class */ (function () {
+    function Persons(person) {
+        console.log(person);
+    }
+    return Persons;
+}());
+var stu = []; //定义一个数组stu  数组中的每一项都是一个Person类
+stu[0] = new Persons({
+    firstName: 'lan',
+    lastName: 'pang'
+});
+stu[1] = new Persons({
+    firstName: 'lan',
+    lastName: 'pang'
+});
+console.log(stu);
+function getCounter() {
+    var counter = function (start) {
+        console.log(start);
+    };
+    counter.interval = 123;
+    counter.reset = function () {
+        console.log('reset');
+    };
+    return counter;
+}
+var cou = getCounter();
+cou(10); //当用(10)调用cou是 cou是一个函数接口 执行<Counter>function (start: number) {}；
+cou.reset(); //当用.reset()调用cou时，执行counter.reset = function () { }
+cou.interval = 5.0; //当用.interval调用时，给cou下的interavl属性赋值
+console.log(cou);
+//真的没懂
+var Control = /** @class */ (function () {
+    function Control() {
+    }
+    return Control;
+}());
+var Button = /** @class */ (function (_super) {
+    __extends(Button, _super);
+    function Button() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Button.prototype.select = function () { };
+    return Button;
+}(Control));
+var TextBox = /** @class */ (function (_super) {
+    __extends(TextBox, _super);
+    function TextBox() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    TextBox.prototype.select = function () { };
+    return TextBox;
+}(Control));
+function createClock(ctor, hour, minute) {
+    console.log('---');
+    console.log(ctor);
+    return new ctor(hour, minute);
+}
+var DigitalClock = /** @class */ (function () {
+    function DigitalClock(h, m) {
+        this.tick();
+    }
+    DigitalClock.prototype.tick = function () {
+        console.log("beep beep");
+    };
+    return DigitalClock;
+}());
+var AnalogClock = /** @class */ (function () {
+    function AnalogClock(h, m) {
+        this.tick();
+    }
+    AnalogClock.prototype.tick = function () {
+        console.log("tick tock");
+    };
+    return AnalogClock;
+}());
+var digital = createClock(DigitalClock, 12, 17);
+console.log(digital);

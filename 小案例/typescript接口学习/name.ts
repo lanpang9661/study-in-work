@@ -208,17 +208,165 @@ anis({
 
 interface ClockInterface {
     currentTime: Date;
+    setTime(d: Date):void;
 }
 
 class Clock implements ClockInterface {
     currentTime: Date;
+
     constructor(h: number, m: number) { 
+        var now = new Date;
+        this.currentTime = now;
+        this.setTime(now);
+     }
+
+     setTime(now: Date) {
         this.currentTime = new Date()
-        console.log(this.currentTime);
-        
     }
 }
 
 var clock = new Clock(12,12);
 
-var llld;
+
+
+
+//扩展接口
+
+interface Shape {
+    color: string;
+}
+
+interface Square extends Shape {
+    sideLength: number;
+}
+
+
+let square = <Square>{};
+
+// let square = {} as Square;
+//两种声明都可以
+
+square.color = "blue";
+square.sideLength = 10;
+
+console.log(square);
+
+// let sut : Array<Person> = [];
+let sut = <Person>{}; //定义一个sut对象，这个对象跟Person接口一样,有Person接口的name和age属性
+sut.age= 18;
+sut.name = 'ddd';
+console.log(sut)
+
+
+
+class Persons {
+    constructor(person: person){
+        console.log(person);
+        
+    }
+}
+
+let stu: Array<Persons> = []; //定义一个数组stu  数组中的每一项都是一个Person类
+
+stu[0] =  new Persons({
+    firstName: 'lan',
+    lastName: 'pang'
+});
+
+stu[1] =  new Persons({
+    firstName: 'lan',
+    lastName: 'pang'
+})
+
+console.log(stu);
+
+
+//混合类型
+interface Counter {
+    (start: number): string;   //  (number) 是一个key  它的值string 是下面定义的函数<Counter>function (start: number) {}
+    interval: number;
+    reset(): void;
+}
+
+function getCounter(): Counter {
+    let counter = <Counter>function (start: number) { 
+        console.log(start);
+    };
+    counter.interval = 123;
+    counter.reset = function () { 
+        console.log('reset');
+        
+    };
+    return counter;
+}
+
+let cou = getCounter();
+cou(10);   //当用(10)调用cou是 cou是一个函数接口 执行<Counter>function (start: number) {}；
+cou.reset(); //当用.reset()调用cou时，执行counter.reset = function () { }
+cou.interval = 5.0;//当用.interval调用时，给cou下的interavl属性赋值
+
+console.log(cou);
+
+
+
+
+//真的没懂
+class Control {
+    private state: any;
+}
+
+interface SelectableControl extends Control {
+    select(): string;
+}
+
+class Button extends Control {
+    select() { }
+}
+class TextBox extends Control {
+    select() { }
+}
+
+// class Location {
+//     select() { }
+// }
+
+
+
+//类静态部分与实例部分的区别
+//完全没懂
+
+interface ClockConstructor {
+    new (hour: number, minute: number): ClockInterface1;
+}
+interface ClockInterface1 {
+    tick():void;
+}
+
+function createClock(ctor: ClockConstructor, hour: number, minute: number): ClockInterface1 {
+    console.log('---');
+    
+    console.log(ctor);
+    
+    return new ctor(hour, minute);
+}
+
+class DigitalClock implements ClockInterface1 {
+    constructor(h: number, m: number) { 
+        this.tick()
+    }
+    tick() {
+        console.log("beep beep");
+    }
+}
+class AnalogClock implements ClockInterface1 {
+    constructor(h: number, m: number) { 
+        this.tick()
+    }
+    tick() {
+        console.log("tick tock");
+    }
+}
+
+let digital = createClock(DigitalClock, 12, 17);
+
+console.log(digital);
