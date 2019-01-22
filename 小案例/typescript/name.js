@@ -1,3 +1,17 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 function greeter(person) {
     return "Hello, " + person;
 }
@@ -62,9 +76,78 @@ function theCityThatAlwaysSleeps() {
     return getCity();
 }
 console.log(theCityThatAlwaysSleeps());
-var _loop_1 = function (i) {
-    setTimeout(function () { console.log(i); }, 1000 * i);
-};
-for (var i = 0; i < 10; i++) {
-    _loop_1(i);
+function printLabel(labelledObj) {
+    console.log(labelledObj.label);
 }
+var myObj = {
+    size: 10,
+    label: "Size 10 Object"
+};
+printLabel(myObj);
+var classmate = /** @class */ (function () {
+    function classmate(config) {
+        this.config = config;
+        console.log(config.name + '...' + config.age);
+    }
+    return classmate;
+}());
+var classmate1 = new classmate({
+    name: 'LanPang',
+    age: 18
+});
+function createSquare(config) {
+    var newSquare = { color: "white", area: 100 };
+    if (config.color) {
+        newSquare.color = config.color;
+    }
+    if (config.width) {
+        newSquare.area = config.width * config.width;
+    }
+    return newSquare;
+}
+var mySquare = createSquare({ color: "black", width: 1000 });
+console.log(mySquare);
+function createSquare1(config) {
+    // ...
+    return { color: 'red', area: 10000 };
+}
+var mySquare1 = createSquare1({ colour: "red", width: 100 });
+console.log(mySquare1);
+//可索引的类型
+var Animal = /** @class */ (function () {
+    function Animal(name) {
+        this.name = name;
+    }
+    return Animal;
+}());
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog(name, breed) {
+        var _this = _super.call(this, name) || this;
+        _this.breed = breed;
+        if (breed) {
+            _this.breed = breed;
+        }
+        return _this;
+    }
+    return Dog;
+}(Animal));
+function anis(config) {
+    console.log(config);
+}
+anis({
+    "dog": {
+        name: "xiaopang"
+    },
+    0: {
+        name: "pangpang",
+    }
+});
+var Clock = /** @class */ (function () {
+    function Clock(h, m) {
+        this.currentTime = new Date();
+        console.log(this.currentTime);
+    }
+    return Clock;
+}());
+var clock = new Clock(12, 12);

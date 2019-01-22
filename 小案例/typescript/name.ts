@@ -5,7 +5,7 @@ function greeter(person: string) {
 class student {
     fullName: string;
 
-    constructor (public firstName, public MiddleName, public lastName)  {
+    constructor (public firstName:string, public MiddleName:string, public lastName:string)  {
         this.fullName = firstName + MiddleName + lastName;
     }
 }
@@ -87,6 +87,136 @@ function theCityThatAlwaysSleeps() {
 
 console.log(theCityThatAlwaysSleeps());
 
-for (let i = 0; i < 10 ; i++) {
-    setTimeout(function() {console.log(i); }, 1000 * i);
+// for (let i = 0; i < 10 ; i++) {
+//     setTimeout(function() {console.log(i); }, 1000 * i);
+// }
+
+interface LabelledValue {
+    label: string;
+  }
+  
+  function printLabel(labelledObj: LabelledValue) {
+    console.log(labelledObj.label);
+  }
+  
+  let myObj = {
+      size: 10, 
+      label: "Size 10 Object"
+    };
+  printLabel(myObj);
+  
+
+  interface Person {
+      name: string;
+      age: number;
+  }
+
+  class classmate {
+      constructor( public config: Person){
+          console.log(config.name + '...' + config.age)
+      }
+  }
+
+  var classmate1 = new classmate({
+      name: 'LanPang',
+      age: 18
+  })
+
+//可选属性
+  interface SquareConfig {
+    color?: string;
+    width?: number;
+  }
+  
+  function createSquare(config: SquareConfig): {color: string; area: number} {  //()内是函数参数的类型声明  ：{}里是函数返回值的类型声明
+    let newSquare = {color: "white", area: 100};
+    if (config.color) {
+      newSquare.color = config.color;
+    }
+    if (config.width) {
+      newSquare.area = config.width * config.width;
+    }
+    return newSquare;
+  }
+  
+  let mySquare = createSquare({color: "black",width: 1000});
+
+  console.log(mySquare)
+
+
+
+//额外的属性检查
+
+interface SquareConfig {
+    color?: string;
+    width?: number;
+    [x: string]: any;
 }
+
+function createSquare1(config: SquareConfig): { color: string; area: number } {
+    // ...
+
+    return {color: 'red',area: 10000}
+}
+
+let mySquare1 = createSquare1({ colour: "red", width: 100 });
+
+console.log(mySquare1)
+
+
+//可索引的类型
+class Animal {
+    name: string;
+
+    constructor(name:string){
+        this.name = name
+    }
+}
+class Dog extends Animal {
+
+    constructor(name:string, public breed?: string) {
+        super(name);
+        if(breed){
+            this.breed = breed;
+        }
+    }
+}
+
+// Error: indexing with a 'string' will sometimes get you a Dog!
+interface NotOkay {
+    [x: string]: Animal;
+    [x: number]: Dog;
+}
+
+
+function anis(config: NotOkay){
+    console.log(config);
+}
+
+anis({
+    "dog": {
+        name: "xiaopang"
+    },
+    0: {
+        name: "pangpang",
+        // breed: "eawf" 明明设置了可以传入breed 为什么传入会报错？？？？？
+    }
+})
+
+
+//类类型
+
+interface ClockInterface {
+    currentTime: Date;
+}
+
+class Clock implements ClockInterface {
+    currentTime: Date;
+    constructor(h: number, m: number) { 
+        this.currentTime = new Date()
+        console.log(this.currentTime);
+        
+    }
+}
+
+var clock = new Clock(12,12);
