@@ -243,4 +243,4 @@ var AnalogClock = /** @class */ (function () {
     return AnalogClock;
 }());
 var digital = createClock(DigitalClock, 12, 17);
-// console.log(digital);
+console.log(digital);
