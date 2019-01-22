@@ -369,4 +369,4 @@ class AnalogClock implements ClockInterface1 {
 
 let digital = createClock(DigitalClock, 12, 17);
 
-console.log(digital);
+// console.log(digital);
