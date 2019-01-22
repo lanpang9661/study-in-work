@@ -151,3 +151,4 @@ var Clock = /** @class */ (function () {
     return Clock;
 }());
 var clock = new Clock(12, 12);
+var llld;

@@ -220,3 +220,5 @@ class Clock implements ClockInterface {
 }
 
 var clock = new Clock(12,12);
+
+var llld;
