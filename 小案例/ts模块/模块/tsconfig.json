@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "build/dist",
+    "rootDir": "src",
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "es2017",
+      "es7",
+      "es6",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "declaration": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
+}
